@@ -61,23 +61,30 @@
 
 ---
 
-## Product Portfolio
+## Product Portfolio (13 total — 2026-03-27)
 
-| Product | Status | MRR | Activation | Days Live |
-|---------|--------|-----|-----------|-----------|
-| Cold Email Writer | ✅ LIVE | $0 | Unknown | 16 |
-| FollowUp Writer | ✅ LIVE | $0 | Unknown | 16 |
-| SubjectLine Pro | ✅ LIVE | $0 | Unknown | 16 |
-| Cold Email Pro | ✅ LIVE | $0 | Unknown | 16 |
-| Subject Craft Pro | ✅ LIVE | $0 | Unknown | 16 |
-| ApologyPro | ✅ LIVE | $0 | Unknown | 16 |
-| VidSpark | ✅ LIVE | $0 | Unknown | 16 |
-| Vid Title Pro | ✅ LIVE | $0 | Unknown | 16 |
+| Product | Status | MRR | Distributed | Days Live |
+|---------|--------|-----|-------------|-----------|
+| Cold Email Writer | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| FollowUp Writer | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| SubjectLine Pro | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| Cold Email Pro | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| Subject Craft Pro | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| ApologyPro | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| VidSpark | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| Vid Title Pro | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 17 |
+| Resume Optimizer AI | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 0 |
+| Invoice Generator Pro | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 0 |
+| Meeting Notes AI | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 0 |
+| LinkedIn Bio Writer | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 0 |
+| Landing Page Copy AI | ✅ LIVE | $0 | ✅ Dev.to+Hashnode | 0 |
 
-**Key concern (2026-03-26):** 8 products live for 16 days, $0 MRR total. This is likely a traffic problem, not a product problem. Before building more products, verify:
-1. Are Dev.to/Hashnode articles published and getting indexed?
-2. Is PostHog receiving events from live products (activation_rate measurable)?
-3. Have Reddit posts gone out for any products?
+**CRITICAL BLOCKER (2026-03-27): Stripe TEST mode** — all products have `buy.stripe.com/test_...` links. Zero real revenue until switched.
+**Action:** Replace `STRIPE_SECRET_KEY=sk_live_...` in Vercel env, then run: `STRIPE_SECRET_KEY=sk_live_... node scripts/migrate-stripe-live.js`
+
+**Anthropic API credits depleted** — builder falls back to Groq (lower quality HTML). Add credits at console.anthropic.com/settings/billing.
+
+**Reddit posts pending (MANUAL)** — see `products/reddit-copy-2026-03-27.txt` for ready-to-post copy for top 3 products.
 
 ---
 
@@ -85,13 +92,13 @@
 
 | Channel | Status | Articles Published |
 |---------|--------|-------------------|
-| Dev.to | ⚠️ VERIFY | Unknown |
-| Hashnode | ⚠️ VERIFY | Unknown |
-| SEO pages (GitHub) | ⚠️ VERIFY | Unknown (target: 48 pages for 8 products) |
-| Reddit | ❌ NOT DONE | Requires manual human action |
-| Twitter | ❌ NOT DONE | Requires manual human action |
-| AI directories | ❌ NOT DONE | Requires manual human action |
-| ProductHunt | ❌ PREMATURE | Launch only after first MRR signal |
+| Dev.to | ✅ CONFIRMED | 12 articles (all 13 products except VidSpark/Vid Title Pro on first run) |
+| Hashnode | ✅ CONFIRMED | 12 articles |
+| SEO pages (GitHub) | ✅ CONFIRMED | 64 pages generated 2026-03-10 |
+| Reddit | ⏳ PENDING | Copy ready in `products/reddit-copy-2026-03-27.txt` — post NOW |
+| Twitter | ❌ NOT DONE | Add TYPEFULLY_API_KEY to automate |
+| AI directories | ❌ NOT DONE | Manual 5-min submission each (5 free directories) |
+| ProductHunt | ❌ PREMATURE | After first $100 MRR |
 
 ---
 
