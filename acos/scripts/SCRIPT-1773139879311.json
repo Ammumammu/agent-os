@@ -1,0 +1,84 @@
+{
+  "scriptId": "SCRIPT-1773139879311",
+  "ideaId": "IDEA-002",
+  "hookUsed": "Watch me write a $1,000 email in 30 minutes",
+  "targetPlatform": "TikTok",
+  "estimatedLength": "60-90 seconds",
+  "script": [
+    {
+      "timestamp": "0-3s",
+      "section": "HOOK",
+      "words": "Watch me write a $1,000 email in 30 minutes",
+      "visual": "camera pans to a computer screen with a timer",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "3-8s",
+      "section": "PATTERN INTERRUPT",
+      "words": "Let's get started!",
+      "visual": "sudden cut to a writer typing",
+      "retentionMechanic": "pattern_interrupt"
+    },
+    {
+      "timestamp": "8-15s",
+      "section": "SETUP",
+      "words": "I know what you're thinking, 'How can I write a $1,000 email in just 30 minutes?'",
+      "visual": "text overlay with a question mark",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "15-40s",
+      "section": "VALUE DELIVERY",
+      "words": "First, you need to understand your audience and what they care about.",
+      "visual": "text overlay with a brief explanation",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "20s mark",
+      "section": "CURIOSITY INJECTOR #2",
+      "words": "But here's the catch, time is money, and you need to make every second count.",
+      "visual": "dramatic music starts playing",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "40-60s",
+      "section": "EXAMPLE/PROOF",
+      "words": "I've written emails that have generated over $1,000 in sales in just 30 minutes.",
+      "visual": "text overlay with real numbers and results",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "45s mark",
+      "section": "CURIOSITY INJECTOR #3",
+      "words": "And there's one more thing, you need to use the right language to resonate with your audience.",
+      "visual": "teaser music starts playing",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "60-75s",
+      "section": "INSIGHT",
+      "words": "The key to writing a $1,000 email in 30 minutes is to focus on the benefits and pain points of your audience.",
+      "visual": "text overlay with a brief explanation",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "75-90s",
+      "section": "CTA",
+      "words": "Comment below with 'X' if you want to learn how to write a $1,000 email in 30 minutes.",
+      "visual": "text overlay with a call-to-action",
+      "retentionMechanic": "dm_trigger"
+    }
+  ],
+  "ctaStrategy": {
+    "type": "dm_trigger",
+    "exactWords": "Comment below with 'X' if you want to learn how to write a $1,000 email in 30 minutes.",
+    "expectedSignal": "DM sends"
+  },
+  "contentValueGateCheck": {
+    "insightDelivered": true,
+    "utilityDelivered": true,
+    "hookPayoffAligned": true,
+    "noFiveSlip": true
+  },
+  "recordingNotes": "Show the writer typing and the timer, use dramatic music to build tension, use text overlays to explain the process and results."
+}

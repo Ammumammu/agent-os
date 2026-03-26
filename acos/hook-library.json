@@ -1,0 +1,1131 @@
+{
+  "hooks": [
+    {
+      "hookId": "1773139864063-H01",
+      "ideaId": "IDEA-001",
+      "hookText": "5 AI tools that'll boost sales in 5 minutes",
+      "type": "COUNTDOWN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H02",
+      "ideaId": "IDEA-001",
+      "hookText": "Boost sales by $10,000 with these AI tools today",
+      "type": "INCOME_REVEAL",
+      "platform": "LinkedIn|YouTube|X",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H03",
+      "ideaId": "IDEA-001",
+      "hookText": "Watch me write this cold email in 90 seconds with AI",
+      "type": "DEMO",
+      "platform": "TikTok|YouTube",
+      "expectedScore": 7,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H04",
+      "ideaId": "IDEA-001",
+      "hookText": "Tired of losing sales due to slow email responses?",
+      "type": "PAIN",
+      "platform": "LinkedIn|X",
+      "expectedScore": 6,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H05",
+      "ideaId": "IDEA-001",
+      "hookText": "The #1 reason you're not closing sales is often overlooked",
+      "type": "CONTRARIAN",
+      "platform": "YouTube",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H06",
+      "ideaId": "IDEA-001",
+      "hookText": "From zero to $100,000 in sales with these AI tools",
+      "type": "BEFORE_AFTER",
+      "platform": "TikTok|LinkedIn|X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H07",
+      "ideaId": "IDEA-001",
+      "hookText": "Don't miss these 5 AI tools to boost sales before Q2 ends",
+      "type": "URGENCY",
+      "platform": "LinkedIn|YouTube|X",
+      "expectedScore": 7,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H08",
+      "ideaId": "IDEA-001",
+      "hookText": "You're using AI wrong: Here's how to boost sales",
+      "type": "CONTRARIAN",
+      "platform": "TikTok|X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H01",
+      "ideaId": "IDEA-002",
+      "hookText": "$1,000/month in email sales, guaranteed",
+      "type": "INCOME_REVEAL",
+      "platform": "LinkedIn|YouTube|X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H02",
+      "ideaId": "IDEA-002",
+      "hookText": "From 5 hours to 30 minutes: My email writing secret",
+      "type": "BEFORE_AFTER",
+      "platform": "TikTok|YouTube|X",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H03",
+      "ideaId": "IDEA-002",
+      "hookText": "You've been told email writing takes years, but it's a lie",
+      "type": "CONTRARIAN",
+      "platform": "LinkedIn|YouTube|X",
+      "expectedScore": 7,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H04",
+      "ideaId": "IDEA-002",
+      "hookText": "Top 5 email writing hacks to cut time by 90%",
+      "type": "COUNTDOWN",
+      "platform": "TikTok|LinkedIn|X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H05",
+      "ideaId": "IDEA-002",
+      "hookText": "Watch me write a $1,000 email in 30 minutes",
+      "type": "DEMO",
+      "platform": "LinkedIn|YouTube|X",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H06",
+      "ideaId": "IDEA-002",
+      "hookText": "Tired of wasting hours on email writing?",
+      "type": "PAIN",
+      "platform": "TikTok|LinkedIn|X",
+      "expectedScore": 7,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H07",
+      "ideaId": "IDEA-002",
+      "hookText": "Limited time: Learn the 30-minute email writing trick now",
+      "type": "URGENCY",
+      "platform": "TikTok|LinkedIn|X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H08",
+      "ideaId": "IDEA-002",
+      "hookText": "Write a $1,000 email in 30 minutes, no experience needed",
+      "type": "DEMO",
+      "platform": "LinkedIn|YouTube",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H01",
+      "ideaId": "IDEA-009",
+      "hookText": "Earn $10,000 in 30 days with AI products",
+      "type": "INCOME_REVEAL",
+      "platform": "TikTok|LinkedIn",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H02",
+      "ideaId": "IDEA-009",
+      "hookText": "From 0 to 10x revenue with AI powered products",
+      "type": "BEFORE_AFTER",
+      "platform": "YouTube|X",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H03",
+      "ideaId": "IDEA-009",
+      "hookText": "AI myths debunked: 5 common misconceptions",
+      "type": "CONTRARIAN",
+      "platform": "LinkedIn|TikTok",
+      "expectedScore": 7,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H04",
+      "ideaId": "IDEA-009",
+      "hookText": "5 AI tools to boost your productivity today",
+      "type": "COUNTDOWN",
+      "platform": "X|TikTok",
+      "expectedScore": 6,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H05",
+      "ideaId": "IDEA-009",
+      "hookText": "Build AI powered chatbot in 60 seconds or less",
+      "type": "DEMO",
+      "platform": "YouTube",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H06",
+      "ideaId": "IDEA-009",
+      "hookText": "Tired of wasting time on AI development?",
+      "type": "PAIN",
+      "platform": "LinkedIn",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H07",
+      "ideaId": "IDEA-009",
+      "hookText": "Limited time offer: AI product launch in 24 hours",
+      "type": "URGENCY",
+      "platform": "TikTok|X",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139864063-H08",
+      "ideaId": "IDEA-009",
+      "hookText": "Make $5,000 in 1 week with AI powered e-commerce",
+      "type": "INCOME_REVEAL",
+      "platform": "YouTube",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:51:04.063Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H01",
+      "ideaId": "IDEA-001",
+      "hookText": "Cut email time by 90% with templates",
+      "type": "INCOME_REVEAL",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H02",
+      "ideaId": "IDEA-001",
+      "hookText": "From 5 hours to 30 minutes per email",
+      "type": "BEFORE_AFTER",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H03",
+      "ideaId": "IDEA-001",
+      "hookText": "You don't need 5 years of sales experience",
+      "type": "CONTRARIAN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "6",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H04",
+      "ideaId": "IDEA-001",
+      "hookText": "5 AI tools to boost your sales today",
+      "type": "COUNTDOWN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H05",
+      "ideaId": "IDEA-001",
+      "hookText": "Watch me write a cold email in 90 seconds",
+      "type": "DEMO",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H06",
+      "ideaId": "IDEA-001",
+      "hookText": "Are you tired of spending hours on emails?",
+      "type": "PAIN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H07",
+      "ideaId": "IDEA-001",
+      "hookText": "Limited time offer: Get 10 free email templates",
+      "type": "URGENCY",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H08",
+      "ideaId": "IDEA-001",
+      "hookText": "The biggest mistake sales reps make with email templates",
+      "type": "CONTRARIAN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H01",
+      "ideaId": "IDEA-003",
+      "hookText": "$100k in 30 days using AI outreach tools",
+      "type": "H1 INCOME REVEAL",
+      "platform": "LinkedIn",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H02",
+      "ideaId": "IDEA-003",
+      "hookText": "From 0 to 500 replies in 7 days with AI",
+      "type": "H2 BEFORE/AFTER",
+      "platform": "TikTok",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H03",
+      "ideaId": "IDEA-003",
+      "hookText": "Don't believe the hype – AI outreach isn't for big businesses only",
+      "type": "H3 CONTRARIAN",
+      "platform": "YouTube",
+      "expectedScore": 7,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H04",
+      "ideaId": "IDEA-003",
+      "hookText": "Get access to 5 AI tools for indie hackers in the next 24 hours",
+      "type": "H4 COUNTDOWN",
+      "platform": "X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H05",
+      "ideaId": "IDEA-003",
+      "hookText": "Watch me write a cold email in 90 seconds using AI",
+      "type": "H5 REAL-TIME DEMO",
+      "platform": "LinkedIn",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H06",
+      "ideaId": "IDEA-003",
+      "hookText": "Are you tired of sending 100+ emails with zero replies?",
+      "type": "H6 PAIN AGITATION",
+      "platform": "YouTube",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H07",
+      "ideaId": "IDEA-003",
+      "hookText": "Limited spots available: join our AI outreach masterclass today",
+      "type": "H7 URGENCY/FOMO",
+      "platform": "TikTok",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H08",
+      "ideaId": "IDEA-003",
+      "hookText": "$50k in 60 days using AI-powered sales sequences",
+      "type": "H1 INCOME REVEAL",
+      "platform": "X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H01",
+      "ideaId": "IDEA-005",
+      "hookText": "I made $10,000/day using just 5 AI tools.",
+      "type": "INCOME_REVEAL",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H02",
+      "ideaId": "IDEA-005",
+      "hookText": "From $0 to $10,000/day in just 30 days with AI.",
+      "type": "BEFORE_AFTER",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H03",
+      "ideaId": "IDEA-005",
+      "hookText": "Most AI experts say it's impossible to make $10,000/day, but I did.",
+      "type": "CONTRARIAN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H04",
+      "ideaId": "IDEA-005",
+      "hookText": "5 AI tools that helped me make $10,000/day – watch until #5.",
+      "type": "COUNTDOWN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H05",
+      "ideaId": "IDEA-005",
+      "hookText": "Watch me create a $10,000/day sales funnel in 2 hours with AI – step-by-step.",
+      "type": "DEMO",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H06",
+      "ideaId": "IDEA-005",
+      "hookText": "Tired of struggling to make $1,000/day with your business – there's a better way.",
+      "type": "PAIN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H07",
+      "ideaId": "IDEA-005",
+      "hookText": " Limited time offer: Get instant access to my $10,000/day AI toolset before it sells out.",
+      "type": "URGENCY",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773139450257-H08",
+      "ideaId": "IDEA-005",
+      "hookText": "The top 3 AI tools to make $10,000/day – countdown starts now – #3.",
+      "type": "COUNTDOWN",
+      "platform": "TikTok|LinkedIn|YouTube|X",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T10:44:10.257Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H01",
+      "ideaId": "IDEA-001",
+      "hookText": "Boost response rates by $1,200 per month",
+      "type": "INCOME_REVEAL",
+      "platform": "LinkedIn",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H02",
+      "ideaId": "IDEA-001",
+      "hookText": "From 2% to 12% response rate in just 30 days",
+      "type": "BEFORE_AFTER",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "tested",
+      "actual3secRetention": "65",
+      "actualWatchTime": "55",
+      "actualNonFollowerReach": "35",
+      "gateResult": "PASS",
+      "reusableTemplate": true
+    },
+    {
+      "hookId": "1773134135179-H03",
+      "ideaId": "IDEA-001",
+      "hookText": "AI templates are not just for big businesses",
+      "type": "CONTRARIAN",
+      "platform": "X",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H04",
+      "ideaId": "IDEA-001",
+      "hookText": "Learn the top 5 AI-powered cold email hacks",
+      "type": "COUNTDOWN",
+      "platform": "TikTok",
+      "expectedScore": "6",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H05",
+      "ideaId": "IDEA-001",
+      "hookText": "Watch me craft a response-boosting cold email",
+      "type": "DEMO",
+      "platform": "LinkedIn",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H06",
+      "ideaId": "IDEA-001",
+      "hookText": "Tired of sending cold emails that fall flat?",
+      "type": "PAIN",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H07",
+      "ideaId": "IDEA-001",
+      "hookText": "Only 24 hours left to boost your cold email response rate",
+      "type": "URGENCY",
+      "platform": "X",
+      "expectedScore": "6",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H08",
+      "ideaId": "IDEA-001",
+      "hookText": "From a 0% response rate to 25% in just one week",
+      "type": "BEFORE_AFTER",
+      "platform": "TikTok",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H01",
+      "ideaId": "IDEA-007",
+      "hookText": "90% of experts got a 5-minute response using this",
+      "type": "INCOME_REVEAL",
+      "platform": "LinkedIn|YouTube",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H02",
+      "ideaId": "IDEA-007",
+      "hookText": "From 0 to 90% response rate in 5 minutes only",
+      "type": "BEFORE_AFTER",
+      "platform": "TikTok|X",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H03",
+      "ideaId": "IDEA-007",
+      "hookText": "The 5-minute cold email myth: busted with science",
+      "type": "CONTRARIAN",
+      "platform": "YouTube|LinkedIn",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H04",
+      "ideaId": "IDEA-007",
+      "hookText": "5 shocking cold email mistakes you're making right now",
+      "type": "COUNTDOWN",
+      "platform": "TikTok|X",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H05",
+      "ideaId": "IDEA-007",
+      "hookText": "Watch me write a 90% response rate cold email in 5 minutes",
+      "type": "DEMO",
+      "platform": "YouTube|LinkedIn",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H06",
+      "ideaId": "IDEA-007",
+      "hookText": "Are you tired of sending cold emails that get ignored?",
+      "type": "PAIN",
+      "platform": "LinkedIn|TikTok",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H07",
+      "ideaId": "IDEA-007",
+      "hookText": "Only 5 minutes left to write the perfect cold email",
+      "type": "URGENCY",
+      "platform": "X|TikTok",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773134135179-H08",
+      "ideaId": "IDEA-007",
+      "hookText": "$10,000 in sales from just one 5-minute cold email",
+      "type": "INCOME_REVEAL",
+      "platform": "YouTube|LinkedIn",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H01",
+      "ideaId": "IDEA-001",
+      "hookText": "$10,000 increase in sales from cold email templates in 30 days",
+      "type": "INCOME_REVEAL",
+      "platform": "YouTube",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H02",
+      "ideaId": "IDEA-001",
+      "hookText": "0% open rate to 90% open rate with our AI-powered cold email templates",
+      "type": "BEFORE_AFTER",
+      "platform": "LinkedIn",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H03",
+      "ideaId": "IDEA-001",
+      "hookText": "The one cold email strategy that crushes traditional email templates",
+      "type": "CONTRARIAN",
+      "platform": "TikTok",
+      "expectedScore": 7,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H04",
+      "ideaId": "IDEA-001",
+      "hookText": "5 AI-powered cold email templates that boost response rates by 300%",
+      "type": "COUNTDOWN",
+      "platform": "YouTube",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H05",
+      "ideaId": "IDEA-001",
+      "hookText": "Watch me write a cold email that gets a 90% response rate in 5 minutes",
+      "type": "DEMO",
+      "platform": "LinkedIn",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H06",
+      "ideaId": "IDEA-001",
+      "hookText": "Are you tired of sending cold emails that go unread?",
+      "type": "PAIN",
+      "platform": "TikTok",
+      "expectedScore": 6,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H07",
+      "ideaId": "IDEA-001",
+      "hookText": "Limited time offer: Get our AI-powered cold email templates and boost response rates by 300%",
+      "type": "URGENCY",
+      "platform": "YouTube",
+      "expectedScore": 8,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H08",
+      "ideaId": "IDEA-001",
+      "hookText": "The cold email strategy that's being hidden from you by your email service provider",
+      "type": "CONTRARIAN",
+      "platform": "LinkedIn",
+      "expectedScore": 9,
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H01",
+      "ideaId": "IDEA-002",
+      "hookText": "$100,000 in sales within weeks using follow-up emails",
+      "type": "INCOME_REVEAL",
+      "platform": "LinkedIn",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H02",
+      "ideaId": "IDEA-002",
+      "hookText": "From 0% open rates to 80% open rates with follow-up emails",
+      "type": "BEFORE_AFTER",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H03",
+      "ideaId": "IDEA-002",
+      "hookText": "Stop wasting thousands on manual follow-up emails daily",
+      "type": "CONTRARIAN",
+      "platform": "TikTok",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H04",
+      "ideaId": "IDEA-002",
+      "hookText": "5 proven AI tools to automate follow-up emails in minutes",
+      "type": "COUNTDOWN",
+      "platform": "X",
+      "expectedScore": "6",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H05",
+      "ideaId": "IDEA-002",
+      "hookText": "Watch me automate my follow-up email sequence in 60 seconds",
+      "type": "DEMO",
+      "platform": "LinkedIn",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H06",
+      "ideaId": "IDEA-002",
+      "hookText": "Are you tired of sending follow-up emails that get ignored?",
+      "type": "PAIN",
+      "platform": "YouTube",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H07",
+      "ideaId": "IDEA-002",
+      "hookText": "Stop losing sales tonight with manual follow-up emails",
+      "type": "URGENCY",
+      "platform": "TikTok",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H08",
+      "ideaId": "IDEA-002",
+      "hookText": "Believe it or not, 80% of sales happen after the initial email",
+      "type": "CONTRARIAN",
+      "platform": "LinkedIn",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H01",
+      "ideaId": "IDEA-003",
+      "hookText": "$250K Boosted by 25%: Discover the Secret to Email Success",
+      "type": "INCOME_REVEAL",
+      "platform": "YouTube",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H02",
+      "ideaId": "IDEA-003",
+      "hookText": "Before: 5% Open Rate, After: 25% Open Rate - The Shocking Truth",
+      "type": "BEFORE_AFTER",
+      "platform": "LinkedIn",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H03",
+      "ideaId": "IDEA-003",
+      "hookText": "Contrary to Popular Belief: Email Personalization is a Myth",
+      "type": "CONTRARIAN",
+      "platform": "TikTok",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H04",
+      "ideaId": "IDEA-003",
+      "hookText": "5 Email Marketing Secrets to Boost Open Rates by 25% in 5 Minutes",
+      "type": "COUNTDOWN",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H05",
+      "ideaId": "IDEA-003",
+      "hookText": "Watch Me Boost Email Open Rate by 25% in 90 Seconds",
+      "type": "DEMO",
+      "platform": "TikTok",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H06",
+      "ideaId": "IDEA-003",
+      "hookText": "Are You Suffering from 5% Email Open Rates? Discover the Solution",
+      "type": "PAIN",
+      "platform": "LinkedIn",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H07",
+      "ideaId": "IDEA-003",
+      "hookText": "Don't Miss Out: Email Open Rate Alert - Boost Your Rates by 25% Today",
+      "type": "URGENCY",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133994879-H08",
+      "ideaId": "IDEA-003",
+      "hookText": "$1.5M in Lost Revenue: The Cost of Ignoring Email Personalization",
+      "type": "INCOME_REVEAL",
+      "platform": "LinkedIn",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:13:14.879Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H01",
+      "ideaId": "IDEA-001",
+      "hookText": "Boost your sales by $100,000 with our cold email formula",
+      "type": "INCOME_REVEAL",
+      "platform": "LinkedIn",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H02",
+      "ideaId": "IDEA-001",
+      "hookText": "From 0 to 20% response rate in just 30 days – no fluke",
+      "type": "BEFORE_AFTER",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H03",
+      "ideaId": "IDEA-001",
+      "hookText": "Don't believe it's hard to get a cold email response – here's proof",
+      "type": "CONTRARIAN",
+      "platform": "TikTok",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H04",
+      "ideaId": "IDEA-001",
+      "hookText": "Get 5 cold email templates that work in the next 10 minutes",
+      "type": "COUNTDOWN",
+      "platform": "X",
+      "expectedScore": "6",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H05",
+      "ideaId": "IDEA-001",
+      "hookText": "Watch me write a cold email that gets a 20% response rate in 90 seconds",
+      "type": "DEMO",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H06",
+      "ideaId": "IDEA-001",
+      "hookText": "Tired of sending cold emails that get ignored – here's the fix",
+      "type": "PAIN",
+      "platform": "LinkedIn",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H07",
+      "ideaId": "IDEA-001",
+      "hookText": "Limited time offer: Get our top-performing cold email templates for free – for the next 48 hours",
+      "type": "URGENCY",
+      "platform": "X",
+      "expectedScore": "5",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H08",
+      "ideaId": "IDEA-001",
+      "hookText": "Cold emails don't work – except when you use this one trick",
+      "type": "CONTRARIAN",
+      "platform": "TikTok",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H01",
+      "ideaId": "IDEA-002",
+      "hookText": "$1.2M in losses due to AI-powered cold email",
+      "type": "INCOME_REVEAL",
+      "platform": "TikTok",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H02",
+      "ideaId": "IDEA-002",
+      "hookText": "From 0.5% to 4.2% open rates in 1 week",
+      "type": "BEFORE_AFTER",
+      "platform": "X",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H03",
+      "ideaId": "IDEA-002",
+      "hookText": "AI-powered cold email is a myth – here's why",
+      "type": "CONTRARIAN",
+      "platform": "LinkedIn",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H04",
+      "ideaId": "IDEA-002",
+      "hookText": "5 AI tools that will destroy your cold email campaign",
+      "type": "COUNTDOWN",
+      "platform": "TikTok",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H05",
+      "ideaId": "IDEA-002",
+      "hookText": "Watch me write a cold email in 90 seconds",
+      "type": "DEMO",
+      "platform": "YouTube",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H06",
+      "ideaId": "IDEA-002",
+      "hookText": "Tired of wasting hours on cold email campaigns that fail",
+      "type": "PAIN",
+      "platform": "X",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H07",
+      "ideaId": "IDEA-002",
+      "hookText": "Cold email ban looming – you have 48 hours to adapt",
+      "type": "URGENCY",
+      "platform": "TikTok",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H08",
+      "ideaId": "IDEA-002",
+      "hookText": "I tried 10 AI-powered cold email tools – here's what happened",
+      "type": "DEMO",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H01",
+      "ideaId": "IDEA-003",
+      "hookText": "$200K in 3 weeks, using just 5 AI tools",
+      "type": "INCOME_REVEAL",
+      "platform": "TikTok|YouTube",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H02",
+      "ideaId": "IDEA-003",
+      "hookText": "From $0 to $50K per month in just 60 days",
+      "type": "BEFORE_AFTER",
+      "platform": "TikTok|LinkedIn",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H03",
+      "ideaId": "IDEA-003",
+      "hookText": "You've been lied to: AI tools won't replace human effort",
+      "type": "CONTRARIAN",
+      "platform": "YouTube",
+      "expectedScore": "7",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H04",
+      "ideaId": "IDEA-003",
+      "hookText": "Top 10 AI tools for indie hackers: revealed in 90 seconds",
+      "type": "COUNTDOWN",
+      "platform": "TikTok|LinkedIn",
+      "expectedScore": "6",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H05",
+      "ideaId": "IDEA-003",
+      "hookText": "Watch me write a cold email that converts at 30% in 120 seconds",
+      "type": "DEMO",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H06",
+      "ideaId": "IDEA-003",
+      "hookText": "Tired of AI marketing noise: what actually works for indie hackers?",
+      "type": "PAIN",
+      "platform": "LinkedIn",
+      "expectedScore": "8",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H07",
+      "ideaId": "IDEA-003",
+      "hookText": "Limited time: free AI tool access ends in 48 hours",
+      "type": "URGENCY",
+      "platform": "TikTok",
+      "expectedScore": "5",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    },
+    {
+      "hookId": "1773133804901-H08",
+      "ideaId": "IDEA-003",
+      "hookText": "Live AI-powered email campaign build in 60 seconds",
+      "type": "DEMO",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:10:04.901Z",
+      "status": "pending_test"
+    }
+  ],
+  "templates": [],
+  "lastUpdated": "2026-03-10T10:51:04.063Z"
+}

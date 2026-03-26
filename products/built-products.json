@@ -1,0 +1,21 @@
+{
+  "date": "2026-03-10",
+  "run_at": "2026-03-10T10:45:32.343Z",
+  "built": 0,
+  "failed": 3,
+  "products": [],
+  "failures": [
+    {
+      "spec": "Cold Email Writer",
+      "error": "fetch failed"
+    },
+    {
+      "spec": "Subject Line Pro",
+      "error": "fetch failed"
+    },
+    {
+      "spec": "Apology Email Pro",
+      "error": "fetch failed"
+    }
+  ]
+}

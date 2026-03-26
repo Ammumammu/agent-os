@@ -1,0 +1,66 @@
+{
+  "mission": "$108 Revenue Goal",
+  "run_at": "2026-03-10T10:49:21.352Z",
+  "revenue": {
+    "stripe_today": "0.00",
+    "stripe_total": "0.00",
+    "gumroad_total": "0.00",
+    "grand_total": 0,
+    "checked_at": "2026-03-10T10:47:11.701Z"
+  },
+  "stripe_mode": "test",
+  "goal_usd": 108,
+  "remaining_usd": 108,
+  "progress_pct": "0.0%",
+  "gumroad": {
+    "activated": 0,
+    "products": [
+      {
+        "name": "Cold Email Writer",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "name": "FollowUp Writer",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "name": "SubjectLine Pro",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "name": "Cold Email Pro",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "name": "Subject Craft Pro",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "name": "ApologyPro",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "name": "VidSpark",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "name": "Vid Title Pro",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      }
+    ]
+  },
+  "distribution": {
+    "channels_fired": 3,
+    "total_posts": 6
+  },
+  "producthunt": {
+    "title": "Cold Email Writer",
+    "tagline": "Write cold emails that convert",
+    "description": "Write cold emails that convert",
+    "topics": [],
+    "first_comment": "",
+    "launch_day": "Tuesday (next week)",
+    "url": "https://cold-email-writer-tool-2yg128czk-sweths-projects-68683994.vercel.app",
+    "gumroad_url": ""
+  }
+}

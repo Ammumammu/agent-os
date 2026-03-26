@@ -1,0 +1,104 @@
+name: Agent OS Revenue Checks
+
+# This workflow handles revenue-only runs every 4 hours.
+# Full daily pipeline runs at 00:00 UTC via daily-agents.yml.
+# The 05:00 full run was removed to prevent double-billing (both workflows overlapped).
+on:
+  schedule:
+    # Revenue check — every 4 hours (maximise conversion window)
+    - cron: '0 1,9,13,17,21 * * *'
+  workflow_dispatch: # Manual trigger from GitHub Actions UI
+
+jobs:
+  run-agents:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Run Agent OS pipeline
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+          VERCEL_API_KEY: ${{ secrets.VERCEL_API_KEY }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          GUMROAD_ACCESS_TOKEN: ${{ secrets.GUMROAD_ACCESS_TOKEN }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+          POSTHOG_PERSONAL_API_KEY: ${{ secrets.POSTHOG_PERSONAL_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          CHROME_CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+          CHROME_CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
+          CHROME_REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          PH_TOKEN: ${{ secrets.PH_TOKEN }}
+          SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+          GOOGLE_CSE_API_KEY: ${{ secrets.GOOGLE_CSE_API_KEY }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          POSTHOG_WRITE_KEY: ${{ secrets.POSTHOG_WRITE_KEY }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          AGENT_OS_URL: ${{ secrets.AGENT_OS_URL }}
+          # ── Viral Distribution Channels ──────────────────────────────────────
+          # Twitter/X — schedule threads automatically (free.typefully.com)
+          TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
+          # Reddit — auto-post Show HN style (register app at reddit.com/prefs/apps)
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          # LinkedIn — post articles automatically (LinkedIn Developer Portal)
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          # Medium — publish articles automatically (medium.com/me/settings → Integration Token)
+          MEDIUM_INTEGRATION_TOKEN: ${{ secrets.MEDIUM_INTEGRATION_TOKEN }}
+          MEDIUM_USER_ID: ${{ secrets.MEDIUM_USER_ID }}
+          # Hacker News — auto Show HN post (your HN login)
+          HN_USERNAME: ${{ secrets.HN_USERNAME }}
+          HN_PASSWORD: ${{ secrets.HN_PASSWORD }}
+          # Telegram Channel — broadcast launch announcements (BotFather)
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          # IndexNow / Bing — instant search engine indexing (bing.com/indexnow)
+          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
+          # ── Revenue Mission ───────────────────────────────────────────────────
+          CEO_EMAIL: ${{ secrets.CEO_EMAIL }}
+          OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}
+          GUMROAD_CLIENT_ID: ${{ secrets.GUMROAD_CLIENT_ID }}
+          GUMROAD_CLIENT_SECRET: ${{ secrets.GUMROAD_CLIENT_SECRET }}
+          GUMROAD_SELLER_ID: ${{ secrets.GUMROAD_SELLER_ID }}
+          STRIPE_PUBLISHABLE_KEY: ${{ secrets.STRIPE_PUBLISHABLE_KEY }}
+          # ── Failure alerts (Slack) ────────────────────────────────────────────────
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          # On schedule events that are NOT 05:00 UTC, only run revenue agent
+          HOUR=$(date -u +%H)
+          if [ "$GITHUB_EVENT_NAME" = "schedule" ] && [ "$HOUR" != "5" ]; then
+            echo "Revenue-only run at $HOUR UTC"
+            node run.js --from=revenue
+          else
+            node run.js
+          fi

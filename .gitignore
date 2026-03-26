@@ -1,0 +1,6 @@
+.vercel
+.env
+CLAUDE.local.md
+node_modules/
+*.log
+.claude/tmp/

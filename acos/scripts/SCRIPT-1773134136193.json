@@ -1,0 +1,84 @@
+{
+  "scriptId": "SCRIPT-1773134136193",
+  "ideaId": "IDEA-001",
+  "hookUsed": "From 2% to 12% response rate in just 30 days",
+  "targetPlatform": "LinkedIn",
+  "estimatedLength": "60-90 seconds",
+  "script": [
+    {
+      "timestamp": "0-3s",
+      "section": "HOOK",
+      "words": "From 2% to 12% response rate in just 30 days",
+      "visual": "Animated text on screen with hook text",
+      "retentionMechanic": "pattern_interrupt"
+    },
+    {
+      "timestamp": "3-8s",
+      "section": "PATTERN INTERRUPT",
+      "words": "But have you ever wondered why?",
+      "visual": "Surprised facial expression with raised eyebrow",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "8-15s",
+      "section": "SETUP",
+      "words": "Most people try and fail with cold emails because they lack the right strategy",
+      "visual": "Failed emails on screen with red X",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "15-40s",
+      "section": "VALUE DELIVERY",
+      "words": "That's why I've developed a system that boosts your cold email response rate from 2% to 12% in just 30 days",
+      "visual": "Slide with statistics and graphs",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "20s",
+      "section": "CURIOSITY INJECTOR #2",
+      "words": "Here's the catch, it's not just about the template",
+      "visual": "Suspicious expression on screen",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "40-60s",
+      "section": "EXAMPLE/PROOF",
+      "words": "I've used this system to land meetings with top decision-makers and close deals worth $10,000+",
+      "visual": "Screenshots of successful emails and deals",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "45s",
+      "section": "CURIOSITY INJECTOR #3",
+      "words": "And there's one more thing, it's not just about the template or the strategy",
+      "visual": "Mysterious grin on screen",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "60-75s",
+      "section": "INSIGHT",
+      "words": "It's about understanding the psychology behind cold emails and using that to your advantage",
+      "visual": "Lightbulb moment on screen",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "75-90s",
+      "section": "CTA",
+      "words": "Comment 'Boost' to get the exact strategy and start landing meetings with top decision-makers",
+      "visual": "Call-to-action button on screen",
+      "retentionMechanic": "dm_trigger"
+    }
+  ],
+  "ctaStrategy": {
+    "type": "dm_trigger",
+    "exactWords": "Comment 'Boost' to get the exact strategy",
+    "expectedSignal": "DM sends"
+  },
+  "contentValueGateCheck": {
+    "insightDelivered": true,
+    "utilityDelivered": true,
+    "hookPayoffAligned": true,
+    "noFiveSlip": true
+  },
+  "recordingNotes": "Use a friendly tone and show enthusiasm while explaining the strategy"
+}

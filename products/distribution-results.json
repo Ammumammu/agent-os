@@ -1,0 +1,113 @@
+{
+  "run_at": "2026-03-10T10:46:39.701Z",
+  "products_count": 3,
+  "results": [
+    {
+      "product": "followup-writer-tool",
+      "channels_hit": 3,
+      "total_channels": 4,
+      "results": {
+        "devto": {
+          "url": "https://dev.to/poreddivarajaykumar/i-built-followup-writer-write-follow-ups-fast-3ekd",
+          "id": 3334556,
+          "platform": "devto"
+        },
+        "hashnode": {
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-followup-writer-write-follow-ups-fast-1-1-1-1-1-1-1-1-1",
+          "id": "69aff655472f9716affdd903",
+          "platform": "hashnode"
+        },
+        "backlinks": {
+          "platform": "backlinks",
+          "pings": [
+            {
+              "service": "google",
+              "status": 404
+            },
+            {
+              "service": "bing",
+              "status": 410
+            }
+          ],
+          "indexnow": null,
+          "pinged_at": "2026-03-10T10:45:40.779Z"
+        },
+        "newsletter": {
+          "skipped": true,
+          "reason": "No subscribers yet"
+        }
+      }
+    },
+    {
+      "product": "youtube-thumbnail-ideas",
+      "channels_hit": 3,
+      "total_channels": 4,
+      "results": {
+        "devto": {
+          "url": "https://dev.to/poreddivarajaykumar/i-built-vidspark-boost-views-3216",
+          "id": 3334558,
+          "platform": "devto"
+        },
+        "hashnode": {
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-vidspark-boost-views-1",
+          "id": "69aff661472f9716affdd905",
+          "platform": "hashnode"
+        },
+        "backlinks": {
+          "platform": "backlinks",
+          "pings": [
+            {
+              "service": "google",
+              "status": 404
+            },
+            {
+              "service": "bing",
+              "status": 410
+            }
+          ],
+          "indexnow": null,
+          "pinged_at": "2026-03-10T10:45:53.115Z"
+        },
+        "newsletter": {
+          "skipped": true,
+          "reason": "No subscribers yet"
+        }
+      }
+    },
+    {
+      "product": "youtube-title-ideas",
+      "channels_hit": 2,
+      "total_channels": 4,
+      "results": {
+        "devto": {
+          "skipped": true,
+          "reason": "Dev.to rate limited — retry in 300s"
+        },
+        "hashnode": {
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-vid-title-pro-boost-views-1",
+          "id": "69aff68b472f9716affdd907",
+          "platform": "hashnode"
+        },
+        "backlinks": {
+          "platform": "backlinks",
+          "pings": [
+            {
+              "service": "google",
+              "status": 404
+            },
+            {
+              "service": "bing",
+              "status": 410
+            }
+          ],
+          "indexnow": null,
+          "pinged_at": "2026-03-10T10:46:35.296Z"
+        },
+        "newsletter": {
+          "skipped": true,
+          "reason": "No subscribers yet"
+        }
+      }
+    }
+  ]
+}

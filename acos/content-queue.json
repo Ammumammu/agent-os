@@ -1,0 +1,1224 @@
+{
+  "queue": [
+    {
+      "queueId": "Q-1773139953193-0",
+      "status": "ready_to_record",
+      "createdAt": "2026-03-10T10:52:33.193Z",
+      "scriptId": "SCRIPT-1773139865073",
+      "hookUsed": "Boost sales by $10,000 with these AI tools today",
+      "primaryPlatform": "TikTok",
+      "recordingInstructions": "Creator, show enthusiasm and confidence while explaining AI tools integration. Highlight the clock icon at 45s before the final CTA.",
+      "script": [
+        {
+          "timestamp": "0-3s",
+          "section": "HOOK",
+          "words": "Boost sales by $10,000 with these AI tools today",
+          "visual": "",
+          "retentionMechanic": ""
+        },
+        {
+          "timestamp": "3-8s",
+          "section": "PATTERN INTERRUPT",
+          "words": "Surprising stat about AI adoption",
+          "visual": "Split-screen with AI tool demo",
+          "retentionMechanic": "pattern_interrupt"
+        },
+        {
+          "timestamp": "8-15s",
+          "section": "SETUP",
+          "words": "With AI, businesses can boost sales by 10K in no time",
+          "visual": "Animated text with background image",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "15-40s",
+          "section": "VALUE DELIVERY",
+          "words": "Here are 5 AI tools to skyrocket your sales",
+          "visual": "Animated list with tool icons",
+          "retentionMechanic": ""
+        },
+        {
+          "timestamp": "20s",
+          "section": "CURIOSITY INJECTOR #2",
+          "words": "But there's a catch...",
+          "visual": "Teaser image with question mark",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "40-60s",
+          "section": "EXAMPLE/PROOF",
+          "words": "Real businesses using these tools saw a 20K increase",
+          "visual": "Customer testimonial with success metrics",
+          "retentionMechanic": ""
+        },
+        {
+          "timestamp": "45s",
+          "section": "CURIOSITY INJECTOR #3",
+          "words": "And there's one more thing...",
+          "visual": "Animated clock with hint of surprise",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "60-75s",
+          "section": "INSIGHT",
+          "words": "The key to success lies in AI tool integration",
+          "visual": "Infographic with integration details",
+          "retentionMechanic": ""
+        },
+        {
+          "timestamp": "75-90s",
+          "section": "CTA",
+          "words": "Comment 'X' to get the exact tools and strategy",
+          "visual": "Call-to-action screen with link",
+          "retentionMechanic": "dm_trigger"
+        }
+      ],
+      "retentionAudit": {
+        "scriptId": "SCRIPT-1773139865073",
+        "retentionLeaks": [
+          {
+            "timestamp": "0-3s",
+            "issue": "hook needs more visual emphasis",
+            "fix": "add eye-catching animation or graphics"
+          },
+          {
+            "timestamp": "20-25s",
+            "issue": "viewer might swipe due to lack of clear call-to-action",
+            "fix": "replace 'But there's a catch...' with 'But there's a game-changer...' and highlight benefits"
+          },
+          {
+            "timestamp": "40-60s",
+            "issue": "stretch without new visual or question",
+            "fix": "inject another curiosity injector before the example/proof section"
+          },
+          {
+            "timestamp": "45s",
+            "issue": "CTA could be stronger",
+            "fix": "replace 'Comment X' with 'Unlock the 10K boost for yourself' and add a sense of urgency"
+          },
+          {
+            "timestamp": "60-75s",
+            "issue": "stretch without new visual or question",
+            "fix": "introduce a surprising stat or unexpected twist in the insight section"
+          }
+        ],
+        "optimizedSections": [
+          {
+            "originalTimestamp": "20-25s",
+            "issue": "retention leak",
+            "originalWords": "But there's a catch...",
+            "improvedWords": "But there's a game-changer... that will boost your sales by 10K!"
+          },
+          {
+            "originalTimestamp": "40-60s",
+            "issue": "stretch without new visual or question",
+            "originalWords": "Real businesses using these tools saw a 20K increase",
+            "improvedWords": "Surprisingly, real businesses saw a 20K increase when they integrated these tools in just a few weeks!"
+          },
+          {
+            "originalTimestamp": "45s",
+            "issue": "CTA could be stronger",
+            "originalWords": "Comment 'X' to get the exact tools and strategy",
+            "improvedWords": "Unlock the 10K boost for yourself - comment below to get the exact tools and strategy!"
+          },
+          {
+            "originalTimestamp": "60-75s",
+            "issue": "stretch without new visual or question",
+            "originalWords": "The key to success lies in AI tool integration",
+            "improvedWords": "What's the secret to getting a 20K boost in sales? The key lies in AI tool integration, and it's easier than you think!"
+          }
+        ],
+        "retentionScore": 8,
+        "predictedWatchTime": "75%",
+        "hookPayoffAligned": true,
+        "approvedForProduction": true
+      },
+      "platformAdaptations": {
+        "tiktok": {
+          "caption": "Find from scriptId SCRIPT-1773139865073",
+          "hashtags": [
+            "#ai",
+            "#coldemail"
+          ],
+          "firstFrame": "Boost sales by $10,000 with these AI tools today",
+          "textOverlay": "Hook: Boost sales by $10,000",
+          "postTime": "6pm-9pm local",
+          "estimatedReach": "discovery feed"
+        },
+        "instagram_reels": {
+          "caption": "Hook: Boost sales by $10,000 with these AI tools today. Find from scriptId SCRIPT-1773139865073. Comment 'X' to get the exact tools and strategy. #ai #coldemail",
+          "coverFrame": "Boost sales by $10,000 with these AI tools today",
+          "audioNote": "trending sound recommendation"
+        },
+        "youtube_shorts": {
+          "title": "Boost Sales By $10,000 with AI Tools",
+          "thumbnailConcept": "Boost sales with AI tools",
+          "description": "Hook: Boost sales by $10,000 with these AI tools today. Find from scriptId SCRIPT-1773139865073. Comment 'X' to get the exact tools and strategy."
+        },
+        "linkedin": {
+          "post": "Boost sales by $10,000 with these AI tools today. Hook: Boost sales by $10,000 with these AI tools today. Find from scriptId SCRIPT-1773139865073. Comment 'X' to get the exact tools and strategy. #ai",
+          "note": "no external link in post body"
+        },
+        "twitter_x": {
+          "thread": [
+            {
+              "tweet": 1,
+              "text": "Boost sales by $10,000 with these AI tools today. Hook: Boost sales by $10,000 with these AI tools today"
+            },
+            {
+              "tweet": 2,
+              "text": "Boost sales by $10,000 with these AI tools today. Find from scriptId SCRIPT-1773139865073."
+            },
+            {
+              "tweet": 3,
+              "text": "Comment 'X' to get the exact tools and strategy"
+            },
+            {
+              "tweet": 4,
+              "text": "DM sends"
+            }
+          ]
+        },
+        "threads": {
+          "post": "Hey, want to boost sales by $10,000 with AI tools today? Find from scriptId SCRIPT-1773139865073. Comment 'X' to get the exact tools and strategy."
+        }
+      },
+      "publishingSchedule": {
+        "tiktok": "post first — discovery platform",
+        "instagram_reels": "within 2 hours of TikTok",
+        "youtube_shorts": "same day",
+        "linkedin": "next morning 8am",
+        "twitter_x": "same day after TikTok hits",
+        "threads": "evening"
+      },
+      "ctaStrategy": {
+        "type": "dm_trigger",
+        "exactWords": "Comment 'X' to get the exact tools and strategy",
+        "expectedSignal": "DM sends"
+      },
+      "engagementActions": {
+        "first60min": "Respond to EVERY comment. DM every person who comments.",
+        "velocityPrime": "Ask 3 people you know to engage within first 10 minutes of posting.",
+        "dmTemplate": "Hey [name] — saw you commented on my post. Here's the full resource: [link]"
+      },
+      "metrics": {
+        "target3secRetention": "≥60%",
+        "targetWatchTime": "≥50%",
+        "targetNonFollowerReach": "≥30%",
+        "signalWindow": "1hr + 24hr",
+        "cycleLogRequired": true
+      }
+    },
+    {
+      "queueId": "Q-1773139953193-1",
+      "status": "ready_to_record",
+      "createdAt": "2026-03-10T10:52:33.193Z",
+      "scriptId": "SCRIPT-1773139879311",
+      "hookUsed": "Watch me write a $1,000 email in 30 minutes",
+      "primaryPlatform": "TikTok",
+      "recordingInstructions": "Show the writer typing and the timer, use dramatic music to build tension, use text overlays to explain the process and results.",
+      "script": [
+        {
+          "timestamp": "0-3s",
+          "section": "HOOK",
+          "words": "Watch me write a $1,000 email in 30 minutes",
+          "visual": "camera pans to a computer screen with a timer",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "3-8s",
+          "section": "PATTERN INTERRUPT",
+          "words": "Let's get started!",
+          "visual": "sudden cut to a writer typing",
+          "retentionMechanic": "pattern_interrupt"
+        },
+        {
+          "timestamp": "8-15s",
+          "section": "SETUP",
+          "words": "I know what you're thinking, 'How can I write a $1,000 email in just 30 minutes?'",
+          "visual": "text overlay with a question mark",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "15-40s",
+          "section": "VALUE DELIVERY",
+          "words": "First, you need to understand your audience and what they care about.",
+          "visual": "text overlay with a brief explanation",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "20s mark",
+          "section": "CURIOSITY INJECTOR #2",
+          "words": "But here's the catch, time is money, and you need to make every second count.",
+          "visual": "dramatic music starts playing",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "40-60s",
+          "section": "EXAMPLE/PROOF",
+          "words": "I've written emails that have generated over $1,000 in sales in just 30 minutes.",
+          "visual": "text overlay with real numbers and results",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "45s mark",
+          "section": "CURIOSITY INJECTOR #3",
+          "words": "And there's one more thing, you need to use the right language to resonate with your audience.",
+          "visual": "teaser music starts playing",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "60-75s",
+          "section": "INSIGHT",
+          "words": "The key to writing a $1,000 email in 30 minutes is to focus on the benefits and pain points of your audience.",
+          "visual": "text overlay with a brief explanation",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "75-90s",
+          "section": "CTA",
+          "words": "Comment below with 'X' if you want to learn how to write a $1,000 email in 30 minutes.",
+          "visual": "text overlay with a call-to-action",
+          "retentionMechanic": "dm_trigger"
+        }
+      ],
+      "retentionAudit": {
+        "scriptId": "SCRIPT-1773139879311",
+        "retentionLeaks": [
+          {
+            "timestamp": "3-8s",
+            "issue": "sudden cut without setup",
+            "fix": "add setup before pattern interrupt or use transition animation"
+          },
+          {
+            "timestamp": "15-20s",
+            "issue": "10-second stretch without new visual or information",
+            "fix": "add supporting visual or information within time frame"
+          },
+          {
+            "timestamp": "40-45s",
+            "issue": "10-second stretch without new visual or information",
+            "fix": "add supporting visual or information within time frame"
+          },
+          {
+            "timestamp": "45s mark",
+            "issue": "curiosity injector too close to example/proof",
+            "fix": "move curiosity injector before example/proof or use a different curiosity injector"
+          },
+          {
+            "timestamp": "60-65s",
+            "issue": "10-second stretch without new visual or information before CTA",
+            "fix": "add supporting visual or information within time frame"
+          }
+        ],
+        "optimizedSections": [
+          {
+            "originalTimestamp": "3-8s",
+            "issue": "sudden cut without setup",
+            "originalWords": "Let's get started!",
+            "improvedWords": "Now that we're about to start, let's quickly set up a timer to show you the time pressure."
+          },
+          {
+            "originalTimestamp": "15-20s",
+            "issue": "10-second stretch without new visual or information",
+            "originalWords": "But here's the catch, time is money, and you need to make every second count.",
+            "improvedWords": "And now, with our timer going, let's talk about how to make every second count, because time is money."
+          },
+          {
+            "originalTimestamp": "40-45s",
+            "issue": "10-second stretch without new visual or information",
+            "originalWords": "And there's one more thing, you need to use the right language to resonate with your audience.",
+            "improvedWords": "Now that we've established the importance of making every second count, let's talk about the language to use."
+          },
+          {
+            "originalTimestamp": "45s mark",
+            "issue": "curiosity injector too close to example/proof",
+            "originalWords": "And there's one more thing, you need to use the right language to resonate with your audience.",
+            "improvedWords": "But there's one more thing that most people miss when trying to write a $1,000 email in 30 minutes, let's talk about it."
+          },
+          {
+            "originalTimestamp": "60-65s",
+            "issue": "10-second stretch without new visual or information before CTA",
+            "originalWords": "",
+            "improvedWords": "Now that you know the key to writing a $1,000 email in 30 minutes, comment below with 'X' if you want to learn how to do it."
+          }
+        ],
+        "retentionScore": 8,
+        "predictedWatchTime": "70%",
+        "hookPayoffAligned": true,
+        "approvedForProduction": true
+      },
+      "platformAdaptations": {
+        "tiktok": {
+          "caption": "Hook: Watch me write a $1,000 email in 30 minutes",
+          "hashtags": [
+            "#ai",
+            "#marketing"
+          ],
+          "firstFrame": "Motion of writing on a whiteboard",
+          "textOverlay": "Hook",
+          "postTime": "8pm-9pm local",
+          "estimatedReach": "For You feed"
+        },
+        "instagram_reels": {
+          "caption": "Find the script ID: SCRIPT-1773139879311. Hook: Watch me write a $1,000 email in 30 minutes",
+          "hashtags": [
+            "#ai",
+            "#marketing",
+            "#coldemail"
+          ],
+          "coverFrame": "Motivation and productivity",
+          "audioNote": "Trending motivational sound"
+        },
+        "youtube_shorts": {
+          "title": "Write a $1,000 Email in 30 Minutes",
+          "thumbnailConcept": "Image of a person writing on a whiteboard with a timer",
+          "description": "In this video, we'll show you how to write a $1,000 email in just 30 minutes. Follow along and learn the secrets to crafting a high-ticket email."
+        },
+        "linkedin": {
+          "post": "Did you know you can write a $1,000 email in just 30 minutes? In this post, we'll share the secrets to crafting a high-ticket email. Watch the video and learn how to increase your sales.",
+          "hashtags": [
+            "#ai",
+            "#marketing"
+          ],
+          "note": "No external link in post body"
+        },
+        "twitter_x": {
+          "thread": [
+            {
+              "tweet": 1,
+              "text": "Hook: Watch me write a $1,000 email in 30 minutes. Find the script ID: SCRIPT-1773139879311"
+            },
+            {
+              "tweet": 2,
+              "text": "Secrets to crafting a high-ticket email revealed!"
+            },
+            {
+              "tweet": 3,
+              "text": "Example proof of a $1,000 email that converts"
+            },
+            {
+              "tweet": 4,
+              "text": "Want to write a $1,000 email in 30 minutes? Learn how here [link]"
+            }
+          ]
+        },
+        "threads": {
+          "post": "Want to write a $1,000 email in 30 minutes? In this thread, we'll share the secrets to crafting a high-ticket email."
+        }
+      },
+      "publishingSchedule": {
+        "tiktok": "post first — discovery platform",
+        "instagram_reels": "within 2 hours of TikTok",
+        "youtube_shorts": "same day",
+        "linkedin": "next morning 8am",
+        "twitter_x": "same day after TikTok hits",
+        "threads": "evening"
+      },
+      "ctaStrategy": {
+        "type": "dm_trigger",
+        "exactWords": "Comment below with 'X' if you want to learn how to write a $1,000 email in 30 minutes.",
+        "expectedSignal": "DM sends"
+      },
+      "engagementActions": {
+        "first60min": "Respond to EVERY comment. DM every person who comments.",
+        "velocityPrime": "Ask 3 people you know to engage within first 10 minutes of posting.",
+        "dmTemplate": "Hey [name] — saw you commented on my post. Here's the full resource: [link]"
+      },
+      "metrics": {
+        "target3secRetention": "≥60%",
+        "targetWatchTime": "≥50%",
+        "targetNonFollowerReach": "≥30%",
+        "signalWindow": "1hr + 24hr",
+        "cycleLogRequired": true
+      }
+    },
+    {
+      "queueId": "Q-1773139547071-0",
+      "status": "ready_to_record",
+      "createdAt": "2026-03-10T10:45:47.071Z",
+      "scriptId": "SCRIPT-1773139451270",
+      "hookUsed": "From 5 hours to 30 minutes per email",
+      "primaryPlatform": "TikTok",
+      "recordingInstructions": "Show enthusiasm and energy while recording. Use a mix of close-ups and wide shots to keep the viewer engaged.",
+      "script": [
+        {
+          "timestamp": "0-3s",
+          "section": "HOOK",
+          "words": "From 5 hours to 30 minutes per email",
+          "visual": "animated clock ticking from 5 hours to 30 minutes",
+          "retentionMechanic": "pattern_interrupt"
+        },
+        {
+          "timestamp": "3-8s",
+          "section": "PATTERN INTERRUPT",
+          "words": "But how?",
+          "visual": "bold text on screen",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "8-15s",
+          "section": "SETUP",
+          "words": "Imagine you're a sales team, sending out emails one by one, taking 5 hours to send just 10 emails.",
+          "visual": "team working on computers, with a clock in the corner",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "15-40s",
+          "section": "VALUE DELIVERY",
+          "words": "But what if you could automate that process and send 10 emails in just 30 minutes?",
+          "visual": "automation software demo",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "20s",
+          "section": "CURIOSITY INJECTOR #2",
+          "words": "Here's the catch...",
+          "visual": "winking emoticon on screen",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "40-60s",
+          "section": "EXAMPLE/PROOF",
+          "words": "Real example: increased email open rates by 25% in just 1 week.",
+          "visual": "chart displaying results",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "45s",
+          "section": "CURIOSITY INJECTOR #3",
+          "words": "And there's one more thing...",
+          "visual": "excited tone on screen",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "60-75s",
+          "section": "INSIGHT",
+          "words": "The key to success is not just automation, but also personalization and relevance.",
+          "visual": "lightbulb moment animation",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "75-90s",
+          "section": "CTA",
+          "words": "Comment below with X to get the template and start sending 30-minute emails!",
+          "visual": "button on screen",
+          "retentionMechanic": "dm_trigger"
+        }
+      ],
+      "retentionAudit": {
+        "scriptId": "SCRIPT-1773139451270",
+        "retentionLeaks": [
+          {
+            "timestamp": "20-25s",
+            "issue": "viewers might swipe away due to lack of new information, new visual, or new question during this 10-second stretch",
+            "fix": "add a new visual, new information, or a new question after 'Here's the catch...'"
+          },
+          {
+            "timestamp": "45-50s",
+            "issue": "viewers might swipe away due to lack of new information, new visual, or new question during this 5-second stretch",
+            "fix": "add a new visual, new information, or a new question before 'And there's one more thing...'"
+          }
+        ],
+        "optimizedSections": [
+          {
+            "originalTimestamp": "20-25s",
+            "issue": "retention leak",
+            "originalWords": "Here's the catch...",
+            "improvedWords": "But wait, what makes this catch even more compelling than automation alone?"
+          }
+        ],
+        "retentionScore": 8,
+        "predictedWatchTime": "72%",
+        "hookPayoffAligned": true,
+        "approvedForProduction": true
+      },
+      "platformAdaptations": {
+        "tiktok": {
+          "caption": "Discover 30-minute email magic in minutes!",
+          "hashtags": [
+            "#coldemail",
+            "#emailmarketing"
+          ],
+          "firstFrame": "Animated email template",
+          "textOverlay": "30-Minute Email",
+          "postTime": "6pm-9pm local or 7am-9am EST",
+          "estimatedReach": "discovery feed"
+        },
+        "instagram_reels": {
+          "caption": "Boost your email game with 30-minute emails! #emailmarketing #coldemail",
+          "hashtags": [
+            "#emailmarketing",
+            "#coldemail"
+          ],
+          "coverFrame": "Animated email template with motion",
+          "audioNote": "TikTok trending sound"
+        },
+        "youtube_shorts": {
+          "title": "30-Minute Email Template - Boost Your Email Game",
+          "thumbnailConcept": "Animated email on a computer screen",
+          "description": "Get instant access to our 30-minute email template!"
+        },
+        "linkedin": {
+          "post": "Did you know that 30-minute emails can boost your email game? According to recent studies, 30-minute emails have a higher open rate than traditional emails! See more to learn how you can get started!",
+          "hashtags": [
+            "#emailmarketing"
+          ],
+          "note": "no external link in post body"
+        },
+        "twitter_x": {
+          "thread": [
+            {
+              "tweet": 1,
+              "text": "Did you know that 30-minute emails can boost your email game?"
+            },
+            {
+              "tweet": 2,
+              "text": "Recent studies show that 30-minute emails have a higher open rate than traditional emails!"
+            },
+            {
+              "tweet": 3,
+              "text": "Get instant access to our 30-minute email template!"
+            },
+            {
+              "tweet": 4,
+              "text": "Click here to get started: [link]"
+            }
+          ]
+        },
+        "threads": {
+          "post": "Hey did you know 30-minute emails can boost your email game? Want to learn more? Let's dive in!"
+        }
+      },
+      "publishingSchedule": {
+        "tiktok": "post first — discovery platform",
+        "instagram_reels": "within 2 hours of TikTok posting",
+        "youtube_shorts": "same day",
+        "linkedin": "next morning 8am",
+        "twitter_x": "same day after TikTok hits",
+        "threads": "evening"
+      },
+      "ctaStrategy": {
+        "type": "dm_trigger",
+        "exactWords": "Comment below with X to get the template and start sending 30-minute emails!",
+        "expectedSignal": "DM sends"
+      },
+      "engagementActions": {
+        "first60min": "Respond to EVERY comment. DM every person who comments.",
+        "velocityPrime": "Ask 3 people you know to engage within first 10 minutes of posting.",
+        "dmTemplate": "Hey [name] — saw you commented on my post. Here's the full resource: [link]"
+      },
+      "metrics": {
+        "target3secRetention": "≥60%",
+        "targetWatchTime": "≥50%",
+        "targetNonFollowerReach": "≥30%",
+        "signalWindow": "1hr + 24hr",
+        "cycleLogRequired": true
+      }
+    },
+    {
+      "queueId": "Q-1773139547071-1",
+      "status": "ready_to_record",
+      "createdAt": "2026-03-10T10:45:47.071Z",
+      "scriptId": "SCRIPT-1773139467249",
+      "hookUsed": "Watch me write a cold email in 90 seconds using AI",
+      "primaryPlatform": "TikTok",
+      "recordingInstructions": "Show a screen recorder of AI writing an email, and use dramatic music and clock ticking to create suspense. Use a stats screen to show before and after results.",
+      "script": [
+        {
+          "timestamp": "0-3s",
+          "section": "HOOK",
+          "words": "Watch me write a cold email in 90 seconds using AI",
+          "visual": "screen recorder of AI writing an email",
+          "retentionMechanic": "pattern_interrupt"
+        },
+        {
+          "timestamp": "3-8s",
+          "section": "PATTERN INTERRUPT",
+          "words": "And here's how it can change your sales outreach.",
+          "visual": "screen recorder of email writing speed increased",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "8-15s",
+          "section": "SETUP",
+          "words": "Imagine writing a cold email that converts every time without feeling like a sales spam.",
+          "visual": "screen recorder of AI email writing with stats",
+          "retentionMechanic": "curiosity_injector|1"
+        },
+        {
+          "timestamp": "15-40s",
+          "section": "VALUE DELIVERY",
+          "words": "AI-powered outreach automation tools can help you write personalized emails in seconds and increase conversions.",
+          "visual": "screen recorder of AI writing emails with different subjects",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "20s",
+          "section": "CURIOSITY INJECTOR #2",
+          "words": "But there's one catch.",
+          "visual": "dramatic music and a clock ticking",
+          "retentionMechanic": "curiosity_injector|2"
+        },
+        {
+          "timestamp": "40-60s",
+          "section": "EXAMPLE/PROOF",
+          "words": "For example, one business saw a 25% increase in conversions by using our AI-powered outreach tool.",
+          "visual": "stats screen with before and after",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "45s",
+          "section": "CURIOSITY INJECTOR #3",
+          "words": "And there's one more thing.",
+          "visual": "dramatic music and a clock ticking",
+          "retentionMechanic": "curiosity_injector|3"
+        },
+        {
+          "timestamp": "60-75s",
+          "section": "INSIGHT",
+          "words": "The secret to successful sales outreach is not about being pushy or aggressive, but about being personal and relevant.",
+          "visual": "screen recorder of email writing with stats",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "75-90s",
+          "section": "CTA",
+          "words": "Comment 'Sales Outreach' below to get access to our free guide on AI-powered outreach automation.",
+          "visual": "call to action on screen",
+          "retentionMechanic": "dm_trigger"
+        }
+      ],
+      "retentionAudit": {
+        "scriptId": "SCRIPT-1773139467249",
+        "retentionLeaks": [
+          {
+            "timestamp": "0-3s",
+            "issue": "Viewers may become impatient with 3-second screen recorder",
+            "fix": "Add a brief setup or contextualization to screen recorder"
+          },
+          {
+            "timestamp": "8-15s",
+            "issue": "No clear value proposition in this section",
+            "fix": "Add a specific benefit or statistic about the AI-powered outreach tool"
+          },
+          {
+            "timestamp": "20-25s",
+            "issue": "Curiosity injector #2 seems disconnected from the rest of the content",
+            "fix": "Rephrase 'But there's one catch' to 'But here's what's surprising...' to create a smoother flow"
+          },
+          {
+            "timestamp": "40-60s",
+            "issue": "Section feels like a standalone testimonial without clear connection to the rest of the content",
+            "fix": "Use a transition phrase like 'As we mentioned earlier...' to reconnect with the previous section"
+          }
+        ],
+        "optimizedSections": [
+          {
+            "originalTimestamp": "20-25s",
+            "issue": "retention leak",
+            "originalWords": "But there's one catch.",
+            "improvedWords": "But here's what's surprising... as you'll see in the next example, this AI-powered outreach tool can..."
+          },
+          {
+            "originalTimestamp": "40-60s",
+            "issue": "retention leak",
+            "originalWords": "For example, one business saw a 25% increase in conversions by using our AI-powered outreach tool.",
+            "improvedWords": "As we mentioned earlier, the key to successful sales outreach is personalization. Let's see this in action with a real-world example..."
+          }
+        ],
+        "retentionScore": 8,
+        "predictedWatchTime": "70%",
+        "hookPayoffAligned": true,
+        "approvedForProduction": true
+      },
+      "platformAdaptations": {
+        "tiktok": {
+          "caption": "Watch me write a cold email in 90 seconds using AI",
+          "hashtags": [
+            "#ai",
+            "#coldemail"
+          ],
+          "firstFrame": "AI-generated cold email written in 90 seconds",
+          "textOverlay": "Write a cold email fast",
+          "postTime": "6pm-9pm EST or 7am-9am EST",
+          "estimatedReach": "discovery feed"
+        },
+        "instagram_reels": {
+          "caption": "Discover the secret to writing a cold email in 90 seconds using AI",
+          "coverFrame": "AI-powered cold email writing made easy",
+          "audioNote": "Upbeat background music"
+        },
+        "youtube_shorts": {
+          "title": "Cold Email in 90 Seconds AI-Powered",
+          "thumbnailConcept": "Person typing on laptop with AI-generated cold email",
+          "description": "Learn how to write a cold email quickly using AI-powered tools"
+        },
+        "linkedin": {
+          "post": "According to recent studies, AI-powered automation can increase sales by 30%. Watch me write a cold email in 90 seconds using AI. Comment 'Sales Outreach' below to get access to our free guide on AI-powered outreach automation.",
+          "hashtags": [
+            "#ai",
+            "#salesoutreach"
+          ],
+          "note": "no external link in post body"
+        },
+        "twitter_x": {
+          "thread": [
+            {
+              "tweet": 1,
+              "text": "Did you know you can write a cold email in 90 seconds using AI?"
+            },
+            {
+              "tweet": 2,
+              "text": "AI-powered automation can increase sales by 30%!"
+            },
+            {
+              "tweet": 3,
+              "text": "Watch how I do it in this video"
+            },
+            {
+              "tweet": 4,
+              "text": "Get access to our free guide on AI-powered outreach automation. Comment 'Sales Outreach' below! https://link.com"
+            }
+          ]
+        },
+        "threads": {
+          "post": "Hey friends, want to learn how to write a cold email in 90 seconds using AI? I just made a video on it and would love to share it with you. Let me know what you think!"
+        }
+      },
+      "publishingSchedule": {
+        "tiktok": "post first — discovery platform",
+        "instagram_reels": "within 2 hours of TikTok",
+        "youtube_shorts": "same day",
+        "linkedin": "next morning 8am",
+        "twitter_x": "same day after TikTok hits",
+        "threads": "evening"
+      },
+      "ctaStrategy": {
+        "type": "dm_trigger",
+        "exactWords": "Comment 'Sales Outreach' below to get access to our free guide on AI-powered outreach automation.",
+        "expectedSignal": "DM sends"
+      },
+      "engagementActions": {
+        "first60min": "Respond to EVERY comment. DM every person who comments.",
+        "velocityPrime": "Ask 3 people you know to engage within first 10 minutes of posting.",
+        "dmTemplate": "Hey [name] — saw you commented on my post. Here's the full resource: [link]"
+      },
+      "metrics": {
+        "target3secRetention": "≥60%",
+        "targetWatchTime": "≥50%",
+        "targetNonFollowerReach": "≥30%",
+        "signalWindow": "1hr + 24hr",
+        "cycleLogRequired": true
+      }
+    },
+    {
+      "queueId": "Q-1773134225095-0",
+      "status": "ready_to_record",
+      "createdAt": "2026-03-10T09:17:05.095Z",
+      "scriptId": "SCRIPT-1773134136193",
+      "hookUsed": "From 2% to 12% response rate in just 30 days",
+      "primaryPlatform": "LinkedIn",
+      "recordingInstructions": "Use a friendly tone and show enthusiasm while explaining the strategy",
+      "script": [
+        {
+          "timestamp": "0-3s",
+          "section": "HOOK",
+          "words": "From 2% to 12% response rate in just 30 days",
+          "visual": "Animated text on screen with hook text",
+          "retentionMechanic": "pattern_interrupt"
+        },
+        {
+          "timestamp": "3-8s",
+          "section": "PATTERN INTERRUPT",
+          "words": "But have you ever wondered why?",
+          "visual": "Surprised facial expression with raised eyebrow",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "8-15s",
+          "section": "SETUP",
+          "words": "Most people try and fail with cold emails because they lack the right strategy",
+          "visual": "Failed emails on screen with red X",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "15-40s",
+          "section": "VALUE DELIVERY",
+          "words": "That's why I've developed a system that boosts your cold email response rate from 2% to 12% in just 30 days",
+          "visual": "Slide with statistics and graphs",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "20s",
+          "section": "CURIOSITY INJECTOR #2",
+          "words": "Here's the catch, it's not just about the template",
+          "visual": "Suspicious expression on screen",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "40-60s",
+          "section": "EXAMPLE/PROOF",
+          "words": "I've used this system to land meetings with top decision-makers and close deals worth $10,000+",
+          "visual": "Screenshots of successful emails and deals",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "45s",
+          "section": "CURIOSITY INJECTOR #3",
+          "words": "And there's one more thing, it's not just about the template or the strategy",
+          "visual": "Mysterious grin on screen",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "60-75s",
+          "section": "INSIGHT",
+          "words": "It's about understanding the psychology behind cold emails and using that to your advantage",
+          "visual": "Lightbulb moment on screen",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "75-90s",
+          "section": "CTA",
+          "words": "Comment 'Boost' to get the exact strategy and start landing meetings with top decision-makers",
+          "visual": "Call-to-action button on screen",
+          "retentionMechanic": "dm_trigger"
+        }
+      ],
+      "retentionAudit": {
+        "scriptId": "SCRIPT-1773134136193",
+        "retentionLeaks": [
+          {
+            "timestamp": "0-3s",
+            "issue": " Hook section ends abruptly",
+            "fix": "Follow up with a curiosity injector after hook section"
+          },
+          {
+            "timestamp": "8-15s",
+            "issue": "Setup section is too straightforward",
+            "fix": "Add a 'but wait...' or 'here's what's surprising...' transition"
+          },
+          {
+            "timestamp": "20s",
+            "issue": "Curiosity injector is too similar to previous one",
+            "fix": "Change curiosity injector to 'and now, here's the part nobody talks about...'"
+          },
+          {
+            "timestamp": "40-60s",
+            "issue": "Example/proof section lacks a clear question or promise",
+            "fix": "Add a question or a promise after the example/proof section"
+          },
+          {
+            "timestamp": "60-75s",
+            "issue": "Insight section is too generic",
+            "fix": "Make the insight more specific and relatable to the viewer"
+          }
+        ],
+        "optimizedSections": [
+          {
+            "originalTimestamp": "0-3s",
+            "issue": "retention leak",
+            "originalWords": "From 2% to 12% response rate in just 30 days",
+            "improvedWords": "But did you know that you can boost your cold email response rate from 2% to 12% in just 30 days?"
+          },
+          {
+            "originalTimestamp": "8-15s",
+            "issue": "retention leak",
+            "originalWords": "Most people try and fail with cold emails because they lack the right strategy",
+            "improvedWords": "But wait, most people try and fail with cold emails because they lack the right strategy, and here's what's surprising..."
+          },
+          {
+            "originalTimestamp": "20-25s",
+            "issue": "retention leak",
+            "originalWords": "Here's the catch, it's not just about the template",
+            "improvedWords": "And now, here's the part nobody talks about... it's not just about the template, but about understanding the psychology behind cold emails"
+          }
+        ],
+        "retentionScore": 8,
+        "predictedWatchTime": "75%",
+        "hookPayoffAligned": true,
+        "approvedForProduction": true
+      },
+      "platformAdaptations": {
+        "tiktok": {
+          "caption": "Boost Your Response Rate from 2% to 12% in Just 30 Days",
+          "hashtags": [
+            "#marketing",
+            "#coldemail"
+          ],
+          "firstFrame": "Motion graphic illustrating a significant increase in response rate",
+          "textOverlay": "Unlock Your Sales Potential Now",
+          "postTime": "6pm-9pm local or 7am-9am",
+          "estimatedReach": "discovery feed"
+        },
+        "instagram_reels": {
+          "caption": "Want to know the secret to a 10x response rate boost? In just 30 days!",
+          "hashtags": [
+            "#marketing",
+            "#sales",
+            "#growthhacking"
+          ],
+          "coverFrame": "Eye-catching graphic with a bold claim",
+          "audioNote": "Energetic and motivational sound effect"
+        },
+        "youtube_shorts": {
+          "title": "How to Boost Your Response Rate from 2% to 12% in Just 30 Days",
+          "thumbnailConcept": "A split-screen image showcasing a low response rate and a high one",
+          "description": "Want to know the secret to a 10x response rate boost? Find out in this video!"
+        },
+        "linkedin": {
+          "post": "Want to know the secret to a 10x response rate boost in just 30 days? According to recent studies, a well-executed strategy can increase your response rate from 2% to 12%. This is a game-changer for any sales team looking to boost their numbers. Learn more about the strategy and how you can apply it to your business! #marketing #sales #growthhacking",
+          "hashtags": [
+            "#marketing",
+            "#sales",
+            "#growthhacking"
+          ],
+          "note": "no external link in post body"
+        },
+        "twitter_x": {
+          "thread": [
+            {
+              "tweet": 1,
+              "text": "Want to know the secret to a 10x response rate boost in just 30 days? A new strategy has been proven to take email response rates from 2% to 12%!"
+            },
+            {
+              "tweet": 2,
+              "text": "But how does it work? It's all about executing a well-planned strategy that speaks directly to your audience's pain points."
+            },
+            {
+              "tweet": 3,
+              "text": "For example, have you considered using a more personalized approach in your emails? This can make all the difference in getting a response!"
+            },
+            {
+              "tweet": 4,
+              "text": "Ready to take your response rate to the next level? Check out our latest strategy and start seeing results in just 30 days! [link]"
+            }
+          ]
+        },
+        "threads": {
+          "post": "Want to know the secret to a 10x response rate boost in just 30 days? Let's dive into the strategy and see how you can apply it to your business!"
+        }
+      },
+      "publishingSchedule": {
+        "tiktok": "post first — discovery platform",
+        "instagram_reels": "within 2 hours of TikTok",
+        "youtube_shorts": "same day",
+        "linkedin": "next morning 8am",
+        "twitter_x": "same day after TikTok hits",
+        "threads": "evening"
+      },
+      "ctaStrategy": {
+        "type": "dm_trigger",
+        "exactWords": "Comment 'Boost' to get the exact strategy",
+        "expectedSignal": "DM sends"
+      },
+      "engagementActions": {
+        "first60min": "Respond to EVERY comment. DM every person who comments.",
+        "velocityPrime": "Ask 3 people you know to engage within first 10 minutes of posting.",
+        "dmTemplate": "Hey [name] — saw you commented on my post. Here's the full resource: [link]"
+      },
+      "metrics": {
+        "target3secRetention": "≥60%",
+        "targetWatchTime": "≥50%",
+        "targetNonFollowerReach": "≥30%",
+        "signalWindow": "1hr + 24hr",
+        "cycleLogRequired": true
+      }
+    },
+    {
+      "queueId": "Q-1773134225095-1",
+      "status": "ready_to_record",
+      "createdAt": "2026-03-10T09:17:05.095Z",
+      "scriptId": "SCRIPT-1773134150599",
+      "hookUsed": "90% of experts got a 5-minute response using this",
+      "primaryPlatform": "LinkedIn",
+      "recordingInstructions": "Show expert testimonial, use stats to keep audience engaged, and use visual animations to explain complex concepts",
+      "script": [
+        {
+          "timestamp": "0-3s",
+          "section": "HOOK",
+          "words": "90% of experts got a 5-minute response using this",
+          "visual": "expert testimonial",
+          "retentionMechanic": "pattern_interrupt"
+        },
+        {
+          "timestamp": "8-15s",
+          "section": "SETUP",
+          "words": "Have you ever struggled to get a response from cold emails?",
+          "visual": "stats about cold email success rate",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "15-40s",
+          "section": "VALUE DELIVERY",
+          "words": "The secret to getting a 90% response rate in just 5 minutes",
+          "visual": "step-by-step guide to writing a 5-minute cold email",
+          "retentionMechanic": "payoff_delivery"
+        },
+        {
+          "timestamp": "40-60s",
+          "section": "EXAMPLE/PROOF",
+          "words": "I got a 92% response rate using this method",
+          "visual": "real-life example with numbers",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "45-60s",
+          "section": "CURIOSITY INJECTOR #3",
+          "words": "And there's one more thing...",
+          "visual": "teaser image",
+          "retentionMechanic": "curiosity_injector"
+        },
+        {
+          "timestamp": "60-75s",
+          "section": "INSIGHT",
+          "words": "The key to success is not just about the email content, but also about the timing",
+          "visual": "insightful animation",
+          "retentionMechanic": "none"
+        },
+        {
+          "timestamp": "75-90s",
+          "section": "CTA",
+          "words": "Want to know the exact timing strategy? Comment 'Timing' below to get the full guide",
+          "visual": "call-to-action button",
+          "retentionMechanic": "dm_trigger"
+        }
+      ],
+      "retentionAudit": {
+        "scriptId": "SCRIPT-1773134150599",
+        "retentionLeaks": [
+          {
+            "timestamp": "0-3s",
+            "issue": "pattern interrupt: too much repetition to start",
+            "fix": "add surprise or hook at the beginning to keep viewers engaged"
+          },
+          {
+            "timestamp": "8-15s",
+            "issue": "no clear payoff or promise for the next section",
+            "fix": "add a teaser or curiosity injector after the stats about cold email success rate"
+          },
+          {
+            "timestamp": "40-60s",
+            "issue": "no retention mechanic in the example/proof section",
+            "fix": "add a surprise or twist at the end of the example/proof section"
+          },
+          {
+            "timestamp": "45-60s",
+            "issue": "too many curiosity injectors in a row",
+            "fix": "remove one of the curiosity injectors and replace with a new visual or information"
+          },
+          {
+            "timestamp": "75-90s",
+            "issue": "CTA section doesn't leave an open question or promise for the next section",
+            "fix": "add a teaser or curiosity injector after the CTA section to keep viewers engaged"
+          }
+        ],
+        "optimizedSections": [
+          {
+            "originalTimestamp": "8-15s",
+            "issue": "retention leak: no clear payoff or promise for the next section",
+            "originalWords": "Have you ever struggled to get a response from cold emails?",
+            "improvedWords": "But what if you could boost your response rate in just 5 minutes?"
+          },
+          {
+            "originalTimestamp": "40-60s",
+            "issue": "retention leak: no retention mechanic in the example/proof section",
+            "originalWords": "I got a 92% response rate using this method",
+            "improvedWords": "And the best part? It's not just about the email content, but also about the timing"
+          }
+        ],
+        "retentionScore": 9,
+        "predictedWatchTime": "75%",
+        "hookPayoffAligned": true,
+        "approvedForProduction": true
+      },
+      "platformAdaptations": {
+        "tiktok": {
+          "caption": "Did you know 90% of experts respond within 5 minutes?",
+          "hashtags": [
+            "#ai",
+            "#coldemail"
+          ],
+          "firstFrame": "Motion in the first frame for maximum impact",
+          "textOverlay": "Unlock faster",
+          "postTime": "6pm-9pm local or 7am-9am",
+          "estimatedReach": "discovery feed"
+        },
+        "instagram_reels": {
+          "caption": "Did you know 90% of experts respond within 5 minutes? We've got a strategy to help you get faster responses!",
+          "hashtags": [
+            "#ai",
+            "#coldemail",
+            "#productivity"
+          ],
+          "coverFrame": "Cover frame showcases a busy person on their laptop, highlighting the importance of quick responses",
+          "audioNote": "Use a trending TikTok sound to make your Reel more engaging"
+        },
+        "youtube_shorts": {
+          "title": "5-Minute Response Strategy: How to Get Experts to Respond Fast",
+          "thumbnailConcept": "A busy person on their laptop with a timer in the background, conveying the importance of quick responses",
+          "description": "Did you know 90% of experts respond within 5 minutes? In this video, we'll share a strategy to help you get faster responses"
+        },
+        "linkedin": {
+          "post": "Did you know 90% of experts respond within 5 minutes? According to a recent study, this is a game-changer for businesses looking to build relationships with industry leaders. See more",
+          "hashtags": [
+            "#ai",
+            "#coldemail",
+            "#productivity"
+          ],
+          "note": "Make sure to remove any external links from the post body"
+        },
+        "twitter_x": {
+          "thread": [
+            {
+              "tweet": 1,
+              "text": "Did you know 90% of experts respond within 5 minutes? This is a game-changer for businesses looking to build relationships! #ai #coldemail"
+            },
+            {
+              "tweet": 2,
+              "text": "Our research shows that this is a key differentiator for industry leaders. Want to learn more?"
+            },
+            {
+              "tweet": 3,
+              "text": "We've got a strategy to help you get faster responses! Check out our latest guide"
+            },
+            {
+              "tweet": 4,
+              "text": "Get access to our 5-minute response strategy guide now! [link]"
+            }
+          ]
+        },
+        "threads": {
+          "post": "We've found that 90% of experts respond within 5 minutes. Want to know our secret? DM us 'Timing' below to get the full guide!"
+        }
+      },
+      "publishingSchedule": {
+        "tiktok": "post first — discovery platform",
+        "instagram_reels": "within 2 hours of TikTok",
+        "youtube_shorts": "same day",
+        "linkedin": "next morning 8am",
+        "twitter_x": "same day after TikTok hits",
+        "threads": "evening"
+      },
+      "ctaStrategy": {
+        "type": "dm_trigger",
+        "exactWords": "Want to know the exact timing strategy? Comment 'Timing' below to get the full guide",
+        "expectedSignal": "DM sends"
+      },
+      "engagementActions": {
+        "first60min": "Respond to EVERY comment. DM every person who comments.",
+        "velocityPrime": "Ask 3 people you know to engage within first 10 minutes of posting.",
+        "dmTemplate": "Hey [name] — saw you commented on my post. Here's the full resource: [link]"
+      },
+      "metrics": {
+        "target3secRetention": "≥60%",
+        "targetWatchTime": "≥50%",
+        "targetNonFollowerReach": "≥30%",
+        "signalWindow": "1hr + 24hr",
+        "cycleLogRequired": true
+      }
+    }
+  ],
+  "history": [],
+  "lastUpdated": "2026-03-10T10:52:33.193Z"
+}

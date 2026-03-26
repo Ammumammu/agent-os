@@ -1,0 +1,91 @@
+{
+  "date": "2026-03-10",
+  "run_at": "2026-03-10T06:27:35.614Z",
+  "launched": 3,
+  "products": [
+    {
+      "id": 1773124044607.8494,
+      "name": "FollowUp Writer",
+      "slug": "followup-writer-tool",
+      "tagline": "Write follow-ups fast",
+      "icp": "sales teams sending follow-up emails",
+      "category": "email",
+      "status": "live",
+      "github_url": "https://github.com/Ammumammu/followup-writer-tool",
+      "vercel_url": "https://followup-writer-tool-fv66hxlih-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_bJeeV67rsawK8TY5cvg7e0g",
+      "gumroad_link": "",
+      "stripe_product_id": "prod_U7YtCfGM7di72z",
+      "mrr_usd": 0,
+      "visitors": 0,
+      "conversion_rate": 0,
+      "demand_score": 7.5,
+      "keywords": [
+        "email writer for follow up",
+        "follow up email template",
+        "sales follow up email"
+      ],
+      "pricing": {
+        "monthly_usd": 9,
+        "one_time_usd": 19
+      },
+      "launched_at": "2026-03-10T06:27:24.607Z"
+    },
+    {
+      "id": 1773124049451.7866,
+      "name": "VidSpark",
+      "slug": "youtube-thumbnail-ideas",
+      "tagline": "Boost Views",
+      "icp": "independent YouTuber creating engaging videos",
+      "category": "youtube",
+      "status": "live",
+      "github_url": "https://github.com/Ammumammu/youtube-thumbnail-ideas",
+      "vercel_url": "https://youtube-thumbnail-ideas-nyyaabzm6-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_7sY14g9zAgV87PU6gzg7e0h",
+      "gumroad_link": "",
+      "stripe_product_id": "prod_U7Yt5mRekWmLU1",
+      "mrr_usd": 0,
+      "visitors": 0,
+      "conversion_rate": 0,
+      "demand_score": 7.5,
+      "keywords": [
+        "youtube thumbnail idea",
+        "youtube thumbnail creator",
+        "youtube video thumbnail maker"
+      ],
+      "pricing": {
+        "monthly_usd": 9,
+        "one_time_usd": 19
+      },
+      "launched_at": "2026-03-10T06:27:29.451Z"
+    },
+    {
+      "id": 1773124055610.3015,
+      "name": "Vid Title Pro",
+      "slug": "youtube-title-ideas",
+      "tagline": "Boost Views!",
+      "icp": "independent YouTuber creating content regularly",
+      "category": "youtube",
+      "status": "live",
+      "github_url": "https://github.com/Ammumammu/youtube-title-ideas",
+      "vercel_url": "https://youtube-title-ideas-9skmmlql2-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_5kQ14g134fR4c6a7kDg7e0i",
+      "gumroad_link": "",
+      "stripe_product_id": "prod_U7YtVsFko0NrXz",
+      "mrr_usd": 0,
+      "visitors": 0,
+      "conversion_rate": 0,
+      "demand_score": 7.5,
+      "keywords": [
+        "youtube title generator",
+        "youtube title ideas",
+        "youtube seo title generator"
+      ],
+      "pricing": {
+        "monthly_usd": 9,
+        "one_time_usd": 19
+      },
+      "launched_at": "2026-03-10T06:27:35.610Z"
+    }
+  ]
+}

@@ -1,0 +1,2105 @@
+{
+  "archives": {
+    "trends": [
+      {
+        "scannedAt": "2026-03-10T10:49:21.571Z",
+        "topTrends": [
+          {
+            "trend": "Cold Email AI: Boosting Response Rates by 300%",
+            "platform": "LinkedIn|TikTok",
+            "hookPattern": "boost response rates, increase sales",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Outreach Automation: The Secret to Scaling Your Outreach",
+            "platform": "YouTube|X",
+            "hookPattern": "scale outreach, get more deals",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI Writing Tools: How to Write 10x Faster and Better",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "write faster, write better",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Building AI Products: The Ultimate Guide for Indie Hackers",
+            "platform": "X|YouTube",
+            "hookPattern": "build AI products, get revenue",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Indie Hacker Revenue Reveals: Top Earners Share Their Secrets",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "get revenue secrets, increase earnings",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI Productivity Tools: Boosting Efficiency by 50%",
+            "platform": "YouTube|X",
+            "hookPattern": "boost efficiency, increase productivity",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Top 5 AI Tools for Automating Your Business",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "automate business, increase sales",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "How to Create a Successful AI Startup: Lessons from Top Founders",
+            "platform": "X|YouTube",
+            "hookPattern": "create AI startup, get successful",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Future of AI in Marketing: Trends and Predictions",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "future of AI in marketing, get ahead",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI for Small Business: How to Get Started and See Results",
+            "platform": "YouTube|X",
+            "hookPattern": "get started with AI for small business, see results",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Revenue Hacking with AI: Top Strategies for Indie Hackers",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "hacking revenue with AI, get rich",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "boost",
+          "increase",
+          "get",
+          "secret",
+          "boost",
+          "boost"
+        ],
+        "contentFormatsWinning": [
+          "listicle",
+          "guide",
+          "reveal",
+          "trends report"
+        ],
+        "avoidPatterns": [
+          "spammy",
+          "clickbait",
+          "overpromising"
+        ],
+        "weeklyIntel": "Cold email AI and outreach automation are dominating the niche this week. Listicles and guides are performing well on TikTok and LinkedIn, while YouTube and X are favoring reveal-style content. Remember to avoid spammy and clickbait patterns.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T10:40:57.588Z",
+        "topTrends": [
+          {
+            "trend": "Cold Email AI Script Templates for Boosting Conversion Rates",
+            "platform": "LinkedIn|TikTok",
+            "hookPattern": "Get 10x more meeting requests with AI-powered cold email scripts",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI-Powered Outreach Automation Tools for Sales Teams",
+            "platform": "YouTube|X",
+            "hookPattern": "Cut outreach time by 80% with AI-driven email automation tools",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Revolutionizing Content Creation with AI Writing Tools",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "Write articles 5x faster with AI-powered content generation tools",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Building AI Products for a Global Market: A Step-by-Step Guide",
+            "platform": "YouTube|X",
+            "hookPattern": "Create and launch AI products that solve real-world problems",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "Indie Hacker Revenue Reveals: How to Make $10K/day with AI Tools",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "Unlock the secrets of $10K/day revenue with AI tools and indie hacking",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Top AI Productivity Tools for Streamlining Your Workflow",
+            "platform": "YouTube|X",
+            "hookPattern": "Get 2x more done with AI-powered productivity tools",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI-Driven Outreach for B2B Sales Teams: Best Practices",
+            "platform": "LinkedIn|TikTok",
+            "hookPattern": "Boost B2B sales with AI-powered outreach strategies",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Creating a Successful AI-Powered Business Model",
+            "platform": "YouTube|X",
+            "hookPattern": "Learn how to build a lucrative AI-powered business model",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "AI Writing Tools for Beginners: A Step-by-Step Guide",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "Start writing like a pro with AI-powered content creation tools",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Unlocking the Potential of AI in Marketing Automation",
+            "platform": "LinkedIn|TikTok",
+            "hookPattern": "Revolutionize marketing with AI-powered automation tools",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "How-to's",
+          "List-based content",
+          "Success stories",
+          "Templates and examples"
+        ],
+        "contentFormatsWinning": [
+          "Video tutorials",
+          "Podcast-style content",
+          "Listicles",
+          "Step-by-step guides"
+        ],
+        "avoidPatterns": [
+          "Fake news",
+          "Overly promotional content",
+          "Poorly optimized headlines"
+        ],
+        "weeklyIntel": "AI-powered outreach automation tools and AI writing tools are currently in high demand, with a focus on productivity and conversion rates. Utilize list-based content, step-by-step guides, and success stories to drive engagement and revenue in the AI tools niche.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T10:37:08.648Z",
+        "topTrends": [
+          {
+            "trend": "Cold Email AI Templates for 5-Figure Days",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The Shocking Truth About Cold Email AI",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Automate Your Outreach with AI-Powered Email Sequences",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The Simple 3-Step System to Double Your Outreach Response Rate",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Revolutionize Your Content Creation with AI Writing Tools",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The AI Tool That Writes More Than 10,000 Words in an Hour",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "From 0 to 10K MRR: Lessons from Successful AI Product Founders",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The 5 Key Strategies Behind the Most Successful AI Product Launches",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Indie Hacker Revenue Reveals: The Top AI Product Earning $10K+ Daily",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The #1 AI Product That's Generating $50K+ in Revenue Each Month",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI-Integrated Productivity Tools for Entrepreneurs",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The Secret to Getting 5x More Done in Half the Time with AI",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The Top AI Tools for Scaling Your Business to $1M+",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The #1 AI Tool That's Helped 10+ Businesses Reach 7-Figure Status",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Creating AI-Driven Products That Sell for Thousands",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The 5-Step Formula to Building AI Products That Sell Like Hotcakes",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Overcoming AI Product Development Roadblocks with These 5 Tools",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The Top AI Tools That'll Help You Develop Your Product in Half the Time",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Monetizing Your AI Skills: From Freelancing to Product Building",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The Shocking Truth About How Much Freelancers Can Earn with AI",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The Future of AI-Driven Customer Service: Trends and Insights",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "The 5 Key Metrics to Track When Building an AI-Powered Customer Service",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "list",
+          "how-to",
+          "secret"
+        ],
+        "contentFormatsWinning": [
+          "video",
+          "blog post",
+          "podcast"
+        ],
+        "avoidPatterns": [
+          "get rich quick",
+          "AI magic"
+        ],
+        "weeklyIntel": "The AI tools niche is seeing a surge in interest around cold email automation, AI writing tools, and productivity software. Top-performing content is centered around actionable advice, success stories, and product reviews.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T10:35:22.958Z",
+        "topTrends": [
+          {
+            "trend": "AI-Powered Cold Email Templates for Outreach Automation",
+            "platform": "LinkedIn|YouTube",
+            "hookPattern": "get more qualified leads with 5x less effort",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI tools products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Boost Productivity with AI Writing Tools for Content Creation",
+            "platform": "X|TikTok",
+            "hookPattern": "write 3x more content with 50% less time",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Revolutionize Your Business with Custom AI Product Development",
+            "platform": "YouTube|LinkedIn",
+            "hookPattern": "increase revenue by 25% with AI-driven products",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI product development",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Indie Hacker Success Stories: Reaching $10K/day Revenue with AI",
+            "platform": "TikTok|X",
+            "hookPattern": "learn the exact strategies to hit $10K/day",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium for AI tools products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Unlock the Power of AI for Sales Outreach and Automation",
+            "platform": "LinkedIn|YouTube",
+            "hookPattern": "get more meetings with 90% fewer emails",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI tools products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI-Powered Productivity Tools for Entrepreneurs: A Game-Changer",
+            "platform": "X|TikTok",
+            "hookPattern": "get 2x more done in 1x the time with AI",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI productivity tools",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Build Your Dream Business with AI: A Step-by-Step Guide",
+            "platform": "YouTube|LinkedIn",
+            "hookPattern": "learn the exact roadmap to AI-driven success",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI product development",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI Writing Assistants: The Future of Content Creation is Here",
+            "platform": "TikTok|X",
+            "hookPattern": "write 5x more content with AI-powered assistance",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Maximize Your Revenue with AI-Driven Sales Funnels",
+            "platform": "LinkedIn|YouTube",
+            "hookPattern": "increase conversions by 30% with AI-powered funnels",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI tools products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Revolutionize Your Marketing with AI-Powered Campaigns",
+            "platform": "X|TikTok",
+            "hookPattern": "get 10x more engagement with AI-driven campaigns",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI marketing tools",
+            "urgency": "emerging"
+          }
+        ],
+        "hookTypesWinning": [
+          "list-based content",
+          "success stories",
+          "step-by-step guides"
+        ],
+        "contentFormatsWinning": [
+          "video content",
+          "long-form blog posts",
+          "podcasts"
+        ],
+        "avoidPatterns": [
+          "get rich quick schemes",
+          "overly promotional content"
+        ],
+        "weeklyIntel": "The AI tools niche is trending towards utility-driven content, with a focus on productivity, automation, and revenue growth. List-based content and success stories are performing well, while video content and long-form blog posts are dominating the algorithms.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T10:34:09.621Z",
+        "topTrends": [
+          {
+            "trend": "7-Figure Outbound Revenue Without Cold Email Burnout",
+            "platform": "TikTok|LinkedIn|YouTube",
+            "hookPattern": "the secret AI-powered sequence to crush outbound revenue",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "How to Automate Outreach to 1000+ Leads Daily",
+            "platform": "X|YouTube",
+            "hookPattern": "the top AI tools for automated outreach and lead generation",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Unlocking 5-Figure Per Day Revenue with AI Writing Tools",
+            "platform": "LinkedIn|Twitter",
+            "hookPattern": "the AI-powered writing tools that generate revenue",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The #1 Formula for Successful AI Product Builders",
+            "platform": "YouTube|TikTok",
+            "hookPattern": "the key to turning your AI idea into a revenue-generating product",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "low",
+            "monetizationFit": "medium",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "Indie Hacking to $10k Daily Revenue: AI Tools Edition",
+            "platform": "Twitter|LinkedIn",
+            "hookPattern": "the AI tools that helped indie hackers achieve 10k daily revenue",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI-Driven Productivity Tools to Boost Revenue 20X",
+            "platform": "X|YouTube",
+            "hookPattern": "the top AI-powered productivity tools for revenue growth",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "low",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "How AI-Powered Outreach Automates 90% of Your Work",
+            "platform": "LinkedIn|Twitter",
+            "hookPattern": "the AI tools that automate outreach and save you time",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Unlocking 1000+ Leads Daily with AI Writing Power",
+            "platform": "Twitter|X",
+            "hookPattern": "the AI writing tools that generate leads and revenue",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The #1 AI Tool for Turning Your Idea into a 10k Daily Product",
+            "platform": "YouTube|TikTok",
+            "hookPattern": "the AI tools that helped product builders achieve 10k daily revenue",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "low",
+            "monetizationFit": "medium",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "How to Automate 1000+ Leads Daily with AI Power",
+            "platform": "LinkedIn|Twitter",
+            "hookPattern": "the AI tools that automate outreach and generate leads",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The AI-Driven Productivity Secrets of 10k Daily Earners",
+            "platform": "X|YouTube",
+            "hookPattern": "the AI-powered productivity tools used by 10k daily earners",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          }
+        ],
+        "hookTypesWinning": [
+          "list",
+          "secret",
+          "formula",
+          "power",
+          "secrets"
+        ],
+        "contentFormatsWinning": [
+          "TikTok video",
+          "LinkedIn post",
+          "YouTube video",
+          "Twitter thread"
+        ],
+        "avoidPatterns": [
+          "yet another list of AI tools",
+          " generic '10x your productivity' claim"
+        ],
+        "weeklyIntel": "Indie hackers are achieving 10k daily revenue with AI-powered outreach and writing tools. Top AI tools for automated outreach and lead generation are trending now, while AI-driven productivity tools are emerging as a key growth strategy.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-24T16:45:19.213Z",
+        "topTrends": [
+          {
+            "trend": "5x Your Cold Email Conversion Rates with AI",
+            "platform": "YouTube|LinkedIn|TikTok|X",
+            "hookPattern": "get the exact AI-powered cold email template",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Automate Your Outreach and Get 300% More Meetings",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "use AI to personalize and optimize your outreach",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "How to Build a $10K/Month AI Product with Zero Coding",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the step-by-step guide to building a profitable AI product",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "My $50K/Month Revenue Secret: AI Writing Tools",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the exact AI writing tools I use to make $50K/month",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The #1 AI Productivity Tool for Entrepreneurs",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the top AI productivity tool used by entrepreneurs",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The Ultimate Guide to AI Writing for Indie Hackers",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the definitive guide to AI writing for indie hackers",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "How to Automate Your AI Writing Process",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "use AI to automate your writing process",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Unlock the Power of AI for Your Business",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the exact AI tools and strategies to grow your business",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The AI Writing Tools You Need to Know About",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the top AI writing tools you need to know",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "How to Build a Successful AI Product with a Small Team",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the exact steps to build a successful AI product with a small team",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "My AI Productivity Secrets to Get More Done in Less Time",
+            "platform": "TikTok|YouTube|LinkedIn|X",
+            "hookPattern": "get the exact AI productivity secrets to get more done in less time",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "list",
+          "how-to",
+          "step-by-step",
+          "exact",
+          "top"
+        ],
+        "contentFormatsWinning": [
+          "video",
+          "article",
+          "listicle",
+          "podcast",
+          "infographic"
+        ],
+        "avoidPatterns": [
+          "general",
+          "vague",
+          "hypothetical",
+          "overused"
+        ],
+        "weeklyIntel": "The current top-performing trend in the AI tools space is cold email AI optimization, with a focus on templates and automation. Top-performing content formats include videos, articles, and listicles.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T09:11:32.324Z",
+        "topTrends": [
+          {
+            "trend": "Automate Your Outreach with AI-Powered Email Tools",
+            "platform": "LinkedIn|YouTube",
+            "hookPattern": "boost your response rates by",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Unlock Indie Hacker Success with AI-Driven Revenue Strategies",
+            "platform": "TikTok",
+            "hookPattern": "how we went from",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for indie hacker revenue reveals",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Revolutionize Your Writing with AI-Generated Content Tools",
+            "platform": "X",
+            "hookPattern": "get 3x more writing done in",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The Ultimate Guide to Building AI Products that Sell",
+            "platform": "YouTube",
+            "hookPattern": "how to turn your idea into",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for building AI products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Maximize Your Productivity with AI-Powered Tools",
+            "platform": "TikTok|LinkedIn",
+            "hookPattern": "gain an extra 2 hours a day with",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI productivity tools",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Top 5 AI Writing Tools for Bloggers and Marketers",
+            "platform": "TikTok",
+            "hookPattern": "don't let writer's block hold you back!",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "How to Create AI-Driven Outreach Campaigns that Convert",
+            "platform": "X",
+            "hookPattern": "the secret to sending the right message",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for outreach automation",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Future of AI Productivity: Trends to Watch in 2026",
+            "platform": "YouTube",
+            "hookPattern": "stay ahead of the curve with our expert insights",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI productivity tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "From Zero to Hero: How to Build a Successful AI Product",
+            "platform": "TikTok",
+            "hookPattern": "our rags-to-riches story of",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for building AI products",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Ultimate AI Writing Tool for Content Creators",
+            "platform": "LinkedIn",
+            "hookPattern": "get 5x more content written in half the time",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The Top 10 AI Productivity Tools for Remote Workers",
+            "platform": "YouTube",
+            "hookPattern": "stay productive anywhere, anytime with our top picks",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI productivity tools",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "curiosity",
+          "utility",
+          "storytelling"
+        ],
+        "contentFormatsWinning": [
+          "listicles",
+          "how-to guides",
+          "testimonials"
+        ],
+        "avoidPatterns": [
+          "oversaturated keywords",
+          " generic templates"
+        ],
+        "weeklyIntel": "Cold email AI and outreach automation tools are in high demand, with a focus on boosting response rates and converting leads. AI writing tools and productivity software are also trending, with a focus on maximizing content output and minimizing writer's block.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T09:10:33.465Z",
+        "topTrends": [
+          {
+            "trend": "Cold Email AI: 4X Conversion Rates with ChatGPT",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "get instant access to AI-powdered cold email templates",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools and outreach automation products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI Writing Tools for 10X Faster Content Creation",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "generate 5 high-quality blog posts in under an hour",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI writing tools and productivity tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Outreach Automation for 99% Email Response Rates",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "send personalized emails to 10,000 prospects in minutes",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for outreach automation products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "How to Build an AI Product with No Code",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "build a profitable AI-powered chatbot in 30 days",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI product building tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Indie Hacker Reveals $100K/Month Revenue from AI",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "learn how to monetize your AI project with zero marketing",
+            "engagementDriver": "identity/emotional",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI product building tools",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "5 AI Productivity Tools to Boost Your Efficiency",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "get instant access to the top AI-powered productivity tools",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for productivity tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The Future of AI Writing: Trends to Watch in 2026",
+            "platform": "LinkedIn|YouTube|X",
+            "hookPattern": "stay ahead of the curve with the latest AI writing trends",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Building a Successful AI Startup: Lessons from the Top",
+            "platform": "LinkedIn|YouTube|X",
+            "hookPattern": "learn from the top AI startup founders and their journey",
+            "engagementDriver": "identity/emotional",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI product building tools",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "AI-Powered Sales Funnels for 10X More Conversions",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "create a sales funnel that converts like a well-oiled machine",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for outreach automation products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "How to Use AI for Personalized Marketing Messages",
+            "platform": "LinkedIn|YouTube|X",
+            "hookPattern": "send messages that resonate with your audience and drive sales",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for outreach automation products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "The Top AI Tools for E-commerce Entrepreneurs to Boost Sales",
+            "platform": "TikTok|LinkedIn|YouTube|X",
+            "hookPattern": "get instant access to the top AI-powered e-commerce tools",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for productivity tools",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "get instant access",
+          "boost your efficiency",
+          "10X more conversions"
+        ],
+        "contentFormatsWinning": [
+          "listicles",
+          "how-to guides",
+          "success stories"
+        ],
+        "avoidPatterns": [
+          "get rich quick",
+          "overnight success",
+          "scam alerts"
+        ],
+        "weeklyIntel": "Cold email AI and outreach automation are dominating the niche this week, with a focus on utility-driven content and AI-powered productivity tools. Indie hacker success stories and revenue reveals are also gaining traction, but with a lower urgency level.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T09:09:27.903Z",
+        "topTrends": [
+          {
+            "trend": "AI-Powered Cold Email Campaigns",
+            "platform": "LinkedIn",
+            "hookPattern": "Before-After-Bridge",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Outreach Automation for Indie Hackers",
+            "platform": "TikTok",
+            "hookPattern": "Problem-Agitate-Solve",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI Writing Tools for Content Creation",
+            "platform": "YouTube",
+            "hookPattern": "What-If-Now",
+            "engagementDriver": "emotional",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Building AI Products for Non-Technical Founders",
+            "platform": "X",
+            "hookPattern": "How-To",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "Indie Hacker Revenue Reveals Using AI Tools",
+            "platform": "TikTok",
+            "hookPattern": "Behind-The-Scenes",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI Productivity Tools for Remote Teams",
+            "platform": "LinkedIn",
+            "hookPattern": "Before-After-Bridge",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI-Powered Sales Funnel Optimization",
+            "platform": "YouTube",
+            "hookPattern": "What-If-Now",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Cold Email AI Templates for Beginners",
+            "platform": "TikTok",
+            "hookPattern": "How-To",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "Outreach Automation for E-commerce Businesses",
+            "platform": "X",
+            "hookPattern": "Problem-Agitate-Solve",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "AI Writing Tools for SEO Content Creation",
+            "platform": "YouTube",
+            "hookPattern": "Before-After-Bridge",
+            "engagementDriver": "emotional",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "Before-After-Bridge",
+          "What-If-Now",
+          "Problem-Agitate-Solve"
+        ],
+        "contentFormatsWinning": [
+          "short-form videos",
+          "podcast interviews",
+          "in-depth blog posts"
+        ],
+        "avoidPatterns": [
+          "overly promotional content",
+          "low-quality affiliate marketing",
+          "unrealistic income promises"
+        ],
+        "weeklyIntel": "AI-powered cold email campaigns and outreach automation are currently trending, with a focus on utility and curiosity-driven engagement. Indie hackers are also sharing their revenue reveals using AI tools, driving high engagement on TikTok and LinkedIn. High-quality, in-depth content is getting the most algorithmic push.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T09:07:07.445Z",
+        "topTrends": [
+          {
+            "trend": "AI-powered cold email templates",
+            "platform": "LinkedIn",
+            "hookPattern": "Boost your sales with 5-minute email templates",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Outreach automation for indie hackers",
+            "platform": "TikTok",
+            "hookPattern": "How I automated my outreach and got 10x responses",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "low",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI writing tools for content creation",
+            "platform": "YouTube",
+            "hookPattern": "Write 10x faster with these AI writing tools",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Building AI products as a side hustle",
+            "platform": "X",
+            "hookPattern": "From 0 to $10K/month with my AI side hustle",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Indie hacker revenue reveals",
+            "platform": "TikTok",
+            "hookPattern": "I made $10K in one day with my AI tool",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "low",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI productivity tools for entrepreneurs",
+            "platform": "LinkedIn",
+            "hookPattern": "10 AI tools to boost your productivity",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Cold email AI for e-commerce",
+            "platform": "YouTube",
+            "hookPattern": "How to use AI for cold email in e-commerce",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "low",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI-powered outreach sequences",
+            "platform": "X",
+            "hookPattern": "The ultimate AI-powered outreach sequence template",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Building and selling AI products",
+            "platform": "TikTok",
+            "hookPattern": "How I built and sold my AI product for $100K",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "low",
+            "monetizationFit": "medium",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "AI writing tools for social media",
+            "platform": "LinkedIn",
+            "hookPattern": "Write social media posts 10x faster with AI",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "before-and-after",
+          "problem-agitation-solution",
+          "how-to",
+          "listicle"
+        ],
+        "contentFormatsWinning": [
+          "video",
+          "podcast",
+          "blog post",
+          "template"
+        ],
+        "avoidPatterns": [
+          "overly promotional",
+          "low-quality clickbait",
+          "too much jargon"
+        ],
+        "weeklyIntel": "AI-powered cold email templates and outreach automation are trending now, while indie hacker revenue reveals and building AI products as a side hustle are emerging trends. AI writing tools and productivity tools remain evergreen topics in the niche.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T07:28:22.648Z",
+        "topTrends": [
+          {
+            "trend": "5x Your Cold Email Response Rate with AI-Powered Templates",
+            "platform": "YouTube|LinkedIn|Twitter",
+            "hookPattern": "get the exact templates that top producers use",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools and outreach automation products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Outreach Automation on Steroids: AI-Powered Email Sequences",
+            "platform": "TikTok|LinkedIn|Twitter",
+            "hookPattern": "dramatically increase your email open rates with AI",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for outreach automation products",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Write 10x Faster with AI-Powered Writing Tools: A Case Study",
+            "platform": "YouTube|LinkedIn|Twitter",
+            "hookPattern": "see how a real business used AI writing tools to boost productivity",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "From Zero to $10K/Month: Building and Selling AI Products",
+            "platform": "TikTok|LinkedIn|Twitter",
+            "hookPattern": "get the exact steps to create and sell a successful AI product",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for building AI products and indie hacker revenue reveals",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Indie Hacker Reveals: How to Make $10K/Month with AI Tools",
+            "platform": "YouTube|LinkedIn|Twitter",
+            "hookPattern": "hear from someone who's actually done it and achieved success",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for indie hacker revenue reveals",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Boost Your Productivity with AI-Powered Tools: A Top 10 List",
+            "platform": "TikTok|LinkedIn|Twitter",
+            "hookPattern": "see the top AI tools you need to boost your productivity",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI productivity tools products",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Future of Outreach Automation: AI-Powered Sequences",
+            "platform": "YouTube|LinkedIn|Twitter",
+            "hookPattern": "see what the experts say about the future of outreach automation",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for outreach automation products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "AI Writing Tools for Beginners: A Step-by-Step Guide",
+            "platform": "TikTok|LinkedIn|Twitter",
+            "hookPattern": "get the exact guide to using AI writing tools like a pro",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI writing tools products",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Top 5 AI Tools for Building and Selling AI Products",
+            "platform": "YouTube|LinkedIn|Twitter",
+            "hookPattern": "see the top AI tools to use when building and selling AI products",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for building AI products and AI productivity tools products",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "From Zero to $10K/Month: The Ultimate AI Product Roadmap",
+            "platform": "TikTok|LinkedIn|Twitter",
+            "hookPattern": "get the exact roadmap to creating a successful AI product",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for building AI products and indie hacker revenue reveals",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Ultimate AI Writing Tools Review: A Top 10 List",
+            "platform": "YouTube|LinkedIn|Twitter",
+            "hookPattern": "see the top AI writing tools and why they're worth using",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools products",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "get the exact",
+          "see what the experts",
+          "get the exact guide",
+          "dramatically increase"
+        ],
+        "contentFormatsWinning": [
+          "list",
+          "case study",
+          "step-by-step guide"
+        ],
+        "avoidPatterns": [
+          "AI is going to replace human jobs",
+          "AI is too complicated",
+          "you need to be a tech expert"
+        ],
+        "weeklyIntel": "This week, AI writing tools and outreach automation are trending, with a focus on productivity and case studies. Use list-based content formats and hook patterns that drive curiosity and utility to resonate with your audience.",
+        "week": "2026-03-10"
+      },
+      {
+        "scannedAt": "2026-03-10T07:27:36.308Z",
+        "topTrends": [
+          {
+            "trend": "5x Your Cold Email Conversion Rates with AI-Powered Templates",
+            "platform": "LinkedIn|X|Twitter",
+            "hookPattern": "achieve x% increase by leveraging AI-driven cold email templates",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Automate Your Outreach and Close More Deals with AI",
+            "platform": "YouTube|TikTok|Quora",
+            "hookPattern": "boost your outreach game with AI-powered automation",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium for outreach automation products",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Revolutionize Your Content Creation with AI Writing Tools",
+            "platform": "TikTok|Reddit|Pinterest",
+            "hookPattern": "discover the secret to faster content creation with AI writing",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Unlock the Power of AI to Build and Launch Your Product",
+            "platform": "X|LinkedIn|Twitter",
+            "hookPattern": "from idea to launch: how AI can help you build a successful product",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "medium for AI product builders",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Reveal How This Indie Hacker Made $10K in One Month",
+            "platform": "TikTok|Instagram|Twitch",
+            "hookPattern": "get inside the mind of a $10K/month indie hacker",
+            "engagementDriver": "identity",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for indie hacker revenue reveals",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "10 AI Productivity Tools to Boost Your Workflow Today",
+            "platform": "Quora|Pinterest|Twitter",
+            "hookPattern": " discover the top AI productivity tools to supercharge your day",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium for AI productivity tools",
+            "urgency": "evergreen"
+          },
+          {
+            "trend": "How to Build a $100K Per Month AI Product from Scratch",
+            "platform": "YouTube|LinkedIn|Reddit",
+            "hookPattern": "from zero to hero: how to build a $100K/month AI product",
+            "engagementDriver": "curiosity",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for AI product builders",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "The Ultimate Guide to AI Writing Tools for Bloggers",
+            "platform": "Pinterest|TikTok|LinkedIn",
+            "hookPattern": "write faster and more efficiently with AI: a comprehensive guide",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "high for AI writing tools",
+            "urgency": "trending now"
+          },
+          {
+            "trend": "Get Noticed: How to Use AI for Cold Email Outreach",
+            "platform": "Reddit|Quora|Twitter",
+            "hookPattern": "boost your cold email open rates with AI-powered outreach strategies",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "medium",
+            "monetizationFit": "high for outreach automation products",
+            "urgency": "emerging"
+          },
+          {
+            "trend": "Recode Your Productivity with AI Tools for Entrepreneurs",
+            "platform": "LinkedIn|Pinterest|TikTok",
+            "hookPattern": "unleash your inner entrepreneur: top AI tools to boost productivity",
+            "engagementDriver": "utility",
+            "estimatedSearchVolume": "high",
+            "monetizationFit": "medium for AI productivity tools",
+            "urgency": "trending now"
+          }
+        ],
+        "hookTypesWinning": [
+          "how-to",
+          "success story",
+          "listicle",
+          "comprehensive guide"
+        ],
+        "contentFormatsWinning": [
+          "video",
+          "blog post",
+          "podcast",
+          "infographic"
+        ],
+        "avoidPatterns": [
+          "clickbait",
+          "spammy",
+          "low-quality",
+          "outdated"
+        ],
+        "weeklyIntel": "This week, AI-powered cold email templates and outreach automation are dominating the conversation. Utilize AI writing tools for faster content creation and leverage AI productivity tools to supercharge your workflow. Focus on creating comprehensive guides, success stories, and how-to content to maximize engagement.",
+        "week": "2026-03-10"
+      }
+    ],
+    "audience": [
+      {
+        "analyzedAt": "2026-03-10T12:00:00.000Z",
+        "primaryPainPoints": [
+          {
+            "pain": "Manually crafting cold email subject lines and follow-up messages is time-consuming and leads to a significant drop in response rates.",
+            "intensity": "burning",
+            "contentHook": "Leveraging AI to predict and optimize email copy for maximum conversion rates",
+            "productMatch": "SubjectLine Pro and FollowUp Writer"
+          },
+          {
+            "pain": "Developing content that resonates with target audiences and drives business growth is an ongoing challenge.",
+            "intensity": "moderate",
+            "contentHook": "Unlocking the power of AI to create captivating and effective marketing copy",
+            "productMatch": "AI Copywriter"
+          },
+          {
+            "pain": "Sourcing and writing high-quality email copy is a significant bottleneck in sales outreach and business development.",
+            "intensity": "mild",
+            "contentHook": "Streamlining the content creation process with AI-driven solutions",
+            "productMatch": "Cold Email Writer"
+          }
+        ],
+        "topQuestions": [
+          {
+            "question": "How can I increase my email open rates and response rates without sacrificing personalization?",
+            "emotionalTrigger": "desire",
+            "contentIdea": "Video concept: '10X Your Email Response Rates: AI-Powered Email Copy That Converts'"
+          },
+          {
+            "question": "What are the most effective subject line and follow-up message formulas that drive conversions?",
+            "emotionalTrigger": "curiosity",
+            "contentIdea": "Video concept: 'The Ultimate Guide to Crafting Irresistible Email Subject Lines and Follow-Ups'"
+          }
+        ],
+        "identitySignals": [
+          "Aspirational identity: 'Results-Driven Sales Pro'",
+          "Identity: 'Entrepreneurial Maverick'"
+        ],
+        "languagePhrases": [
+          "Specific words: 'email copy optimization', 'targeted marketing', 'content personalization'",
+          "Concerns: 'injection of time', 'increasing conversion rates', 'improving email open rates'"
+        ],
+        "buyingTriggers": [
+          "Free trial or demo access to AI-powered tools",
+          "Success stories and case studies from similar businesses"
+        ],
+        "contentGaps": [
+          "Addressing the unique challenges of cold emailing in specific industries (e.g., SaaS, e-commerce, finance)",
+          "Developing content around AI-powered email copy for non-technical audiences"
+        ]
+      },
+      {
+        "analyzedAt": "2026-03-10T10:41:32.032Z",
+        "primaryPainPoints": [
+          {
+            "pain": "Spending excessive hours crafting and rewriting cold emails without converting at optimal rates, leading to poor sales results and wasted prospecting efforts.",
+            "intensity": "burning",
+            "contentHook": "Leverage AI-powered copywriting tools to instantly boost open rates, response rates, and ultimately, close deals faster.",
+            "productMatch": "AI Copywriter"
+          },
+          {
+            "pain": "Struggling to keep follow-up emails consistent and engaging, resulting in lost momentum and decreased prospect interest.",
+            "intensity": "moderate",
+            "contentHook": "Discover the secret to creating irresistible follow-up emails that keep your prospects hooked from the very first message.",
+            "productMatch": "FollowUp Writer"
+          },
+          {
+            "pain": "Tiresome and time-consuming process of crafting and testing subject lines, only to see unimpressive open rates and disappointing click-through rates.",
+            "intensity": "mild",
+            "contentHook": "Unleash the power of AI-driven subject line optimization to increase open rates, click-through rates, and boost your email marketing ROI.",
+            "productMatch": "SubjectLine Pro"
+          }
+        ],
+        "topQuestions": [
+          {
+            "question": "How can I write effective cold emails that don't turn off potential clients and actually generate leads?",
+            "emotionalTrigger": "fear",
+            "contentIdea": "Create a video series showcasing a step-by-step guide on crafting engaging cold emails, highlighting real-life examples and case studies."
+          },
+          {
+            "question": "What's the optimal subject line length and composition to ensure my emails get opened and read?",
+            "emotionalTrigger": "curiosity",
+            "contentIdea": "Develop an in-depth blog post analyzing the most effective subject line strategies, including data-driven insights and expert interviews."
+          }
+        ],
+        "identitySignals": [
+          "I'm a forward-thinking sales professional aiming to revolutionize the way I approach cold email marketing.",
+          "I see myself as a creative problem-solver who continuously seeks innovative solutions to stay ahead in the fast-paced business world."
+        ],
+        "languagePhrases": [
+          "cold email optimization",
+          "AI-powered copywriting tools",
+          "email marketing ROI",
+          "sales prospecting strategies"
+        ],
+        "buyingTriggers": [
+          "I've experienced a significant increase in sales conversions since implementing AI-powered copywriting tools.",
+          "I've seen a substantial reduction in the time spent crafting and rewriting cold emails, freeing up more time for high-leverage activities."
+        ],
+        "contentGaps": [
+          "The role of personalization in cold email marketing: How to leverage AI-driven insights to create hyper-personalized email campaigns.",
+          "The intersection of AI and creativity: How to effectively combine human intuition with AI-generated ideas to create truly compelling content."
+        ]
+      },
+      {
+        "analyzedAt": "2026-03-10T10:37:51.461Z",
+        "primaryPainPoints": [
+          {
+            "pain": "Difficulty in crafting engaging subject lines that increase cold email open rates without sounding spammy or generic.",
+            "intensity": "burning",
+            "contentHook": "How to create a subject line that sparks curiosity and sets the tone for a compelling cold email pitch.",
+            "productMatch": "SubjectLine Pro"
+          },
+          {
+            "pain": "Struggling to write personalized follow-up emails that resonate with leads without copying previous messages.",
+            "intensity": "moderate",
+            "contentHook": "Developing a follow-up email framework that adapts to the lead's responses and keeps the conversation engaging.",
+            "productMatch": "FollowUp Writer"
+          },
+          {
+            "pain": "Lack of time to brainstorm and write compelling copy for marketing materials, sales emails, and social media posts.",
+            "intensity": "mild",
+            "contentHook": "Discovering a simple, AI-powered copywriting tool that saves time and boosts creativity.",
+            "productMatch": "AI Copywriter"
+          }
+        ],
+        "topQuestions": [
+          {
+            "question": "What's the secret to crafting cold emails that convert and don't get ignored?",
+            "emotionalTrigger": "fear",
+            "contentIdea": "A video series on cold email psychology, featuring expert interviews and real-world case studies."
+          },
+          {
+            "question": "How can I increase my email open rates and get more people to engage with my content?",
+            "emotionalTrigger": "desire",
+            "contentIdea": "A blog post on the top 10 most effective subject lines for cold emails, backed by data and expert insights."
+          }
+        ],
+        "identitySignals": [
+          "I'm a savvy sales professional who wants to stay ahead of the curve.",
+          "I'm a growth-oriented entrepreneur who needs to scale my business quickly."
+        ],
+        "languagePhrases": [
+          "I'm tired of writing the same cold emails over and over.",
+          "I need a tool that helps me create personalized content at scale."
+        ],
+        "buyingTriggers": [
+          "Free trials or demos that showcase the tool's capabilities.",
+          "Social proof in the form of customer testimonials and case studies."
+        ],
+        "contentGaps": [
+          "The intersection of AI-powered content creation and emotional storytelling in cold emails.",
+          "How to use AI tools to personalize and optimize sales follow-up sequences for maximum impact."
+        ]
+      },
+      {
+        "analyzedAt": "2026-03-10T10:35:38.275Z",
+        "primaryPainPoints": [
+          {
+            "pain": "Finding the perfect subject line to increase email open rates without sacrificing creative authenticity",
+            "intensity": "moderate",
+            "contentHook": "Discover the psychological triggers behind the most effective subject lines.",
+            "productMatch": "SubjectLine Pro"
+          },
+          {
+            "pain": "Crafting cold email copy that resonates with the target audience without coming across as insincere",
+            "intensity": "burning",
+            "contentHook": "Learn how to write cold email copy that showcases your brand's unique voice and personality.",
+            "productMatch": "Cold Email Writer"
+          },
+          {
+            "pain": "Failing to scale follow-up email sequences that maintain engagement without appearing spammy",
+            "intensity": "mild",
+            "contentHook": "Unlock the secrets to crafting follow-up email sequences that convert leads into paying customers.",
+            "productMatch": "FollowUp Writer"
+          },
+          {
+            "pain": "Struggling to consistently produce high-quality copy for business outreach and sales emails",
+            "intensity": "moderate",
+            "contentHook": "Get instant access to AI-generated copy that speaks to your audience's desires and pain points.",
+            "productMatch": "AI Copywriter"
+          }
+        ],
+        "topQuestions": [
+          {
+            "question": "How can I personalize my cold email copy to increase response rates?",
+            "emotionalTrigger": "desire",
+            "contentIdea": "Create a video that showcases case studies of successful cold email campaigns that leveraged personalization techniques."
+          },
+          {
+            "question": "What are the most effective subject line formulas for getting opens and clicks?",
+            "emotionalTrigger": "fear",
+            "contentIdea": "Develop a step-by-step guide on crafting subject lines that mitigate the risk of being marked as spam."
+          },
+          {
+            "question": "Can I use AI to help me write sales emails that actually convert?",
+            "emotionalTrigger": "curiosity",
+            "contentIdea": "Host a webinar that showcases the benefits and limitations of AI-generated sales emails and how to effectively use them."
+          }
+        ],
+        "identitySignals": [
+          "Aspiring Thought Leaders in their Industry",
+          "Perceived as Creative Problem-Solvers"
+        ],
+        "languagePhrases": [
+          "Personalize my sales outreach",
+          "Increase email open rates",
+          "Crafting authentic copy",
+          "Scaling follow-up sequences",
+          "High-quality copy for business outreach"
+        ],
+        "buyingTriggers": [
+          "Seeing a significant increase in open rates and response rates after using our tools",
+          "Receiving positive reviews and testimonials from peers and industry leaders",
+          "Experiencing a boost in productivity and efficiency through automation"
+        ],
+        "contentGaps": [
+          "The intersection of AI and emotional intelligence in sales email copywriting",
+          "Case studies on successful B2B cold email campaigns that leveraged personalization and creativity",
+          "The role of storytelling in business outreach and sales emails"
+        ]
+      },
+      {
+        "analyzedAt": "2026-03-10T10:34:24.533Z",
+        "primaryPainPoints": [
+          {
+            "pain": "Spending excessive time crafting and optimizing each cold email, resulting in a significant decrease in response rates and an inability to scale outreach efforts.",
+            "intensity": "burning",
+            "contentHook": "How to automate cold email responses and boost conversion rates.",
+            "productMatch": "Cold Email Writer, FollowUp Writer"
+          },
+          {
+            "pain": "Struggling to craft compelling subject lines that grab the attention of potential customers amidst high email noise levels.",
+            "intensity": "moderate",
+            "contentHook": "Unlock the secrets to crafting irresistible subject lines that drive engagement.",
+            "productMatch": "SubjectLine Pro"
+          },
+          {
+            "pain": "Writing engaging business content that resonates with target audiences and effectively communicates value propositions.",
+            "intensity": "mild",
+            "contentHook": "Discover the art of crafting compelling business copy that resonates with your audience.",
+            "productMatch": "AI Copywriter"
+          }
+        ],
+        "topQuestions": [
+          {
+            "question": "How can I write cold emails that get a response rate of at least 10% without sacrificing my productivity?",
+            "emotionalTrigger": "fear",
+            "contentIdea": "A video showcasing 5 simple yet effective cold email templates that boost response rates"
+          },
+          {
+            "question": "What are the most effective ways to craft subject lines that stand out in a crowded inbox?",
+            "emotionalTrigger": "desire",
+            "contentIdea": "An infographic highlighting the top 10 most engaging subject line formulas"
+          },
+          {
+            "question": "How can I create high-quality business content that resonates with my target audience and drives conversions?",
+            "emotionalTrigger": "identity",
+            "contentIdea": "A webinar on crafting authentic business narratives that drive customer loyalty"
+          }
+        ],
+        "identitySignals": [
+          "Innovative marketers",
+          "Results-driven entrepreneurs",
+          "Creative problem solvers"
+        ],
+        "languagePhrases": [
+          "Scalable outreach",
+          "Personalized cold emails",
+          "Crafting compelling copy"
+        ],
+        "buyingTriggers": [
+          "Success stories from similar businesses",
+          "Positive reviews and ratings from trusted sources",
+          "Free trials or demos that showcase product value"
+        ],
+        "contentGaps": [
+          "The importance of crafting a unique value proposition in cold email campaigns",
+          "The role of personalization in driving email engagement and conversion rates",
+          "Best practices for measuring the effectiveness of business content"
+        ]
+      }
+    ],
+    "winningFormats": [
+      {
+        "format": "BEFORE_AFTER",
+        "platform": "TikTok",
+        "avgWatchTime": 52.5,
+        "addedAt": "2026-03-10T10:46:15.676Z"
+      },
+      {
+        "format": "BEFORE_AFTER",
+        "platform": "TikTok",
+        "avgWatchTime": "55",
+        "addedAt": "2026-03-10T10:53:01.250Z"
+      }
+    ],
+    "retentionStructures": [
+      {
+        "scriptId": "SCRIPT-1773134136193",
+        "hook": "From 2% to 12% response rate in just 30 days",
+        "structure": "HOOK → PATTERN INTERRUPT → SETUP → VALUE DELIVERY → CURIOSITY INJECTOR #2 → EXAMPLE/PROOF → CURIOSITY INJECTOR #3 → INSIGHT → CTA",
+        "predictedWatch": "75%",
+        "addedAt": "2026-03-10T09:17:22.052Z"
+      },
+      {
+        "scriptId": "SCRIPT-1773134150599",
+        "hook": "90% of experts got a 5-minute response using this",
+        "structure": "HOOK → SETUP → VALUE DELIVERY → EXAMPLE/PROOF → CURIOSITY INJECTOR #3 → INSIGHT → CTA",
+        "predictedWatch": "75%",
+        "addedAt": "2026-03-10T09:17:22.052Z"
+      },
+      {
+        "scriptId": "SCRIPT-1773139451270",
+        "hook": "From 5 hours to 30 minutes per email",
+        "structure": "HOOK → PATTERN INTERRUPT → SETUP → VALUE DELIVERY → CURIOSITY INJECTOR #2 → EXAMPLE/PROOF → CURIOSITY INJECTOR #3 → INSIGHT → CTA",
+        "predictedWatch": "72%",
+        "addedAt": "2026-03-10T10:46:15.676Z"
+      },
+      {
+        "scriptId": "SCRIPT-1773139467249",
+        "hook": "Watch me write a cold email in 90 seconds using AI",
+        "structure": "HOOK → PATTERN INTERRUPT → SETUP → VALUE DELIVERY → CURIOSITY INJECTOR #2 → EXAMPLE/PROOF → CURIOSITY INJECTOR #3 → INSIGHT → CTA",
+        "predictedWatch": "70%",
+        "addedAt": "2026-03-10T10:46:15.676Z"
+      },
+      {
+        "scriptId": "SCRIPT-1773139865073",
+        "hook": "Boost sales by $10,000 with these AI tools today",
+        "structure": "HOOK → PATTERN INTERRUPT → SETUP → VALUE DELIVERY → CURIOSITY INJECTOR #2 → EXAMPLE/PROOF → CURIOSITY INJECTOR #3 → INSIGHT → CTA",
+        "predictedWatch": "75%",
+        "addedAt": "2026-03-10T10:53:01.250Z"
+      },
+      {
+        "scriptId": "SCRIPT-1773139879311",
+        "hook": "Watch me write a $1,000 email in 30 minutes",
+        "structure": "HOOK → PATTERN INTERRUPT → SETUP → VALUE DELIVERY → CURIOSITY INJECTOR #2 → EXAMPLE/PROOF → CURIOSITY INJECTOR #3 → INSIGHT → CTA",
+        "predictedWatch": "70%",
+        "addedAt": "2026-03-10T10:53:01.250Z"
+      }
+    ],
+    "outlierPatterns": [
+      {
+        "trend": "5x Your Cold Email Conversion Rates with AI",
+        "platform": "YouTube|LinkedIn|TikTok|X",
+        "hookPattern": "get the exact AI-powered cold email template",
+        "engagementDriver": "curiosity",
+        "estimatedSearchVolume": "high",
+        "monetizationFit": "high",
+        "urgency": "trending now",
+        "addedAt": "2026-03-10T09:17:22.052Z"
+      },
+      {
+        "trend": "Automate Your Outreach and Get 300% More Meetings",
+        "platform": "TikTok|LinkedIn|YouTube|X",
+        "hookPattern": "use AI to personalize and optimize your outreach",
+        "engagementDriver": "utility",
+        "estimatedSearchVolume": "high",
+        "monetizationFit": "high",
+        "urgency": "trending now",
+        "addedAt": "2026-03-10T09:17:22.052Z"
+      },
+      {
+        "trend": "How to Build a $10K/Month AI Product with Zero Coding",
+        "platform": "TikTok|YouTube|LinkedIn|X",
+        "hookPattern": "get the step-by-step guide to building a profitable AI product",
+        "engagementDriver": "identity",
+        "estimatedSearchVolume": "medium",
+        "monetizationFit": "high",
+        "urgency": "emerging",
+        "addedAt": "2026-03-10T09:17:22.052Z"
+      },
+      {
+        "trend": "My $50K/Month Revenue Secret: AI Writing Tools",
+        "platform": "TikTok|YouTube|LinkedIn|X",
+        "hookPattern": "get the exact AI writing tools I use to make $50K/month",
+        "engagementDriver": "curiosity",
+        "estimatedSearchVolume": "high",
+        "monetizationFit": "high",
+        "urgency": "trending now",
+        "addedAt": "2026-03-10T09:17:22.052Z"
+      },
+      {
+        "trend": "Cold Email AI Script Templates for Boosting Conversion Rates",
+        "platform": "LinkedIn|TikTok",
+        "hookPattern": "Get 10x more meeting requests with AI-powered cold email scripts",
+        "engagementDriver": "utility",
+        "estimatedSearchVolume": "high",
+        "monetizationFit": "high",
+        "urgency": "trending now",
+        "addedAt": "2026-03-10T10:46:15.676Z"
+      },
+      {
+        "trend": "Revolutionizing Content Creation with AI Writing Tools",
+        "platform": "TikTok|LinkedIn",
+        "hookPattern": "Write articles 5x faster with AI-powered content generation tools",
+        "engagementDriver": "curiosity",
+        "estimatedSearchVolume": "high",
+        "monetizationFit": "high",
+        "urgency": "trending now",
+        "addedAt": "2026-03-10T10:46:15.676Z"
+      },
+      {
+        "trend": "Building AI Products for a Global Market: A Step-by-Step Guide",
+        "platform": "YouTube|X",
+        "hookPattern": "Create and launch AI products that solve real-world problems",
+        "engagementDriver": "identity",
+        "estimatedSearchVolume": "medium",
+        "monetizationFit": "high",
+        "urgency": "evergreen",
+        "addedAt": "2026-03-10T10:46:15.676Z"
+      },
+      {
+        "trend": "Indie Hacker Revenue Reveals: How to Make $10K/day with AI Tools",
+        "platform": "TikTok|LinkedIn",
+        "hookPattern": "Unlock the secrets of $10K/day revenue with AI tools and indie hacking",
+        "engagementDriver": "curiosity",
+        "estimatedSearchVolume": "high",
+        "monetizationFit": "high",
+        "urgency": "trending now",
+        "addedAt": "2026-03-10T10:46:15.676Z"
+      },
+      {
+        "trend": "Cold Email AI: Boosting Response Rates by 300%",
+        "platform": "LinkedIn|TikTok",
+        "hookPattern": "boost response rates, increase sales",
+        "engagementDriver": "utility",
+        "estimatedSearchVolume": "high",
+        "monetizationFit": "high",
+        "urgency": "trending now",
+        "addedAt": "2026-03-10T10:53:01.250Z"
+      },
+      {
+        "trend": "Outreach Automation: The Secret to Scaling Your Outreach",
+        "platform": "YouTube|X",
+        "hookPattern": "scale outreach, get more deals",
+        "engagementDriver": "identity",
+        "estimatedSearchVolume": "medium",
+        "monetizationFit": "high",
+        "urgency": "emerging",
+        "addedAt": "2026-03-10T10:53:01.250Z"
+      },
+      {
+        "trend": "Building AI Products: The Ultimate Guide for Indie Hackers",
+        "platform": "X|YouTube",
+        "hookPattern": "build AI products, get revenue",
+        "engagementDriver": "identity",
+        "estimatedSearchVolume": "medium",
+        "monetizationFit": "high",
+        "urgency": "emerging",
+        "addedAt": "2026-03-10T10:53:01.250Z"
+      }
+    ],
+    "experimentLog": [],
+    "seriesIdeas": [
+      {
+        "title": "10X Your Sales with AI-Powered Email Copy",
+        "concept": "Learn to craft high-performing email copy using AI tools and boost response rates.",
+        "episodeCount": 12,
+        "episodeTitles": [
+          "Ep 1: Introduction to AI-Powered Email Copy",
+          "Ep 2: Crafting Irresistible Subject Lines",
+          "Ep 3: Writing Effective Follow-Up Messages",
+          "Ep 4: Boosting Email Open Rates with AI",
+          "Ep 5: Personalization Techniques for Email Copy",
+          "Ep 6: Measuring and Optimizing Email Performance",
+          "Ep 7: Advanced AI-Powered Email Copy Techniques",
+          "Ep 8: Case Study: Successful Email Campaigns Using AI",
+          "Ep 9: Overcoming Common Email Copy Challenges",
+          "Ep 10: Scaling Email Copy with AI Tools",
+          "Ep 11: Future of Email Copy: AI Trends and Predictions",
+          "Ep 12: Putting it All Together: Creating a 10X Email Copy Strategy"
+        ],
+        "returnViewerAppeal": "high",
+        "monetizationPath": "Cold Email Writer, FollowUp Writer",
+        "validationSignal": " engagement with AI-powered email copy tutorials and case studies"
+      },
+      {
+        "title": "The AI-Powered Outreach Automation Blueprint",
+        "concept": "Discover how to automate your outreach and scale your sales using AI tools and strategies.",
+        "episodeCount": 10,
+        "episodeTitles": [
+          "Ep 1: Introduction to Outreach Automation",
+          "Ep 2: Setting Up Your Outreach Automation Workflow",
+          "Ep 3: Crafting Effective Outreach Messages with AI",
+          "Ep 4: Automating Email Sequences for Maximum Impact",
+          "Ep 5: Using AI to Personalize Your Outreach",
+          "Ep 6: Measuring and Optimizing Outreach Performance",
+          "Ep 7: Advanced Outreach Automation Strategies",
+          "Ep 8: Case Study: Successful Outreach Automation Campaigns",
+          "Ep 9: Overcoming Common Outreach Automation Challenges",
+          "Ep 10: Scaling Outreach Automation with AI Tools"
+        ],
+        "returnViewerAppeal": "medium",
+        "monetizationPath": "FollowUp Writer, SubjectLine Pro",
+        "validationSignal": " engagement with outreach automation tutorials and case studies"
+      },
+      {
+        "title": "The AI Writing Revolution: Write 10X Faster and Better",
+        "concept": "Learn the latest AI writing tools and strategies to write faster, better, and more efficiently.",
+        "episodeCount": 12,
+        "episodeTitles": [
+          "Ep 1: Introduction to AI Writing Tools",
+          "Ep 2: Choosing the Right AI Writing Tool for Your Business",
+          "Ep 3: Writing with AI: Techniques and Best Practices",
+          "Ep 4: Optimizing Your Writing Workflow with AI",
+          "Ep 5: Measuring and Improving Writing Performance with AI",
+          "Ep 6: Advanced AI Writing Techniques for Maximum Productivity",
+          "Ep 7: Case Study: Successful AI Writing Campaigns",
+          "Ep 8: Overcoming Common Writing Challenges with AI",
+          "Ep 9: The Future of Writing: AI Trends and Predictions",
+          "Ep 10: Putting it All Together: Creating a 10X Writing Strategy",
+          "Ep 11: AI Writing for Specific Industries and Verticals",
+          "Ep 12: AI Writing for Beginners: Getting Started with AI Writing"
+        ],
+        "returnViewerAppeal": "high",
+        "monetizationPath": "Cold Email Writer, FollowUp Writer, SubjectLine Pro",
+        "validationSignal": " engagement with AI writing tutorials and case studies"
+      },
+      {
+        "title": "Unlocking the Power of AI Outreach Automation",
+        "concept": "Discover how to streamline your sales process using AI-powered tools and maximize revenue growth",
+        "episodeCount": 12,
+        "episodeTitles": [
+          "Ep 1: Introduction to AI Outreach Automation",
+          "Ep 2: Setting Up AI-Powered Email Automation Tools",
+          "Ep 3: Crafting the Perfect Cold Email Script",
+          "Ep 4: Advanced Email Personalization Techniques",
+          "Ep 5: Leveraging AI for Lead Qualification",
+          "Ep 6: Nurturing Leads with AI-Driven Email Sequences",
+          "Ep 7: Boosting Conversion Rates with AI-Powered Subject Lines",
+          "Ep 8: Measuring ROI with AI-Driven Sales Performance Metrics",
+          "Ep 9: Scaling AI Outreach Automation for Enterprise Success",
+          "Ep 10: Advanced AI-Powered Sales Analytics and Reporting",
+          "Ep 11: Best Practices for AI Outreach Automation Implementation",
+          "Ep 12: Future Trends in AI-Powered Sales and Marketing"
+        ],
+        "returnViewerAppeal": "high",
+        "monetizationPath": "FollowUp Writer, SubjectLine Pro",
+        "validationSignal": "Audience engagement with trending now topics like AI Outreach Automation and Cold Email Script Templates"
+      },
+      {
+        "title": "The AI-Powered Sales Team: Revolutionizing Revenue Growth",
+        "concept": "Explore the possibilities of replacing human sales teams with AI tools and discover the secrets to success",
+        "episodeCount": 10,
+        "episodeTitles": [
+          "Ep 1: Introduction to AI-Powered Sales Teams",
+          "Ep 2: Understanding the Benefits and Challenges of AI Sales Teams",
+          "Ep 3: Implementing AI-Powered Chatbots for Customer Support",
+          "Ep 4: Developing AI-Driven Email Sequences for Lead Nurturing",
+          "Ep 5: AI-Powered Sales Forecasting and Predictive Analytics",
+          "Ep 6: Measuring ROI with AI-Driven Sales Performance Metrics",
+          "Ep 7: Scaling AI Sales Teams for Enterprise Success",
+          "Ep 8: Advanced AI-Powered Sales Analytics and Reporting",
+          "Ep 9: Best Practices for Implementing AI Sales Teams",
+          "Ep 10: Future Trends in AI-Powered Sales and Marketing"
+        ],
+        "returnViewerAppeal": "medium",
+        "monetizationPath": "Cold Email Writer, FollowUp Writer",
+        "validationSignal": "Audience engagement with emerging topics like AI-Powered Outreach Automation Tools for Sales Teams"
+      },
+      {
+        "title": "Revolutionizing Content Creation with AI Writing Tools",
+        "concept": "Discover the power of AI-powered content generation tools and learn how to write articles 5x faster",
+        "episodeCount": 12,
+        "episodeTitles": [
+          "Ep 1: Introduction to AI-Powered Content Generation",
+          "Ep 2: Crafting High-Quality Content with AI Writing Tools",
+          "Ep 3: Advanced Article Writing Techniques with AI",
+          "Ep 4: Leveraging AI for Social Media Content Creation",
+          "Ep 5: Developing AI-Driven Email Marketing Campaigns",
+          "Ep 6: Measuring ROI with AI-Driven Content Performance Metrics",
+          "Ep 7: Scaling AI Content Creation for Enterprise Success",
+          "Ep 8: Advanced AI-Powered Content Analytics and Reporting",
+          "Ep 9: Best Practices for Implementing AI Content Creation",
+          "Ep 10: Future Trends in AI-Powered Content Generation",
+          "Ep 11: Overcoming Common Challenges with AI Content Creation",
+          "Ep 12: Success Stories with AI-Powered Content Generation"
+        ],
+        "returnViewerAppeal": "high",
+        "monetizationPath": "Cold Email Writer, FollowUp Writer, SubjectLine Pro",
+        "validationSignal": "Audience engagement with trending now topics like Revolutionizing Content Creation with AI Writing Tools"
+      },
+      {
+        "title": "5x Your Cold Email Conversion Rates with AI",
+        "concept": "Discover the exact AI-powered cold email templates and strategies to boost your conversion rates by 5 times",
+        "episodeCount": 12,
+        "episodeTitles": [
+          "Ep 1: Introduction to AI-powered cold email templates",
+          "Ep 2: Crafting the perfect subject line with SubjectLine Pro",
+          "Ep 3: Writing high-converting cold email copy with Cold Email Writer",
+          "Ep 4: The art of personalization in cold email outreach",
+          "Ep 5: Advanced cold email segmentation strategies",
+          "Ep 6: Measuring and optimizing cold email campaigns",
+          "Ep 7: Overcoming common cold email objections",
+          "Ep 8: Case studies of successful cold email campaigns",
+          "Ep 9: The future of cold email marketing with AI",
+          "Ep 10: Q&A and community feedback",
+          "Ep 11: Advanced cold email tracking and analytics",
+          "Ep 12: Scaling your cold email operations with AI"
+        ],
+        "returnViewerAppeal": "high",
+        "monetizationPath": "Cold Email Writer and SubjectLine Pro",
+        "validationSignal": "Audience engagement with the initial trend-based content"
+      },
+      {
+        "title": "Automate Your Outreach and Get 300% More Meetings",
+        "concept": "Learn the strategies and tools to automate your outreach and increase your meeting conversions by 300% using AI",
+        "episodeCount": 10,
+        "episodeTitles": [
+          "Ep 1: Introduction to automated outreach with AI",
+          "Ep 2: Setting up your AI-powered outreach workflow",
+          "Ep 3: Crafting the perfect follow-up email with FollowUp Writer",
+          "Ep 4: Advanced outreach segmentation and personalization",
+          "Ep 5: Overcoming objections and closing deals",
+          "Ep 6: Measuring and optimizing outreach campaigns",
+          "Ep 7: Case studies of successful outreach campaigns",
+          "Ep 8: The future of outreach marketing with AI",
+          "Ep 9: Q&A and community feedback",
+          "Ep 10: Scaling your outreach operations with AI"
+        ],
+        "returnViewerAppeal": "high",
+        "monetizationPath": "FollowUp Writer",
+        "validationSignal": "Audience engagement with the initial trend-based content"
+      },
+      {
+        "title": "How to Build a $10K/Month AI Product with Zero Coding",
+        "concept": "Get the step-by-step guide to building a profitable AI product with zero coding and minimal resources",
+        "episodeCount": 12,
+        "episodeTitles": [
+          "Ep 1: Introduction to building an AI product",
+          "Ep 2: Choosing the right AI tool for your product",
+          "Ep 3: Validating your product idea with customer feedback",
+          "Ep 4: Creating a minimum viable product (MVP)",
+          "Ep 5: Marketing and promoting your AI product",
+          "Ep 6: Scaling your AI product with AI-powered marketing",
+          "Ep 7: Overcoming common AI product development challenges",
+          "Ep 8: Case studies of successful AI product launches",
+          "Ep 9: The future of AI product development with AI",
+          "Ep 10: Q&A and community feedback",
+          "Ep 11: Advanced AI product development strategies",
+          "Ep 12: Turning your AI product into a sustainable business"
+        ],
+        "returnViewerAppeal": "medium",
+        "monetizationPath": "AI-powered marketing services",
+        "validationSignal": "Audience engagement with the initial trend-based content"
+      }
+    ]
+  },
+  "hookLibraryReusableTemplates": [
+    {
+      "hookId": "1773134135179-H02",
+      "ideaId": "IDEA-001",
+      "hookText": "From 2% to 12% response rate in just 30 days",
+      "type": "BEFORE_AFTER",
+      "platform": "YouTube",
+      "expectedScore": "9",
+      "createdAt": "2026-03-10T09:15:35.179Z",
+      "status": "tested",
+      "actual3secRetention": "65",
+      "actualWatchTime": "55",
+      "actualNonFollowerReach": "35",
+      "gateResult": "PASS",
+      "reusableTemplate": true
+    }
+  ],
+  "cycleCount": 3,
+  "lastFullUpdate": "2026-03-10T10:53:14.535Z",
+  "currentSkillMastery": {
+    "3secRetentionMet": false,
+    "watchTimeMet": false,
+    "nonFollowerReachMet": false,
+    "postsNeeded": 10,
+    "postsCompleted": 0,
+    "estimatedDaysToMastery": 14
+  }
+}

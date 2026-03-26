@@ -1,0 +1,633 @@
+{
+  "date": "2026-03-10",
+  "run_at": "2026-03-10T10:32:56.156Z",
+  "build_queue": [
+    {
+      "keyword": "email writer for cold outreach",
+      "source": "niche_email",
+      "score": 8
+    },
+    {
+      "keyword": "email writer for follow up",
+      "source": "niche_email",
+      "score": 8
+    },
+    {
+      "keyword": "email writer for subject line",
+      "source": "niche_email",
+      "score": 8
+    },
+    {
+      "keyword": "email writer for apology",
+      "source": "niche_email",
+      "score": 8
+    },
+    {
+      "keyword": "ai tool for resume",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 7.2
+    },
+    {
+      "keyword": "youtube thumbnail idea",
+      "source": "niche_youtube",
+      "score": 7.2
+    },
+    {
+      "keyword": "youtube title generator",
+      "source": "niche_youtube",
+      "score": 7
+    },
+    {
+      "keyword": "youtube description writer",
+      "source": "niche_youtube",
+      "score": 7
+    },
+    {
+      "keyword": "youtube tag generator",
+      "source": "niche_youtube",
+      "score": 7
+    },
+    {
+      "keyword": "youtube script writer",
+      "source": "niche_youtube",
+      "score": 7
+    }
+  ],
+  "seo_queue": [
+    {
+      "keyword": "ai tools free",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6.5
+    },
+    {
+      "keyword": "resume template for developer",
+      "source": "niche_resume",
+      "score": 6.2
+    },
+    {
+      "keyword": "resume template for designer",
+      "source": "niche_resume",
+      "score": 6.2
+    },
+    {
+      "keyword": "resume template for marketer",
+      "source": "niche_resume",
+      "score": 6.2
+    },
+    {
+      "keyword": "resume template for student",
+      "source": "niche_resume",
+      "score": 6.2
+    },
+    {
+      "keyword": "resume template for manager",
+      "source": "niche_resume",
+      "score": 6.2
+    },
+    {
+      "keyword": "seo checker for shopify",
+      "source": "niche_seo",
+      "score": 6.2
+    },
+    {
+      "keyword": "seo checker for wordpress",
+      "source": "niche_seo",
+      "score": 6.2
+    },
+    {
+      "keyword": "seo checker for etsy",
+      "source": "niche_seo",
+      "score": 6.2
+    },
+    {
+      "keyword": "seo checker for amazon",
+      "source": "niche_seo",
+      "score": 6.2
+    },
+    {
+      "keyword": "seo checker for youtube",
+      "source": "niche_seo",
+      "score": 6.2
+    },
+    {
+      "keyword": "uncertainty / monte carlo analysis tools?",
+      "source": "hackernews",
+      "title": "Ask HN: Uncertainty / Monte Carlo Analysis Tools?",
+      "points": 2,
+      "comments": 3,
+      "url": "https://news.ycombinator.com/item?id=19685247",
+      "pain_signal": "does anyone know a tool",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "which ai dev tools are people *really* using?",
+      "source": "hackernews",
+      "title": "Ask HN: Which AI dev tools are people *really* using?",
+      "points": 2,
+      "comments": 0,
+      "url": "https://news.ycombinator.com/item?id=42628413",
+      "pain_signal": "does anyone know a tool",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "real time mail traffic overview",
+      "source": "hackernews",
+      "title": "Ask HN: Real Time Mail Traffic Overview",
+      "points": 2,
+      "comments": 0,
+      "url": "https://news.ycombinator.com/item?id=1497283",
+      "pain_signal": "does anyone know a tool",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "companies use ai to take your calls. i built ai to make them",
+      "source": "hackernews",
+      "title": "Show HN: Companies use AI to take your calls. I built AI to make them for you",
+      "points": 237,
+      "comments": 176,
+      "url": "https://news.ycombinator.com/item?id=44716414",
+      "pain_signal": "we manually",
+      "intent": "generative_tool",
+      "score": 6
+    },
+    {
+      "keyword": "launch hn: maitai (yc s24)",
+      "source": "hackernews",
+      "title": "Launch HN: Maitai (YC S24) – Self-Optimizing LLM Platform",
+      "points": 149,
+      "comments": 75,
+      "url": "https://news.ycombinator.com/item?id=41456552",
+      "pain_signal": "we manually",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "mutableai (yc w22)",
+      "source": "hackernews",
+      "title": "Show HN: MutableAI (YC W22) – Copilot Alternative for VS Code",
+      "points": 75,
+      "comments": 27,
+      "url": "https://news.ycombinator.com/item?id=32334052",
+      "pain_signal": "we manually",
+      "intent": "comparison_page",
+      "score": 6
+    },
+    {
+      "keyword": "a gamer spent 200 hours building an incredibly detailed digi",
+      "source": "hackernews",
+      "title": "A Gamer Spent 200 Hours Building an Incredibly Detailed Digital San Francisco",
+      "points": 153,
+      "comments": 42,
+      "url": "https://news.ycombinator.com/item?id=12834293",
+      "pain_signal": "spent hours",
+      "intent": "generative_tool",
+      "score": 6
+    },
+    {
+      "keyword": "failed project you spent 15 hours/week for 5 years on?",
+      "source": "hackernews",
+      "title": "Ask HN: Failed project you spent 15 hours/week for 5 years on?",
+      "points": 101,
+      "comments": 74,
+      "url": "https://news.ycombinator.com/item?id=27838479",
+      "pain_signal": "spent hours",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "startup failure stories: 20 months in, 2k hours spent and 20",
+      "source": "hackernews",
+      "title": "Startup failure stories: 20 months in, 2K hours spent and 200K € lost (2021)",
+      "points": 57,
+      "comments": 48,
+      "url": "https://news.ycombinator.com/item?id=30932770",
+      "pain_signal": "spent hours",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "i spent 8 hours testing o1 pro ($200) vs. claude sonnet 3.5 ",
+      "source": "hackernews",
+      "title": "I spent 8 hours testing o1 Pro ($200) vs. Claude Sonnet 3.5 ($20)",
+      "points": 53,
+      "comments": 0,
+      "url": "https://news.ycombinator.com/item?id=42342529",
+      "pain_signal": "spent hours",
+      "intent": "comparison_page",
+      "score": 6
+    },
+    {
+      "keyword": "launch hn: evidently ai (yc s21)",
+      "source": "hackernews",
+      "title": "Launch HN: Evidently AI (YC S21) – Track and Debug ML Models in Production",
+      "points": 111,
+      "comments": 17,
+      "url": "https://news.ycombinator.com/item?id=27760627",
+      "pain_signal": "no good solution",
+      "intent": "tracking_tool",
+      "score": 6
+    },
+    {
+      "keyword": "sending mails for my children accessible in the future (",
+      "source": "hackernews",
+      "title": "Ask HN: Sending mails for my children accessible in the future (",
+      "points": 6,
+      "comments": 6,
+      "url": "https://news.ycombinator.com/item?id=30011812",
+      "pain_signal": "no good solution",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "we made a hiring challenge because claude can 1",
+      "source": "hackernews",
+      "title": "Show HN: We made a hiring challenge because Claude can 1-shot our interviews",
+      "points": 4,
+      "comments": 4,
+      "url": "https://news.ycombinator.com/item?id=46557045",
+      "pain_signal": "no good solution",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai tools",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai tools like chatgpt",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai tools list",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai toolkit",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai tools for writing",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai tools for business",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai tools for video editing",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "ai tools for teachers",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 6
+    },
+    {
+      "keyword": "automated tools",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    },
+    {
+      "keyword": "automated tool crib",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    },
+    {
+      "keyword": "automated tooling systems",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    },
+    {
+      "keyword": "automated tool control",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    },
+    {
+      "keyword": "automated toolbox",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    },
+    {
+      "keyword": "automated tool control system",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    },
+    {
+      "keyword": "automated tool and die",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    },
+    {
+      "keyword": "automatic tool changer",
+      "source": "google_autosuggest",
+      "intent": "informational",
+      "score": 5.8
+    }
+  ],
+  "niche_slugs": [
+    {
+      "slug": "email-writer-for-cold-outreach",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-follow-up",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-newsletter",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-subject-line",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-apology",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-sales",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-partnership",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-job-application",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-investor-pitch",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-client-proposal",
+      "niche": "email",
+      "base_keyword": "email writer for cold outreach"
+    },
+    {
+      "slug": "email-writer-for-cold-outreach",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-follow-up",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-newsletter",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-subject-line",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-apology",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-sales",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-partnership",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-job-application",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-investor-pitch",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-client-proposal",
+      "niche": "email",
+      "base_keyword": "email writer for follow up"
+    },
+    {
+      "slug": "email-writer-for-cold-outreach",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-follow-up",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-newsletter",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-subject-line",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-apology",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-sales",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-partnership",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-job-application",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-investor-pitch",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-client-proposal",
+      "niche": "email",
+      "base_keyword": "email writer for subject line"
+    },
+    {
+      "slug": "email-writer-for-cold-outreach",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-follow-up",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-newsletter",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-subject-line",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-apology",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-sales",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-partnership",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-job-application",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-investor-pitch",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "email-writer-for-client-proposal",
+      "niche": "email",
+      "base_keyword": "email writer for apology"
+    },
+    {
+      "slug": "resume-template-for-developer",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-designer",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-marketer",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-student",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-manager",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-nurse",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-teacher",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-accountant",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-engineer",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-writer",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-sales",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-product-manager",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-data-scientist",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-ux-designer",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    },
+    {
+      "slug": "resume-template-for-freelancer",
+      "niche": "resume",
+      "base_keyword": "ai tool for resume"
+    }
+  ],
+  "total_discovered": 129,
+  "total_scored": 129
+}

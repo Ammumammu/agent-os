@@ -1,0 +1,70 @@
+{
+  "scriptId": "SCRIPT-1773134150599",
+  "ideaId": "IDEA-007",
+  "hookUsed": "90% of experts got a 5-minute response using this",
+  "targetPlatform": "LinkedIn",
+  "estimatedLength": "5-15 min",
+  "script": [
+    {
+      "timestamp": "0-3s",
+      "section": "HOOK",
+      "words": "90% of experts got a 5-minute response using this",
+      "visual": "expert testimonial",
+      "retentionMechanic": "pattern_interrupt"
+    },
+    {
+      "timestamp": "8-15s",
+      "section": "SETUP",
+      "words": "Have you ever struggled to get a response from cold emails?",
+      "visual": "stats about cold email success rate",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "15-40s",
+      "section": "VALUE DELIVERY",
+      "words": "The secret to getting a 90% response rate in just 5 minutes",
+      "visual": "step-by-step guide to writing a 5-minute cold email",
+      "retentionMechanic": "payoff_delivery"
+    },
+    {
+      "timestamp": "40-60s",
+      "section": "EXAMPLE/PROOF",
+      "words": "I got a 92% response rate using this method",
+      "visual": "real-life example with numbers",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "45-60s",
+      "section": "CURIOSITY INJECTOR #3",
+      "words": "And there's one more thing...",
+      "visual": "teaser image",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "60-75s",
+      "section": "INSIGHT",
+      "words": "The key to success is not just about the email content, but also about the timing",
+      "visual": "insightful animation",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "75-90s",
+      "section": "CTA",
+      "words": "Want to know the exact timing strategy? Comment 'Timing' below to get the full guide",
+      "visual": "call-to-action button",
+      "retentionMechanic": "dm_trigger"
+    }
+  ],
+  "ctaStrategy": {
+    "type": "dm_trigger",
+    "exactWords": "Want to know the exact timing strategy? Comment 'Timing' below to get the full guide",
+    "expectedSignal": "DM sends"
+  },
+  "contentValueGateCheck": {
+    "insightDelivered": true,
+    "utilityDelivered": true,
+    "hookPayoffAligned": true,
+    "noFiveSlip": true
+  },
+  "recordingNotes": "Show expert testimonial, use stats to keep audience engaged, and use visual animations to explain complex concepts"
+}

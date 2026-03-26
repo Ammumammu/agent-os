@@ -1,0 +1,84 @@
+{
+  "scriptId": "SCRIPT-1773139865073",
+  "ideaId": "IDEA-001",
+  "hookUsed": "Boost sales by $10,000 with these AI tools today",
+  "targetPlatform": "TikTok",
+  "estimatedLength": "60-90 seconds",
+  "script": [
+    {
+      "timestamp": "0-3s",
+      "section": "HOOK",
+      "words": "Boost sales by $10,000 with these AI tools today",
+      "visual": "",
+      "retentionMechanic": ""
+    },
+    {
+      "timestamp": "3-8s",
+      "section": "PATTERN INTERRUPT",
+      "words": "Surprising stat about AI adoption",
+      "visual": "Split-screen with AI tool demo",
+      "retentionMechanic": "pattern_interrupt"
+    },
+    {
+      "timestamp": "8-15s",
+      "section": "SETUP",
+      "words": "With AI, businesses can boost sales by 10K in no time",
+      "visual": "Animated text with background image",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "15-40s",
+      "section": "VALUE DELIVERY",
+      "words": "Here are 5 AI tools to skyrocket your sales",
+      "visual": "Animated list with tool icons",
+      "retentionMechanic": ""
+    },
+    {
+      "timestamp": "20s",
+      "section": "CURIOSITY INJECTOR #2",
+      "words": "But there's a catch...",
+      "visual": "Teaser image with question mark",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "40-60s",
+      "section": "EXAMPLE/PROOF",
+      "words": "Real businesses using these tools saw a 20K increase",
+      "visual": "Customer testimonial with success metrics",
+      "retentionMechanic": ""
+    },
+    {
+      "timestamp": "45s",
+      "section": "CURIOSITY INJECTOR #3",
+      "words": "And there's one more thing...",
+      "visual": "Animated clock with hint of surprise",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "60-75s",
+      "section": "INSIGHT",
+      "words": "The key to success lies in AI tool integration",
+      "visual": "Infographic with integration details",
+      "retentionMechanic": ""
+    },
+    {
+      "timestamp": "75-90s",
+      "section": "CTA",
+      "words": "Comment 'X' to get the exact tools and strategy",
+      "visual": "Call-to-action screen with link",
+      "retentionMechanic": "dm_trigger"
+    }
+  ],
+  "ctaStrategy": {
+    "type": "dm_trigger",
+    "exactWords": "Comment 'X' to get the exact tools and strategy",
+    "expectedSignal": "DM sends"
+  },
+  "contentValueGateCheck": {
+    "insightDelivered": true,
+    "utilityDelivered": true,
+    "hookPayoffAligned": true,
+    "noFiveSlip": true
+  },
+  "recordingNotes": "Creator, show enthusiasm and confidence while explaining AI tools integration. Highlight the clock icon at 45s before the final CTA."
+}

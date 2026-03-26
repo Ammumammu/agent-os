@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent OS v7 — Autonomous SEO + SaaS Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    :root {
+      --bg: #080C10; --surface: #0D1117; --surface2: #161B22; --border: #21262D;
+      --accent: #6366f1; --accent2: #8b5cf6; --green: #22c55e; --red: #ef4444;
+      --yellow: #f59e0b; --text: #E6EDF3; --muted: #7D8590; --mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--mono); background: var(--bg); color: var(--text); min-height: 100vh; font-size: 13px; }
+    .app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+    /* Header */
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 48px; background: var(--surface); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+    .logo { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .budget-bar { display: flex; align-items: center; gap: 12px; }
+    .budget-pill { font-size: 11px; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--border); }
+    .budget-pill.ok { color: var(--green); border-color: rgba(34,197,94,.3); }
+    .budget-pill.warn { color: var(--yellow); border-color: rgba(245,158,11,.3); }
+    .budget-pill.danger { color: var(--red); border-color: rgba(239,68,68,.3); }
+    .mrr-badge { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; color: var(--accent); }
+    /* Layout */
+    .body { display: flex; flex: 1; overflow: hidden; }
+    /* Sidebar */
+    .sidebar { width: 180px; background: var(--surface); border-right: 1px solid var(--border); padding: 12px 0; flex-shrink: 0; overflow-y: auto; }
+    .nav-item { display: flex; align-items: center; gap: 8px; padding: 8px 16px; cursor: pointer; color: var(--muted); font-size: 12px; transition: all .15s; border-left: 2px solid transparent; }
+    .nav-item:hover { color: var(--text); background: rgba(99,102,241,.08); }
+    .nav-item.active { color: var(--accent); border-left-color: var(--accent); background: rgba(99,102,241,.1); }
+    .nav-section { padding: 12px 16px 4px; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    /* Main content */
+    .main { flex: 1; overflow-y: auto; padding: 20px; }
+    /* Right panel: live log */
+    .live-panel { width: 240px; background: var(--surface); border-left: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+    .live-panel-title { padding: 12px 14px; font-size: 11px; color: var(--muted); border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: .06em; }
+    .live-log { flex: 1; overflow-y: auto; padding: 8px; }
+    .log-entry { font-size: 11px; padding: 3px 6px; border-radius: 4px; margin-bottom: 2px; }
+    .log-entry.info { color: var(--muted); }
+    .log-entry.success { color: var(--green); }
+    .log-entry.error { color: var(--red); }
+    .log-entry.warn { color: var(--yellow); }
+    /* Cards */
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+    .card-grid { display: grid; gap: 12px; }
+    .g2 { grid-template-columns: repeat(2, 1fr); }
+    .g3 { grid-template-columns: repeat(3, 1fr); }
+    .g4 { grid-template-columns: repeat(4, 1fr); }
+    /* KPI cards */
+    .kpi { text-align: center; }
+    .kpi-value { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: var(--accent); }
+    .kpi-label { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .kpi-sub { font-size: 11px; color: var(--green); margin-top: 2px; }
+    /* Status pills */
+    .pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 20px; font-size: 11px; }
+    .pill.live { background: rgba(34,197,94,.1); color: var(--green); border: 1px solid rgba(34,197,94,.2); }
+    .pill.building { background: rgba(99,102,241,.1); color: var(--accent); border: 1px solid rgba(99,102,241,.2); }
+    .pill.error { background: rgba(239,68,68,.1); color: var(--red); border: 1px solid rgba(239,68,68,.2); }
+    .pill.pending { background: rgba(245,158,11,.1); color: var(--yellow); border: 1px solid rgba(245,158,11,.2); }
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: none; border-radius: 6px; font-size: 12px; font-family: var(--mono); cursor: pointer; transition: opacity .15s; font-weight: 500; }
+    .btn:hover { opacity: .85; }
+    .btn:disabled { opacity: .4; cursor: not-allowed; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+    .btn-danger { background: rgba(239,68,68,.15); color: var(--red); border: 1px solid rgba(239,68,68,.2); }
+    .btn-green { background: rgba(34,197,94,.15); color: var(--green); border: 1px solid rgba(34,197,94,.2); }
+    /* Table */
+    .tbl { width: 100%; border-collapse: collapse; }
+    .tbl th { text-align: left; padding: 8px 12px; font-size: 11px; color: var(--muted); border-bottom: 1px solid var(--border); font-weight: 500; text-transform: uppercase; letter-spacing: .04em; }
+    .tbl td { padding: 10px 12px; font-size: 12px; border-bottom: 1px solid var(--border); }
+    .tbl tr:hover td { background: rgba(255,255,255,.02); }
+    /* Inputs */
+    .inp { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; color: var(--text); font-family: var(--mono); font-size: 12px; width: 100%; }
+    .inp:focus { outline: none; border-color: var(--accent); }
+    /* Section headers */
+    .section-header { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .section-sub { font-size: 12px; color: var(--muted); margin-bottom: 20px; margin-top: -10px; }
+    /* Tabs */
+    .tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+    .tab { padding: 8px 14px; font-size: 12px; cursor: pointer; color: var(--muted); border-bottom: 2px solid transparent; transition: all .15s; }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    /* Progress bar */
+    .progress { background: var(--surface2); border-radius: 4px; height: 6px; overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 4px; transition: width .3s; }
+    /* Pulse animation */
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+    .pulse { animation: pulse 2s infinite; }
+    @keyframes slideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .slide-in { animation: slideIn .2s ease; }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    /* Copy block */
+    .copy-block { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 12px; font-size: 12px; white-space: pre-wrap; max-height: 200px; overflow-y: auto; }
+    /* Sparkline */
+    .sparkline { display: flex; align-items: flex-end; gap: 2px; height: 32px; }
+    .sparkline-bar { flex: 1; background: var(--accent); border-radius: 2px; opacity: .6; transition: opacity .15s; min-height: 2px; }
+    .sparkline-bar:hover { opacity: 1; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef, useCallback } = React;
+
+// ─── CONFIG (fill in your keys) ──────────────────────────────────────────────
+const ENV = {
+  NVIDIA_API_KEY:     "nvapi-...",
+  NVIDIA_MODEL:       "qwen/qwen2.5-coder-32b-instruct",
+  GROQ_API_KEY:       "YOUR_GROQ_API_KEY",  // fill in from .env
+  GEMINI_API_KEY:     "AIza...",
+  PINECONE_API_KEY:   "pcsk_...",
+  PINECONE_HOST:      "https://xxx.pinecone.io",
+  YOUTUBE_API_KEY:    "AIza...",
+  POSTHOG_WRITE_KEY:  "YOUR_POSTHOG_WRITE_KEY",  // phc_... from PostHog project settings
+  SUPABASE_URL:       "YOUR_SUPABASE_URL",         // https://xxx.supabase.co
+  SUPABASE_ANON_KEY:  "YOUR_SUPABASE_ANON_KEY",   // sb_publishable_... from Supabase settings
+  GITHUB_USERNAME:    "YOUR_GITHUB_USERNAME",
+  DAILY_TARGET_USD:   5000,
+  API_BUDGET_USD:     10.00,
+  PRODUCTS_PER_DAY:   5,
+};
+
+const NAV = [
+  { id: 'dashboard',  icon: '⬡',  label: 'Dashboard',   group: 'core' },
+  { id: 'market',     icon: '🔍',  label: 'Market',       group: 'core' },
+  { id: 'pipeline',   icon: '⇒',   label: 'Pipeline',     group: 'core' },
+  { id: 'build',      icon: '⚡',   label: 'Build',        group: 'core' },
+  { id: 'portfolio',  icon: '▦',   label: 'Portfolio',    group: 'core' },
+  { id: 'seo',        icon: '🌐',  label: 'SEO',          group: 'traffic' },
+  { id: 'traffic',    icon: '↑',   label: 'Traffic',      group: 'traffic' },
+  { id: 'revenue',    icon: '$',   label: 'Revenue',      group: 'money' },
+  { id: 'analytics',  icon: '◎',   label: 'Analytics',    group: 'money' },
+  { id: 'memory',     icon: '◈',   label: 'Memory',       group: 'system' },
+  { id: 'budget',     icon: '⊕',   label: 'Budget',       group: 'system' },
+  { id: 'agents',     icon: '⊛',   label: 'Agents',       group: 'system' },
+  { id: 'goals',      icon: '◎',   label: 'Goals',        group: 'system' },
+  { id: 'schema',     icon: '⊞',   label: 'Schema',       group: 'system' },
+];
+
+// ─── API helper ───────────────────────────────────────────────────────────────
+async function api(path, body) {
+  const r = await fetch(path, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  return r.json();
+}
+
+// ─── Groq helper ──────────────────────────────────────────────────────────────
+async function callGroq(prompt, system = 'You are a helpful assistant.') {
+  const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${ENV.GROQ_API_KEY}` },
+    body: JSON.stringify({
+      model: 'llama-3.3-70b-versatile',
+      messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }],
+      temperature: 0.7, max_tokens: 1500,
+    }),
+  });
+  const d = await r.json();
+  return d.choices?.[0]?.message?.content || '';
+}
+
+// ─── Components ───────────────────────────────────────────────────────────────
+function Pill({ status }) {
+  const map = { live: '● Live', building: '◌ Building', error: '✕ Error', pending: '○ Pending', draft: '◌ Draft' };
+  return <span className={`pill ${status}`}>{map[status] || status}</span>;
+}
+
+function Sparkline({ data = [] }) {
+  const max = Math.max(...data, 1);
+  return (
+    <div className="sparkline">
+      {data.map((v, i) => (
+        <div key={i} className="sparkline-bar" style={{ height: `${Math.max(2, (v / max) * 32)}px` }} title={v} />
+      ))}
+    </div>
+  );
+}
+
+function KPI({ value, label, sub, prefix = '', suffix = '', color }) {
+  return (
+    <div className="card kpi">
+      <div className="kpi-value" style={color ? { color } : {}}>{prefix}{value}{suffix}</div>
+      <div className="kpi-label">{label}</div>
+      {sub && <div className="kpi-sub">{sub}</div>}
+    </div>
+  );
+}
+
+// ─── Dashboard Tab ────────────────────────────────────────────────────────────
+function DashboardTab({ portfolio, mrr, budget, addLog }) {
+  const live = portfolio.filter(p => p.status === 'live').length;
+  const totalVisitors = portfolio.reduce((s, p) => s + (p.visitors || 0), 0);
+  const arr = (mrr * 12).toFixed(0);
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Command Center</div>
+      <div className="section-sub">Today's target: ${ENV.DAILY_TARGET_USD.toLocaleString()} revenue · {ENV.PRODUCTS_PER_DAY} products built</div>
+      <div className="card-grid g4" style={{ marginBottom: 16 }}>
+        <KPI value={`$${mrr.toFixed(0)}`} label="Monthly MRR" sub={`$${arr} ARR`} />
+        <KPI value={live} label="Live Products" sub={`${portfolio.length} total`} />
+        <KPI value={totalVisitors.toLocaleString()} label="Total Visitors" />
+        <KPI value={`$${budget.used.toFixed(2)}`} label="API Spend" sub={`of $${budget.limit}`} color={budget.used > 7 ? 'var(--yellow)' : 'var(--accent)'} />
+      </div>
+      <div className="card-grid g2" style={{ marginBottom: 16 }}>
+        <div className="card">
+          <div style={{ fontSize: 12, fontWeight: 600, marginBottom: 12, color: 'var(--muted)' }}>REVENUE TREND</div>
+          <Sparkline data={[0,0,12,45,89,145,210,380,520,710,890,mrr]} />
+          <div style={{ marginTop: 8, fontSize: 11, color: 'var(--green)' }}>↑ compounding SEO traffic</div>
+        </div>
+        <div className="card">
+          <div style={{ fontSize: 12, fontWeight: 600, marginBottom: 12, color: 'var(--muted)' }}>TODAY'S AGENTS</div>
+          {[
+            { name: 'market-agent', time: '00:00', status: 'idle', desc: 'Discover 50 keywords' },
+            { name: 'seo-agent', time: '02:00', status: 'idle', desc: 'Generate 50 pages' },
+            { name: 'product-agent', time: '04:00', status: 'idle', desc: 'Create 10 specs' },
+            { name: 'builder-agent', time: '05:00', status: 'idle', desc: 'Build 3 tools' },
+            { name: 'launch-agent', time: '07:00', status: 'idle', desc: 'Deploy + monetize' },
+            { name: 'traffic-agent', time: '09:00', status: 'idle', desc: 'Distribute content' },
+            { name: 'analytics-agent', time: '22:00', status: 'idle', desc: 'Track + optimize' },
+          ].map(agent => (
+            <div key={agent.name} style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid var(--border)', fontSize: 11 }}>
+              <span style={{ color: 'var(--text)' }}>{agent.name}</span>
+              <span style={{ color: 'var(--muted)' }}>{agent.time}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="card">
+        <div style={{ fontSize: 12, fontWeight: 600, marginBottom: 12, color: 'var(--muted)' }}>MILESTONES</div>
+        {[
+          { label: '$100 MRR — first revenue', done: mrr >= 100 },
+          { label: '$500 MRR — add affiliates (Rewardful)', done: mrr >= 500 },
+          { label: '$1k MRR — ramen profitable 🍜', done: mrr >= 1000 },
+          { label: '$5k MRR — hire first contractor', done: mrr >= 5000 },
+          { label: '$10k MRR — build TYPE B of winner', done: mrr >= 10000 },
+          { label: '$50k MRR — $600k ARR', done: mrr >= 50000 },
+          { label: '$150k MRR — $1.8M ARR 🏆', done: mrr >= 150000 },
+        ].map((m, i) => (
+          <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'center', padding: '5px 0' }}>
+            <span style={{ color: m.done ? 'var(--green)' : 'var(--border)', fontSize: 14 }}>{m.done ? '✓' : '○'}</span>
+            <span style={{ fontSize: 12, color: m.done ? 'var(--green)' : 'var(--muted)' }}>{m.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Market Tab ───────────────────────────────────────────────────────────────
+function MarketTab({ addLog }) {
+  const [results, setResults] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState('');
+
+  const discover = async () => {
+    setLoading(true);
+    addLog('info', 'market-agent: discovering keywords...');
+    try {
+      const data = await api('/api/keywords', { action: 'daily_discover' });
+      setResults(data);
+      addLog('success', `market-agent: found ${data.discovered} keywords, ${data.buildQueue?.length} queued for build`);
+    } catch (e) {
+      addLog('error', `market-agent: ${e.message}`);
+    }
+    setLoading(false);
+  };
+
+  const search = async () => {
+    if (!query) return;
+    setLoading(true);
+    const data = await api('/api/keywords', { action: 'autosuggest', query }).catch(() => null);
+    if (data) setResults({ buildQueue: data.suggestions, seoQueue: [] });
+    setLoading(false);
+  };
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Market Discovery</div>
+      <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+        <input className="inp" placeholder="Search keyword..." value={query} onChange={e => setQuery(e.target.value)} onKeyDown={e => e.key === 'Enter' && search()} style={{ flex: 1 }} />
+        <button className="btn btn-secondary" onClick={search}>Search</button>
+        <button className="btn btn-primary" onClick={discover} disabled={loading}>
+          {loading ? <span className="pulse">●</span> : '⚡'} Run market-agent
+        </button>
+      </div>
+      {results && (
+        <>
+          <div className="card-grid g3" style={{ marginBottom: 16 }}>
+            <KPI value={results.discovered || results.buildQueue?.length || 0} label="Discovered" />
+            <KPI value={results.buildQueue?.length || 0} label="Build Queue (≥7.0)" color="var(--green)" />
+            <KPI value={results.seoQueue?.length || 0} label="SEO Only (5-7)" />
+          </div>
+          <div className="card">
+            <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 12 }}>BUILD QUEUE</div>
+            <table className="tbl">
+              <thead><tr><th>Keyword</th><th>Score</th><th>Intent</th><th>Source</th><th>Action</th></tr></thead>
+              <tbody>
+                {(results.buildQueue || []).slice(0, 15).map((kw, i) => (
+                  <tr key={i}>
+                    <td style={{ color: 'var(--text)' }}>{kw.keyword || kw}</td>
+                    <td><span style={{ color: (kw.score || 0) >= 8 ? 'var(--green)' : 'var(--yellow)' }}>{kw.score || '—'}</span></td>
+                    <td style={{ color: 'var(--muted)' }}>{kw.intent || '—'}</td>
+                    <td style={{ color: 'var(--muted)' }}>{kw.source || '—'}</td>
+                    <td><span className={`pill ${(kw.score || 0) >= 7 ? 'live' : 'pending'}`}>{(kw.score || 0) >= 7 ? 'Build' : 'SEO'}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// ─── Build Tab ────────────────────────────────────────────────────────────────
+// Uses phased pipeline: start → build_html → deploy → finalize
+// Each phase is a separate API call (≤60s each) — no single-function timeout risk.
+// Polls /api/build?action=get_job for live status between phases.
+
+const BUILD_PHASES = [
+  { key: 'start',      label: '① Spec + Stripe product',       pct: 20 },
+  { key: 'build_html', label: '② Generate HTML (Claude)',       pct: 45 },
+  { key: 'deploy',     label: '③ Deploy to Vercel',             pct: 70 },
+  { key: 'finalize',   label: '④ SEO pages + publish content',  pct: 95 },
+];
+
+function BuildTab({ addLog, addProduct }) {
+  const [keyword, setKeyword] = useState('');
+  const [building, setBuilding] = useState(false);
+  const [phaseIdx, setPhaseIdx] = useState(-1);
+  const [phasePct, setPhasePct] = useState(0);
+  const [phaseLabel, setPhaseLabel] = useState('');
+  const [jobId, setJobId] = useState(null);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
+  const pollRef = React.useRef(null);
+
+  // Stop polling on unmount
+  React.useEffect(() => () => { if (pollRef.current) clearInterval(pollRef.current); }, []);
+
+  const startPolling = (jid) => {
+    if (pollRef.current) clearInterval(pollRef.current);
+    pollRef.current = setInterval(async () => {
+      try {
+        const job = await api('/api/build', { action: 'get_job', jobId: jid });
+        if (job?.status === 'failed') {
+          clearInterval(pollRef.current);
+          setError(job.error || 'Build failed');
+          setBuilding(false);
+        }
+      } catch (_) {}
+    }, 4000);
+  };
+
+  const stopPolling = () => { if (pollRef.current) { clearInterval(pollRef.current); pollRef.current = null; } };
+
+  const build = async () => {
+    if (!keyword.trim() || building) return;
+    setBuilding(true);
+    setResult(null);
+    setError(null);
+    setPhaseIdx(0);
+    setPhasePct(5);
+    setPhaseLabel('Scoring demand...');
+    addLog('info', `build: starting "${keyword}"`);
+
+    try {
+      // ── Phase 1: Spec + Stripe + Gumroad ──────────────────────────────────
+      setPhaseLabel(BUILD_PHASES[0].label);
+      const p1 = await api('/api/build', { action: 'start', keyword: keyword.trim(), githubUsername: ENV.GITHUB_USERNAME });
+
+      if (p1.skipped) {
+        setPhaseLabel(`Skipped — demand score ${p1.score?.toFixed(1)} < 7.0`);
+        addLog('warn', `build: skipped "${keyword}" (score ${p1.score})`);
+        setBuilding(false); return;
+      }
+      if (p1.duplicate) {
+        setPhaseLabel(`Already built today (${p1.status}) — jobId: ${p1.jobId}`);
+        addLog('warn', `build: duplicate "${keyword}" — ${p1.message}`);
+        if (p1.product) { setResult(p1.product); addProduct(p1.product); }
+        setBuilding(false); return;
+      }
+      if (p1.error) throw new Error(p1.error);
+
+      const jid = p1.jobId;
+      setJobId(jid);
+      startPolling(jid);
+      setPhasePct(BUILD_PHASES[0].pct);
+      addLog('success', `build: spec ready — ${p1.spec?.name} (score ${p1.spec?.demand_score})`);
+
+      // ── Phase 2: HTML generation + GitHub push ─────────────────────────────
+      setPhaseIdx(1);
+      setPhaseLabel(BUILD_PHASES[1].label);
+      const p2 = await api('/api/build', { action: 'build_html', jobId: jid, githubUsername: ENV.GITHUB_USERNAME });
+      if (p2.error) throw new Error(p2.error);
+      setPhasePct(BUILD_PHASES[1].pct);
+      addLog('success', `build: HTML pushed → ${p2.githubUrl}`);
+
+      // ── Phase 3: Vercel deploy ─────────────────────────────────────────────
+      setPhaseIdx(2);
+      setPhaseLabel(BUILD_PHASES[2].label);
+      const p3 = await api('/api/build', { action: 'deploy', jobId: jid, githubUsername: ENV.GITHUB_USERNAME });
+      if (p3.error) throw new Error(p3.error);
+      setPhasePct(BUILD_PHASES[2].pct);
+      addLog('success', `build: live → ${p3.liveUrl}`);
+
+      // ── Phase 4: SEO + marketing content + portfolio ───────────────────────
+      setPhaseIdx(3);
+      setPhaseLabel(BUILD_PHASES[3].label);
+      const p4 = await api('/api/build', { action: 'finalize', jobId: jid, githubUsername: ENV.GITHUB_USERNAME });
+      if (p4.error) throw new Error(p4.error);
+      setPhasePct(100);
+
+      stopPolling();
+      const product = p4.product;
+      setResult(product);
+      addProduct(product);
+      setPhaseLabel('');
+      setPhaseIdx(-1);
+      addLog('success', `build: ✅ ${product.name} LIVE — ${product.vercel_url}`);
+
+    } catch (e) {
+      stopPolling();
+      setError(e.message);
+      setPhaseLabel('');
+      addLog('error', `build: ${e.message}`);
+    }
+    setBuilding(false);
+  };
+
+  const progressBar = building && phasePct > 0 ? (
+    <div style={{ marginTop: 12 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: 'var(--muted)', marginBottom: 6 }}>
+        <span>{phaseLabel}</span>
+        <span>{phasePct}%</span>
+      </div>
+      <div style={{ height: 4, background: 'var(--surface2)', borderRadius: 4, overflow: 'hidden' }}>
+        <div style={{ height: '100%', width: `${phasePct}%`, background: 'var(--accent)', borderRadius: 4, transition: 'width 0.6s ease' }} />
+      </div>
+      <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
+        {BUILD_PHASES.map((p, i) => (
+          <div key={p.key} style={{ flex: 1, textAlign: 'center', fontSize: 10,
+            color: i < phaseIdx ? 'var(--green)' : i === phaseIdx ? 'var(--accent)' : 'var(--muted)' }}>
+            {i < phaseIdx ? '✓' : i === phaseIdx ? <span className="pulse">●</span> : '○'} {p.label.split(' ').slice(1).join(' ')}
+          </div>
+        ))}
+      </div>
+      {jobId && <div style={{ marginTop: 8, fontSize: 10, color: 'var(--muted)' }}>Job: {jobId}</div>}
+    </div>
+  ) : null;
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Build a Product</div>
+      <div className="section-sub">Enter a keyword → AI builds complete SaaS tool + deploys + monetizes (~3 min, ~$0.10 API cost)</div>
+      <div className="card" style={{ marginBottom: 16 }}>
+        <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
+          <input className="inp" placeholder="e.g. 'ai resume builder' or 'youtube title generator'"
+            value={keyword} onChange={e => setKeyword(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && build()} style={{ flex: 1 }} disabled={building} />
+          <button className="btn btn-primary" onClick={build} disabled={building || !keyword.trim()} style={{ minWidth: 140 }}>
+            {building ? <><span className="pulse">●</span> Building...</> : '⚡ Build Product'}
+          </button>
+        </div>
+        {progressBar}
+        {error && (
+          <div style={{ marginTop: 10, padding: '8px 12px', background: 'rgba(239,68,68,.12)', border: '1px solid rgba(239,68,68,.3)', borderRadius: 6, fontSize: 12, color: '#f87171' }}>
+            ✗ {error}
+          </div>
+        )}
+      </div>
+      {result && (
+        <div className="card slide-in" style={{ border: '1px solid rgba(34,197,94,.3)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+            <span style={{ color: 'var(--green)', fontWeight: 600 }}>✓ {result.name} is LIVE</span>
+            <Pill status="live" />
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, fontSize: 12 }}>
+            <a href={result.vercel_url} target="_blank" style={{ color: 'var(--accent)', textDecoration: 'none' }}>🌐 {result.vercel_url}</a>
+            {result.stripe_link && <a href={result.stripe_link} target="_blank" style={{ color: 'var(--green)', textDecoration: 'none' }}>💳 {result.stripe_link?.slice(0, 40)}...</a>}
+          </div>
+          <div style={{ marginTop: 12, fontSize: 11, color: 'var(--muted)' }}>
+            {result.demand_score && <span>Demand: {result.demand_score} · </span>}
+            {result.seo_pages > 0 && <span>SEO pages: {result.seo_pages} · </span>}
+            {result.devto_url && <span><a href={result.devto_url} target="_blank" style={{ color: 'var(--muted)' }}>Dev.to ↗</a> · </span>}
+            <span>ICP: {result.icp}</span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Portfolio Tab ────────────────────────────────────────────────────────────
+function PortfolioTab({ portfolio }) {
+  const [filter, setFilter] = useState('all');
+  const filtered = filter === 'all' ? portfolio : portfolio.filter(p => p.category === filter);
+  const categories = [...new Set(portfolio.map(p => p.category).filter(Boolean))];
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Portfolio</div>
+      <div style={{ display: 'flex', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
+        {['all', ...categories].map(cat => (
+          <button key={cat} onClick={() => setFilter(cat)} className={`btn ${filter === cat ? 'btn-primary' : 'btn-secondary'}`} style={{ padding: '4px 10px', fontSize: 11 }}>{cat}</button>
+        ))}
+      </div>
+      {portfolio.length === 0 ? (
+        <div className="card" style={{ textAlign: 'center', padding: 40, color: 'var(--muted)' }}>
+          No products yet. Use the Build tab to create your first product.
+        </div>
+      ) : (
+        <div className="card">
+          <table className="tbl">
+            <thead><tr><th>Product</th><th>Status</th><th>MRR</th><th>Visitors</th><th>Conv%</th><th>Links</th></tr></thead>
+            <tbody>
+              {filtered.map(p => (
+                <tr key={p.slug}>
+                  <td>
+                    <div style={{ fontWeight: 600 }}>{p.name}</div>
+                    <div style={{ fontSize: 11, color: 'var(--muted)' }}>{p.tagline?.slice(0, 50)}</div>
+                  </td>
+                  <td><Pill status={p.status} /></td>
+                  <td style={{ color: p.mrr_usd > 0 ? 'var(--green)' : 'var(--muted)' }}>${(p.mrr_usd || 0).toFixed(0)}</td>
+                  <td>{(p.visitors || 0).toLocaleString()}</td>
+                  <td style={{ color: (p.conversion_rate || 0) > 0.02 ? 'var(--green)' : 'var(--muted)' }}>{((p.conversion_rate || 0) * 100).toFixed(1)}%</td>
+                  <td style={{ display: 'flex', gap: 6 }}>
+                    {p.vercel_url && <a href={p.vercel_url} target="_blank" style={{ color: 'var(--accent)', fontSize: 11 }}>Live ↗</a>}
+                    {p.stripe_link && <a href={p.stripe_link} target="_blank" style={{ color: 'var(--green)', fontSize: 11 }}>Pay ↗</a>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── SEO Tab ──────────────────────────────────────────────────────────────────
+function SeoTab({ addLog }) {
+  const [keyword, setKeyword] = useState('');
+  const [toolName, setToolName] = useState('');
+  const [toolUrl, setToolUrl] = useState('');
+  const [generating, setGenerating] = useState(false);
+  const [pages, setPages] = useState(null);
+
+  const generate = async () => {
+    if (!keyword || generating) return;
+    setGenerating(true);
+    addLog('info', `seo-agent: generating ${keyword}...`);
+    try {
+      const data = await api('/api/content', {
+        action: 'niche_batch',
+        keyword,
+        toolName: toolName || `${keyword.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')} Tool`,
+        toolUrl: toolUrl || 'https://example.vercel.app',
+      });
+      setPages(data.pages);
+      addLog('success', `seo-agent: generated ${Object.keys(data.pages || {}).length} pages`);
+    } catch (e) {
+      addLog('error', `seo-agent: ${e.message}`);
+    }
+    setGenerating(false);
+  };
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">SEO Content Factory</div>
+      <div className="section-sub">Generate 6 SEO pages per keyword: landing + tutorial + comparison + listicle + templates + API docs</div>
+      <div className="card" style={{ marginBottom: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 8, marginBottom: 12 }}>
+          <input className="inp" placeholder="Keyword (e.g. 'ai resume builder')" value={keyword} onChange={e => setKeyword(e.target.value)} />
+          <input className="inp" placeholder="Tool name" value={toolName} onChange={e => setToolName(e.target.value)} />
+          <input className="inp" placeholder="Tool URL" value={toolUrl} onChange={e => setToolUrl(e.target.value)} />
+        </div>
+        <button className="btn btn-primary" onClick={generate} disabled={generating || !keyword}>
+          {generating ? <><span className="pulse">●</span> Generating...</> : '📝 Generate 6 Pages'}
+        </button>
+      </div>
+      {pages && (
+        <div style={{ display: 'grid', gap: 12 }}>
+          {Object.entries(pages).map(([type, page]) => (
+            <div key={type} className="card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+                <span style={{ fontWeight: 600, fontSize: 13 }}>{page.title || type}</span>
+                <span className="pill live" style={{ fontSize: 10 }}>{page.pageType || type}</span>
+              </div>
+              <div style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 8 }}>{page.description}</div>
+              <div style={{ fontSize: 11, color: 'var(--muted)' }}>/{page.slug} · {page.html?.length?.toLocaleString() || 0} chars</div>
+              {page.html && (
+                <button className="btn btn-secondary" style={{ marginTop: 8, fontSize: 11 }} onClick={() => {
+                  const blob = new Blob([page.html], { type: 'text/html' });
+                  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+                  a.download = `${page.slug?.split('/').pop() || 'page'}.html`; a.click();
+                }}>⤓ Download HTML</button>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Traffic Tab ──────────────────────────────────────────────────────────────
+function TrafficTab({ portfolio, addLog }) {
+  const [selected, setSelected] = useState(null);
+  const [publishing, setPublishing] = useState(false);
+  const [published, setPublished] = useState({});
+
+  const autoPublish = async (product) => {
+    setPublishing(true);
+    addLog('info', `traffic-agent: auto-publishing ${product.name}...`);
+    try {
+      const result = await api('/api/publish', { action: 'auto_publish', product });
+      setPublished(prev => ({ ...prev, [product.slug]: result }));
+      addLog('success', `traffic-agent: published ${product.name} → Dev.to + Hashnode`);
+    } catch (e) {
+      addLog('error', `traffic-agent: ${e.message}`);
+    }
+    setPublishing(false);
+  };
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Traffic Distribution</div>
+      <div className="section-sub">Tier 1: Auto-publish (Dev.to + Hashnode) · Tier 2: Human queue (Reddit/Twitter/IH/PH)</div>
+      {portfolio.length === 0 ? (
+        <div className="card" style={{ textAlign: 'center', padding: 40, color: 'var(--muted)' }}>Build products first, then distribute traffic here.</div>
+      ) : (
+        portfolio.filter(p => p.status === 'live').map(product => (
+          <div key={product.slug} className="card" style={{ marginBottom: 12 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+              <div>
+                <span style={{ fontWeight: 600 }}>{product.name}</span>
+                <span style={{ color: 'var(--muted)', fontSize: 11, marginLeft: 8 }}>{product.vercel_url}</span>
+              </div>
+              <button className="btn btn-primary" onClick={() => autoPublish(product)} disabled={publishing} style={{ fontSize: 11 }}>
+                ↑ Auto-publish
+              </button>
+            </div>
+            {published[product.slug] && (
+              <div style={{ fontSize: 11, display: 'flex', gap: 12 }}>
+                {published[product.slug].devto?.url && <a href={published[product.slug].devto.url} target="_blank" style={{ color: 'var(--accent)' }}>Dev.to ↗</a>}
+                {published[product.slug].hashnode?.url && <a href={published[product.slug].hashnode.url} target="_blank" style={{ color: 'var(--accent)' }}>Hashnode ↗</a>}
+              </div>
+            )}
+          </div>
+        ))
+      )}
+    </div>
+  );
+}
+
+// ─── Revenue Tab ─────────────────────────────────────────────────────────────
+function RevenueTab({ addLog }) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const fetch_ = async () => {
+    setLoading(true);
+    try {
+      const d = await api('/api/analytics', { action: 'mrr' });
+      setData(d);
+    } catch (e) { addLog('error', e.message); }
+    setLoading(false);
+  };
+
+  useEffect(() => { fetch_(); }, []);
+
+  return (
+    <div className="slide-in">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+        <div className="section-header" style={{ marginBottom: 0 }}>Revenue</div>
+        <button className="btn btn-secondary" onClick={fetch_} disabled={loading}>{loading ? '...' : '↻ Refresh'}</button>
+      </div>
+      {data ? (
+        <>
+          <div className="card-grid g4" style={{ marginBottom: 16 }}>
+            <KPI value={`$${parseFloat(data.mrr_usd || 0).toFixed(0)}`} label="MRR" color="var(--green)" />
+            <KPI value={`$${parseFloat(data.arr_usd || 0).toFixed(0)}`} label="ARR" />
+            <KPI value={data.active_subscriptions || 0} label="Active Subs" />
+            <KPI value={`$${parseFloat(data.one_time_usd || 0).toFixed(0)}`} label="One-time Sales" />
+          </div>
+          {data.milestone && (
+            <div className="card" style={{ marginBottom: 16, borderColor: 'rgba(99,102,241,.3)' }}>
+              <span style={{ color: 'var(--accent)' }}>🎯 {data.milestone}</span>
+            </div>
+          )}
+          {data.by_product && Object.keys(data.by_product).length > 0 && (
+            <div className="card">
+              <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 12 }}>BY PRODUCT</div>
+              <table className="tbl">
+                <thead><tr><th>Product</th><th>Subscribers</th><th>MRR</th></tr></thead>
+                <tbody>
+                  {Object.entries(data.by_product).map(([slug, d]) => (
+                    <tr key={slug}>
+                      <td>{slug}</td>
+                      <td>{d.count}</td>
+                      <td style={{ color: 'var(--green)' }}>${(d.mrr / 100).toFixed(0)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="card" style={{ textAlign: 'center', padding: 40, color: 'var(--muted)' }}>
+          {loading ? 'Loading revenue data...' : 'No revenue data. Configure Stripe keys in .env.'}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Analytics Tab ────────────────────────────────────────────────────────────
+function AnalyticsTab({ addLog }) {
+  const [metrics, setMetrics] = useState(null);
+  const [product, setProduct] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const fetch_ = async () => {
+    setLoading(true);
+    try {
+      const d = await api('/api/posthog', { action: 'dashboard', dateFrom: '-7d', product: product || undefined });
+      setMetrics(d);
+    } catch (e) { addLog('error', e.message); }
+    setLoading(false);
+  };
+
+  return (
+    <div className="slide-in">
+      <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+        <input className="inp" placeholder="Filter by product slug (optional)" value={product} onChange={e => setProduct(e.target.value)} style={{ flex: 1 }} />
+        <button className="btn btn-primary" onClick={fetch_} disabled={loading}>{loading ? '...' : '◎ Load Analytics'}</button>
+      </div>
+      {metrics ? (
+        <>
+          <div className="card-grid g4" style={{ marginBottom: 16 }}>
+            <KPI value={`${metrics.rates?.activation_rate || 0}%`} label="Activation Rate" sub={metrics.rates?.activation_rate >= 40 ? '✓ Winner zone' : 'Target: 40%'} color={metrics.rates?.activation_rate >= 40 ? 'var(--green)' : 'var(--accent)'} />
+            <KPI value={`${metrics.rates?.paywall_ctr || 0}%`} label="Paywall CTR" sub="Target: 15%" color={metrics.rates?.paywall_ctr >= 15 ? 'var(--green)' : 'var(--accent)'} />
+            <KPI value={`${metrics.rates?.email_capture_rate || 0}%`} label="Email Capture" />
+            <KPI value={metrics.metrics?.opens || 0} label="Tool Opens (7d)" />
+          </div>
+          <div className="card">
+            <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 12 }}>CONVERSION FUNNEL</div>
+            {[
+              { label: 'Tool Opened', value: metrics.metrics?.opens || 0, color: 'var(--accent)' },
+              { label: 'Tool Used', value: metrics.metrics?.uses || 0, color: 'var(--accent2)' },
+              { label: 'Paywall Shown', value: metrics.metrics?.paywalls || 0, color: 'var(--yellow)' },
+              { label: 'Payment Clicked', value: metrics.metrics?.clicks || 0, color: 'var(--green)' },
+            ].map(step => (
+              <div key={step.label} style={{ marginBottom: 10 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4, fontSize: 12 }}>
+                  <span>{step.label}</span><span style={{ color: step.color }}>{step.value}</span>
+                </div>
+                <div className="progress">
+                  <div className="progress-fill" style={{ width: `${Math.min(100, (step.value / Math.max(metrics.metrics?.opens || 1, 1)) * 100)}%`, background: step.color }} />
+                </div>
+              </div>
+            ))}
+          </div>
+          {metrics.winner && (
+            <div className="card" style={{ marginTop: 12, borderColor: 'rgba(34,197,94,.3)', padding: '12px 16px' }}>
+              <span style={{ color: 'var(--green)' }}>🏆 WINNER DETECTED — Double all marketing, build TYPE B, set up affiliates</span>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="card" style={{ textAlign: 'center', padding: 40, color: 'var(--muted)' }}>Click "Load Analytics" to fetch PostHog data.</div>
+      )}
+    </div>
+  );
+}
+
+// ─── Memory Tab ───────────────────────────────────────────────────────────────
+function MemoryTab({ addLog }) {
+  const [insights, setInsights] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState('');
+
+  const search = async () => {
+    if (!query || loading) return;
+    setLoading(true);
+    addLog('info', `memory: querying Pinecone for "${query}"...`);
+    try {
+      // Step 1: embed query via Pinecone Inference API (sparse)
+      const embedR = await fetch('https://api.pinecone.io/embed', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Api-Key': ENV.PINECONE_API_KEY, 'X-Pinecone-API-Version': '2024-10' },
+        body: JSON.stringify({ model: 'pinecone-sparse-english-v0', parameters: { input_type: 'query', truncation: 'END' }, inputs: [{ text: query }] }),
+      });
+      const embedData = await embedR.json();
+      if (!embedR.ok) throw new Error(`Embed failed: ${embedData.error?.message || embedR.status}`);
+      const e = embedData.data?.[0];
+      // Step 2: query with sparse vector
+      const pinR = await fetch(`${ENV.PINECONE_HOST}/query`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'Api-Key': ENV.PINECONE_API_KEY },
+        body: JSON.stringify({ sparseVector: { indices: e.sparse_indices, values: e.sparse_values }, topK: 10, includeMetadata: true }),
+      });
+      const pinData = await pinR.json();
+      const hits = pinData.matches || [];
+      setInsights(hits.map(m => ({ lesson: m.metadata?.text, category: m.metadata?.category, date: m.metadata?.date, action: m.metadata?.action, confidence: m.metadata?.confidence })));
+      addLog('success', `memory: found ${hits.length} relevant insights`);
+    } catch (e) {
+      addLog('error', `memory: ${e.message}`);
+    }
+    setLoading(false);
+  };
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Pinecone Memory</div>
+      <div className="section-sub">All insights from daily reviews. Semantic search across learned lessons.</div>
+      <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+        <input className="inp" placeholder="Search insights (e.g. 'what worked on Reddit')" value={query} onChange={e => setQuery(e.target.value)} onKeyDown={e => e.key === 'Enter' && search()} style={{ flex: 1 }} />
+        <button className="btn btn-primary" onClick={search} disabled={loading}>{loading ? '...' : '◈ Search Memory'}</button>
+      </div>
+      {insights.length > 0 && insights.map((insight, i) => (
+        <div key={i} className="card" style={{ marginBottom: 8 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+            <span className="pill pending" style={{ fontSize: 10 }}>{insight.category}</span>
+            <span style={{ fontSize: 11, color: 'var(--muted)' }}>{insight.date}</span>
+          </div>
+          <div style={{ fontSize: 13, marginBottom: 6 }}>{insight.lesson}</div>
+          {insight.action && <div style={{ fontSize: 11, color: 'var(--green)' }}>→ {insight.action}</div>}
+          {insight.confidence && <div style={{ fontSize: 11, color: 'var(--muted)' }}>Confidence: {(insight.confidence * 100).toFixed(0)}%</div>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ─── Budget Tab ───────────────────────────────────────────────────────────────
+function BudgetTab({ budget }) {
+  const pct = (budget.used / budget.limit) * 100;
+  const color = pct > 95 ? 'var(--red)' : pct > 70 ? 'var(--yellow)' : 'var(--green)';
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">API Budget</div>
+      <div className="card" style={{ marginBottom: 12 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+          <span style={{ fontSize: 13 }}>Daily Limit</span>
+          <span style={{ color, fontWeight: 600 }}>${budget.used.toFixed(3)} / ${budget.limit}</span>
+        </div>
+        <div className="progress" style={{ height: 8 }}>
+          <div className="progress-fill" style={{ width: `${Math.min(100, pct)}%`, background: color }} />
+        </div>
+        {pct > 95 && <div style={{ marginTop: 8, color: 'var(--red)', fontSize: 12 }}>⚠ Hard stop — Groq-only mode active</div>}
+        {pct > 70 && pct <= 95 && <div style={{ marginTop: 8, color: 'var(--yellow)', fontSize: 12 }}>⚡ Warning — reducing Sonnet calls</div>}
+      </div>
+      <div className="card-grid g3" style={{ marginBottom: 12 }}>
+        <KPI value={budget.groq_calls || 0} label="Groq Calls (free)" color="var(--green)" />
+        <KPI value={budget.sonnet_calls || 0} label="Sonnet Calls (~$0.06)" />
+        <KPI value={`${(14400 - (budget.groq_remaining || 14400)).toLocaleString()}`} label="Groq Used Today" />
+      </div>
+      <div className="card">
+        <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 12 }}>ROUTING RULES</div>
+        {[
+          { task: 'market research, scoring, content generation', model: 'Groq llama3-70b', cost: 'Free' },
+          { task: 'code generation (HTML)', model: 'Claude Sonnet 4.6', cost: '~$0.06/product' },
+          { task: 'code debugging', model: 'Claude Sonnet 4.6', cost: '~$0.03' },
+          { task: 'embeddings', model: 'Gemini text-embedding-004', cost: 'Free' },
+        ].map((r, i) => (
+          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px solid var(--border)', fontSize: 12 }}>
+            <span style={{ color: 'var(--muted)' }}>{r.task}</span>
+            <div style={{ textAlign: 'right' }}>
+              <div style={{ color: 'var(--text)' }}>{r.model}</div>
+              <div style={{ color: r.cost === 'Free' ? 'var(--green)' : 'var(--yellow)', fontSize: 11 }}>{r.cost}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Agents Tab ───────────────────────────────────────────────────────────────
+// Agent "Run" buttons trigger the closest equivalent serverless action.
+// Full scheduled runs happen via GitHub Actions (daily-agents.yml).
+const AGENT_ENDPOINT = {
+  'market-agent':    { path: '/api/discover',  body: { action: 'daily_discover' } },
+  'seo-agent':       { path: '/api/content',   body: { action: 'niche_batch', keyword: 'ai productivity tools', toolName: 'AI Productivity Tool', toolUrl: 'https://example.vercel.app' } },
+  'product-agent':   { path: '/api/product',   body: { action: 'score_idea', keyword: 'ai resume builder' } },
+  'builder-agent':   { path: '/api/build',     body: { action: 'check_budget' } },
+  'launch-agent':    { path: '/api/deploy',    body: { action: 'listProjects' } },
+  'traffic-agent':   { path: '/api/publish',   body: { action: 'get_queue' } },
+  'analytics-agent': { path: '/api/analytics', body: { action: 'full_report', period: '7d' } },
+};
+
+function AgentsTab({ addLog }) {
+  const [running, setRunning] = useState({});
+  const [results, setResults] = useState({});
+
+  const runAgent = async (agentId) => {
+    setRunning(p => ({ ...p, [agentId]: true }));
+    setResults(p => ({ ...p, [agentId]: null }));
+    addLog('info', `${agentId}: triggering...`);
+    const { path, body } = AGENT_ENDPOINT[agentId] || {};
+    if (!path) { addLog('warn', `${agentId}: no endpoint mapped`); setRunning(p => ({ ...p, [agentId]: false })); return; }
+    try {
+      const d = await api(path, body);
+      const summary = d.error ? `✗ ${d.error}` : (d.discovered || d.keywords?.length || d.queued || d.mrr_usd !== undefined) ? `✓ done` : `✓ ${JSON.stringify(d).slice(0, 80)}`;
+      setResults(p => ({ ...p, [agentId]: summary }));
+      addLog('success', `${agentId}: ${summary}`);
+    } catch (e) {
+      setResults(p => ({ ...p, [agentId]: `✗ ${e.message}` }));
+      addLog('error', `${agentId}: ${e.message}`);
+    }
+    setRunning(p => ({ ...p, [agentId]: false }));
+  };
+
+  const agents = [
+    { id: 'market-agent', icon: '🔍', desc: 'Discover 50 keywords from HN/Reddit/Google/PH', time: '00:00', free: true },
+    { id: 'seo-agent', icon: '📝', desc: 'Generate 50 SEO pages + push to GitHub', time: '02:00', free: true },
+    { id: 'product-agent', icon: '🛠️', desc: 'Convert top keywords into SaaS specs', time: '04:00', free: true },
+    { id: 'builder-agent', icon: '🔨', desc: 'Build 3 HTML tools (Claude Sonnet ~$0.18)', time: '05:00', free: false },
+    { id: 'launch-agent', icon: '🚀', desc: 'Deploy to Vercel, create Stripe links', time: '07:00', free: false },
+    { id: 'traffic-agent', icon: '📣', desc: 'Auto-publish Dev.to/Hashnode, queue Reddit/Twitter', time: '09:00', free: true },
+    { id: 'analytics-agent', icon: '📊', desc: 'Fetch metrics, extract insights, plan tomorrow', time: '22:00', free: true },
+  ];
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Agent Control</div>
+      <div className="section-sub">Run agents manually or they run on schedule via Vercel Cron</div>
+      <div style={{ display: 'grid', gap: 10 }}>
+        {agents.map(agent => (
+          <div key={agent.id} className="card">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div>
+                <div style={{ fontWeight: 600, fontSize: 13 }}>{agent.icon} {agent.id}</div>
+                <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 3 }}>{agent.desc}</div>
+                <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 2 }}>Scheduled: {agent.time} UTC · {agent.free ? <span style={{ color: 'var(--green)' }}>Free (Groq)</span> : <span style={{ color: 'var(--yellow)' }}>Paid (~$0.18)</span>}</div>
+              </div>
+              <button className={`btn ${agent.free ? 'btn-green' : 'btn-primary'}`} onClick={() => runAgent(agent.id)} disabled={running[agent.id]} style={{ minWidth: 80 }}>
+                {running[agent.id] ? <span className="pulse">●</span> : '▶ Run'}
+              </button>
+            </div>
+            {results[agent.id] && (
+              <div style={{ marginTop: 8, fontSize: 11, color: results[agent.id].startsWith('✗') ? 'var(--red)' : 'var(--green)', padding: '4px 8px', background: 'var(--surface2)', borderRadius: 4 }}>
+                {results[agent.id]}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Pipeline Tab ─────────────────────────────────────────────────────────────
+function PipelineTab({ portfolio, addLog }) {
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const loadJobs = async () => {
+    setLoading(true);
+    try {
+      const d = await api('/api/jobs', { action: 'list' });
+      setJobs(Array.isArray(d) ? d : (d.jobs || []));
+    } catch (e) { addLog('error', `pipeline: ${e.message}`); }
+    setLoading(false);
+  };
+
+  useEffect(() => { loadJobs(); }, []);
+
+  const PHASES = ['start', 'build_html', 'deploy', 'finalize'];
+  const PHASE_LABELS = { start: 'Spec + Stripe', build_html: 'Build HTML', deploy: 'Deploy', finalize: 'SEO + Publish' };
+  const phaseIdx = (phase) => PHASES.indexOf(phase);
+
+  const allItems = [
+    ...jobs,
+    ...portfolio.filter(p => !jobs.find(j => j.slug === p.slug)).map(p => ({
+      slug: p.slug, name: p.name, status: p.status === 'live' ? 'completed' : p.status,
+      phase: 'finalize', vercel_url: p.vercel_url, stripe_link: p.stripe_link,
+      mrr_usd: p.mrr_usd, demand_score: p.demand_score,
+    })),
+  ];
+
+  return (
+    <div className="slide-in">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+        <div>
+          <div className="section-header" style={{ marginBottom: 0 }}>Build Pipeline</div>
+          <div className="section-sub" style={{ marginTop: 4, marginBottom: 0 }}>Per-product phase tracker: Spec → Build → Deploy → Earn</div>
+        </div>
+        <button className="btn btn-secondary" onClick={loadJobs} disabled={loading}>{loading ? '...' : '↻ Refresh'}</button>
+      </div>
+      {allItems.length === 0 ? (
+        <div className="card" style={{ textAlign: 'center', padding: 40, color: 'var(--muted)' }}>
+          No builds yet. Use the Build tab to start your first product.
+        </div>
+      ) : (
+        <div style={{ display: 'grid', gap: 10 }}>
+          {allItems.map(job => {
+            const pIdx = phaseIdx(job.phase);
+            const isDone = job.status === 'completed' || job.status === 'live';
+            const isFailed = job.status === 'failed';
+            return (
+              <div key={job.slug} className="card">
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
+                  <div>
+                    <span style={{ fontWeight: 600, fontSize: 13 }}>{job.name || job.slug}</span>
+                    {job.vercel_url && <a href={job.vercel_url} target="_blank" style={{ color: 'var(--accent)', fontSize: 11, marginLeft: 8 }}>↗ Live</a>}
+                    {job.stripe_link && <a href={job.stripe_link} target="_blank" style={{ color: 'var(--green)', fontSize: 11, marginLeft: 8 }}>💳 Pay</a>}
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    {job.demand_score && <span style={{ fontSize: 11, color: 'var(--muted)' }}>score: {job.demand_score}</span>}
+                    {job.mrr_usd > 0 && <span style={{ color: 'var(--green)', fontSize: 12 }}>${job.mrr_usd}/mo</span>}
+                    <Pill status={isDone ? 'live' : isFailed ? 'error' : 'building'} />
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: 4 }}>
+                  {PHASES.map((p, i) => {
+                    const done = isDone || i < pIdx;
+                    const active = !isDone && i === pIdx;
+                    const failed = isFailed && i === pIdx;
+                    return (
+                      <div key={p} style={{ flex: 1, textAlign: 'center' }}>
+                        <div style={{ height: 3, borderRadius: 2, marginBottom: 4, background: failed ? 'var(--red)' : done ? 'var(--green)' : active ? 'var(--accent)' : 'var(--surface2)' }} />
+                        <div style={{ fontSize: 10, color: failed ? 'var(--red)' : done ? 'var(--green)' : active ? 'var(--accent)' : 'var(--muted)' }}>
+                          {failed ? '✗' : done ? '✓' : active ? <span className="pulse">●</span> : '○'} {PHASE_LABELS[p]}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {job.error && <div style={{ marginTop: 8, fontSize: 11, color: 'var(--red)' }}>✗ {job.error}</div>}
+                {job.started_at && <div style={{ marginTop: 4, fontSize: 10, color: 'var(--muted)' }}>{new Date(job.started_at).toLocaleString()}</div>}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Goals Tab ────────────────────────────────────────────────────────────────
+function GoalsTab({ mrr }) {
+  const MILESTONES = [
+    { id: 'first_revenue', label: 'First $1 of MRR', target_mrr: 1, action: 'Post on Reddit r/SideProject + r/indiehackers', done: mrr >= 1 },
+    { id: 'hundred_mrr', label: '$100 MRR — demand proven', target_mrr: 100, action: 'Reddit posts × 5, submit to 3 free AI directories', done: mrr >= 100 },
+    { id: 'five_hundred_mrr', label: '$500 MRR — add affiliates', target_mrr: 500, action: 'Set up Rewardful ($49/mo) + tweet affiliate program live', done: mrr >= 500 },
+    { id: 'ramen', label: '$1k MRR — ramen profitable', target_mrr: 1000, action: 'Build TYPE B of winner tool (auth + persistence)', done: mrr >= 1000 },
+    { id: 'five_k', label: '$5k MRR — hire contractor', target_mrr: 5000, action: 'ProductHunt launch for top product, double marketing', done: mrr >= 5000 },
+    { id: 'ten_k', label: '$10k MRR — TYPE C SaaS', target_mrr: 10000, action: 'Custom domain, marketing site, $79/mo enterprise tier', done: mrr >= 10000 },
+    { id: 'fifty_k', label: '$50k MRR — SEO moat building', target_mrr: 50000, action: '500 SEO pages live, affiliates generating 30% revenue', done: mrr >= 50000 },
+    { id: 'hundred_50_k', label: '$150k MRR — $1.8M ARR 🏆', target_mrr: 150000, action: '1k+ tools, 3 products at $40k+ MRR each', done: mrr >= 150000 },
+  ];
+
+  const WEEK1_TASKS = [
+    { id: 't1', label: 'Set all Vercel env vars (14 secrets)', link: 'https://vercel.com/dashboard', done: false },
+    { id: 't2', label: 'Verify PostHog events in live products', link: 'https://app.posthog.com', done: false },
+    { id: 't3', label: 'Post Reddit copy for 8 live products', link: 'https://reddit.com/r/SideProject', done: false },
+    { id: 't4', label: 'Submit to free AI directories (TAAFT, Toolify, AI Scout)', link: 'https://theresanaiforthat.com/submit', done: false },
+    { id: 't5', label: 'Verify Stripe webhook at /api/webhook/stripe', link: 'https://dashboard.stripe.com/webhooks', done: false },
+    { id: 't6', label: 'Verify GitHub Actions secrets (AGENT_OS_URL, etc.)', link: 'https://github.com/settings/secrets', done: false },
+    { id: 't7', label: 'Check Dev.to/Hashnode articles are indexed', link: 'https://dev.to/dashboard', done: false },
+  ];
+
+  const [tasks, setTasks] = useState(WEEK1_TASKS);
+  const toggle = (id) => setTasks(prev => prev.map(t => t.id === id ? { ...t, done: !t.done } : t));
+  const completedCount = tasks.filter(t => t.done).length;
+  const nextMilestone = MILESTONES.find(m => !m.done);
+  const mrrPct = nextMilestone ? Math.min(100, (mrr / nextMilestone.target_mrr) * 100) : 100;
+
+  return (
+    <div className="slide-in">
+      <div className="section-header">Goals & Tasks</div>
+      {nextMilestone && (
+        <div className="card" style={{ marginBottom: 16, borderColor: 'rgba(99,102,241,.3)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+            <span style={{ color: 'var(--accent)', fontWeight: 600 }}>🎯 Next: {nextMilestone.label}</span>
+            <span style={{ fontSize: 12, color: 'var(--muted)' }}>${mrr.toFixed(0)} / ${nextMilestone.target_mrr.toLocaleString()}</span>
+          </div>
+          <div className="progress" style={{ height: 6, marginBottom: 8 }}>
+            <div className="progress-fill" style={{ width: `${mrrPct}%`, background: 'var(--accent)' }} />
+          </div>
+          <div style={{ fontSize: 12, color: 'var(--muted)' }}>Action: {nextMilestone.action}</div>
+        </div>
+      )}
+      <div className="card" style={{ marginBottom: 16 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
+          <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 600 }}>WEEK 1 CHECKLIST</span>
+          <span style={{ fontSize: 12, color: completedCount === tasks.length ? 'var(--green)' : 'var(--muted)' }}>{completedCount}/{tasks.length} done</span>
+        </div>
+        {tasks.map(task => (
+          <div key={task.id} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '7px 0', borderBottom: '1px solid var(--border)' }}>
+            <span style={{ cursor: 'pointer', color: task.done ? 'var(--green)' : 'var(--muted)', fontSize: 14 }} onClick={() => toggle(task.id)}>{task.done ? '✓' : '○'}</span>
+            <span style={{ flex: 1, fontSize: 12, color: task.done ? 'var(--muted)' : 'var(--text)', textDecoration: task.done ? 'line-through' : 'none' }}>{task.label}</span>
+            {task.link && <a href={task.link} target="_blank" style={{ color: 'var(--accent)', fontSize: 11 }}>Open ↗</a>}
+          </div>
+        ))}
+      </div>
+      <div className="card">
+        <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 12 }}>MILESTONES</div>
+        {MILESTONES.map(m => (
+          <div key={m.id} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', padding: '7px 0', borderBottom: '1px solid var(--border)' }}>
+            <span style={{ color: m.done ? 'var(--green)' : 'var(--border)', fontSize: 14, marginTop: 1 }}>{m.done ? '✓' : '○'}</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 12, color: m.done ? 'var(--green)' : 'var(--text)' }}>{m.label}</div>
+              <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 2 }}>{m.action}</div>
+            </div>
+            <span style={{ fontSize: 11, color: 'var(--muted)', whiteSpace: 'nowrap' }}>${m.target_mrr.toLocaleString()}/mo</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Schema Tab ───────────────────────────────────────────────────────────────
+function SchemaTab() {
+  return (
+    <div className="slide-in">
+      <div className="section-header">System Schema</div>
+      <div className="card" style={{ marginBottom: 12 }}>
+        <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 12 }}>ARCHITECTURE</div>
+        <pre style={{ fontSize: 11, color: 'var(--text)', lineHeight: 1.6 }}>{`agent-os/
+├── index.html             ← This dashboard (React 18 CDN)
+├── run.js                 ← CLI pipeline runner
+├── vercel.json            ← Route config + function timeouts
+├── api/
+│   ├── build.js           ← 4-phase pipeline orchestrator (300s)
+│   ├── product.js         ← Spec + HTML generator (multi-model)
+│   ├── deploy.js          ← Vercel operations (120s)
+│   ├── github.js          ← GitHub repo + file operations
+│   ├── stripe.js          ← Stripe payments (dedup-safe)
+│   ├── analytics.js       ← Revenue + PostHog aggregation
+│   ├── discover.js        ← Market discovery (HN + Reddit + Google)
+│   ├── keywords.js        ← Alias → discover.js
+│   ├── posthog.js         ← Alias → analytics.js
+│   ├── content.js         ← SEO page generator (6 types)
+│   ├── publish.js         ← Dev.to + Hashnode auto-post
+│   ├── viral.js           ← 10-channel viral distribution
+│   ├── commerce.js        ← Gumroad + Chrome Web Store
+│   ├── email.js           ← Resend transactional emails
+│   ├── jobs.js            ← Async build job management
+│   ├── groq.js            ← Server-side Groq proxy
+│   ├── health.js          ← Readiness probe (5 checks)
+│   └── webhook/stripe.js  ← Payment webhook handler
+├── agents/
+│   ├── market-agent.js    ← 00:00 UTC: discover 50 keywords
+│   ├── seo-agent.js       ← 02:00 UTC: generate 50 SEO pages
+│   ├── product-agent.js   ← 04:00 UTC: create 10 specs
+│   ├── builder-agent.js   ← 05:00 UTC: build 3 HTML tools
+│   ├── launch-agent.js    ← 07:00 UTC: deploy + monetize
+│   ├── traffic-agent.js   ← 09:00 UTC: distribute content
+│   ├── analytics-agent.js ← 22:00 UTC: track + optimize
+│   └── revenue-agent.js   ← On-demand: revenue mission
+└── lib/
+    ├── fetch-retry.js     ← Exponential backoff (10s/30s/60s)
+    └── alert.js           ← Slack + email failure alerts`}</pre>
+      </div>
+      <div className="card">
+        <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 12 }}>SCALE MODEL</div>
+        <table className="tbl">
+          <thead><tr><th>Phase</th><th>Tools</th><th>MRR Target</th><th>Timeline</th></tr></thead>
+          <tbody>
+            {[
+              ['Foundation', '20-50 live', '$0 - $5k', 'Month 1-3'],
+              ['Acceleration', '100-200 live', '$5k - $50k', 'Month 3-6'],
+              ['Scale', '500+ live', '$50k - $500k', 'Month 6-12'],
+              ['$100M path', '1000+ live', '$4.5M+', 'Year 2-3'],
+            ].map(([phase, tools, mrr, timeline]) => (
+              <tr key={phase}>
+                <td style={{ fontWeight: 600 }}>{phase}</td>
+                <td style={{ color: 'var(--muted)' }}>{tools}</td>
+                <td style={{ color: 'var(--green)' }}>{mrr}</td>
+                <td style={{ color: 'var(--muted)' }}>{timeline}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+// ─── Main App ─────────────────────────────────────────────────────────────────
+function App() {
+  const [tab, setTab] = useState('dashboard');
+  const [portfolio, setPortfolio] = useState([]);
+  const [mrr, setMrr] = useState(0);
+  const [logs, setLogs] = useState([{ type: 'info', msg: 'Agent OS v7 ready', ts: new Date().toLocaleTimeString() }]);
+  const [budget, setBudget] = useState({ used: 0, limit: 10, groq_calls: 0, sonnet_calls: 0 });
+
+  const addLog = useCallback((type, msg) => {
+    setLogs(prev => [{ type, msg, ts: new Date().toLocaleTimeString() }, ...prev].slice(0, 100));
+  }, []);
+
+  const addProduct = useCallback((product) => {
+    setPortfolio(prev => [...prev.filter(p => p.slug !== product.slug), product]);
+    setMrr(prev => prev + (product.mrr_usd || 0));
+  }, []);
+
+  // Load portfolio on mount
+  useEffect(() => {
+    fetch('/public/portfolio.json').then(r => r.ok ? r.json() : []).then(data => {
+      if (Array.isArray(data)) {
+        setPortfolio(data);
+        setMrr(data.reduce((s, p) => s + (p.mrr_usd || 0), 0));
+      }
+    }).catch(() => {});
+  }, []);
+
+  const budgetColor = budget.used > 9.5 ? 'danger' : budget.used > 7 ? 'warn' : 'ok';
+
+  const renderTab = () => {
+    const props = { portfolio, mrr, budget, addLog, addProduct };
+    switch (tab) {
+      case 'dashboard': return <DashboardTab {...props} />;
+      case 'market':    return <MarketTab {...props} />;
+      case 'pipeline':  return <PipelineTab {...props} />;
+      case 'build':     return <BuildTab {...props} />;
+      case 'portfolio': return <PortfolioTab {...props} />;
+      case 'seo':       return <SeoTab {...props} />;
+      case 'traffic':   return <TrafficTab {...props} />;
+      case 'revenue':   return <RevenueTab {...props} />;
+      case 'analytics': return <AnalyticsTab {...props} />;
+      case 'memory':    return <MemoryTab {...props} />;
+      case 'budget':    return <BudgetTab {...props} />;
+      case 'agents':    return <AgentsTab {...props} />;
+      case 'goals':     return <GoalsTab {...props} />;
+      case 'schema':    return <SchemaTab />;
+      default:          return <div className="card" style={{ padding: 40, textAlign: 'center', color: 'var(--muted)' }}>Coming soon</div>;
+    }
+  };
+
+  const groups = { core: 'Core', traffic: 'Traffic', money: 'Revenue', system: 'System' };
+  const navGroups = Object.entries(groups).map(([id, label]) => ({
+    label, items: NAV.filter(n => n.group === id),
+  }));
+
+  return (
+    <div className="app">
+      {/* Header */}
+      <div className="header">
+        <div className="logo">Agent OS v7</div>
+        <div className="budget-bar">
+          <span className={`budget-pill ${budgetColor}`}>${budget.used.toFixed(2)} / $10</span>
+          <span className="mrr-badge">${mrr.toFixed(0)}/mo MRR</span>
+          <span style={{ fontSize: 11, color: 'var(--muted)' }}>{portfolio.filter(p => p.status === 'live').length} live</span>
+        </div>
+      </div>
+      <div className="body">
+        {/* Sidebar */}
+        <div className="sidebar">
+          {navGroups.map(group => (
+            <div key={group.label}>
+              <div className="nav-section">{group.label}</div>
+              {group.items.map(item => (
+                <div key={item.id} className={`nav-item ${tab === item.id ? 'active' : ''}`} onClick={() => setTab(item.id)}>
+                  <span>{item.icon}</span>
+                  <span>{item.label}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        {/* Main content */}
+        <div className="main">{renderTab()}</div>
+        {/* Live log panel */}
+        <div className="live-panel">
+          <div className="live-panel-title">Live Log</div>
+          <div className="live-log">
+            {logs.map((log, i) => (
+              <div key={i} className={`log-entry ${log.type}`}>
+                <span style={{ color: 'var(--border)', marginRight: 4 }}>{log.ts}</span>
+                {log.msg}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "cycles": [
+    {
+      "cycleId": "CYCLE-1773138820156",
+      "loggedAt": "2026-03-10T10:33:40.156Z",
+      "platform": "TikTok",
+      "hookUsed": "From 2% to 12% response rate in just 30 days",
+      "hookType": "BEFORE_AFTER",
+      "format": "talking_head",
+      "retention3sec_1hr": "65",
+      "nonFollowerReach_1hr": "35",
+      "watchTime_24hr": "55",
+      "saves_24hr": "120",
+      "comments_24hr": "45",
+      "dmSends_24hr": "15",
+      "totalViews_24hr": "2500",
+      "valuePassed": "utility",
+      "hookPayoffAligned": "yes",
+      "outlierGap": "faster cuts",
+      "nextAdjustment": "better broll",
+      "saveRate": "4.80%",
+      "commentRate": "1.80%",
+      "algorithmResponse": "NON_FOLLOWER_BOOSTED",
+      "gateChecks": {
+        "retention3sec": "PASS",
+        "watchTime": "PASS",
+        "nonFollowerReach": "PASS"
+      },
+      "overallGate": "PASS"
+    },
+    {
+      "cycleId": "BASELINE",
+      "date": "2026-03-10T09:17:06.163Z",
+      "status": "baseline",
+      "targets": {
+        "3secRetention": "≥60%",
+        "watchTime": "≥50%",
+        "saveRate": "≥4%",
+        "dmRate": "≥3%",
+        "nonFollowerReach": "≥30%",
+        "commentRate": "≥1.5%"
+      },
+      "note": "First cycle — no data yet. Track first post metrics within 1hr of publishing."
+    }
+  ],
+  "lastUpdated": "2026-03-10T10:33:40.157Z"
+}

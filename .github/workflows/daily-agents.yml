@@ -1,0 +1,181 @@
+name: Daily Agent OS Run
+
+on:
+  schedule:
+    # Loop 1 (market): 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # allow manual trigger from GitHub UI
+    inputs:
+      from:
+        description: 'Start from agent (market|seo|product|builder|launch|traffic|analytics)'
+        required: false
+        default: 'market'
+
+env:
+  # ── Core infrastructure ────────────────────────────────────────────────────
+  AGENT_OS_URL: ${{ secrets.AGENT_OS_URL }}       # e.g. https://agent-os.vercel.app
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}           # GH_TOKEN avoids clash with Actions built-in
+  GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+
+  # ── AI / Code generation ───────────────────────────────────────────────────
+  GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+  NVIDIA_MODEL: ${{ secrets.NVIDIA_MODEL }}
+  MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+
+  # ── Payments ───────────────────────────────────────────────────────────────
+  # IMPORTANT: use sk_live_... for real revenue. sk_test_... = no real money.
+  STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+  STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+  GUMROAD_ACCESS_TOKEN: ${{ secrets.GUMROAD_ACCESS_TOKEN }}
+
+  # ── Publishing (auto-post) ─────────────────────────────────────────────────
+  DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+  HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+  HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+  RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+
+  # ── Viral distribution channels ────────────────────────────────────────────
+  # Twitter/X: free.typefully.com → Settings → API Key
+  TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
+  # Reddit: reddit.com/prefs/apps → create "script" app
+  REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+  REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+  REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+  REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+  # LinkedIn: developers.linkedin.com → OAuth token
+  LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+  LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+  # Medium: medium.com/me/settings → Integration Tokens
+  MEDIUM_INTEGRATION_TOKEN: ${{ secrets.MEDIUM_INTEGRATION_TOKEN }}
+  MEDIUM_USER_ID: ${{ secrets.MEDIUM_USER_ID }}
+  # Hacker News: your HN account credentials
+  HN_USERNAME: ${{ secrets.HN_USERNAME }}
+  HN_PASSWORD: ${{ secrets.HN_PASSWORD }}
+  # Telegram: t.me/BotFather → /newbot
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+  TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+  # IndexNow: bing.com/indexnow → Get API Key
+  BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
+
+  # ── Analytics + database ───────────────────────────────────────────────────
+  POSTHOG_PERSONAL_API_KEY: ${{ secrets.POSTHOG_PERSONAL_API_KEY }}
+  POSTHOG_PROJECT_ID: ${{ secrets.POSTHOG_PROJECT_ID }}
+  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+  SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+  PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+  PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+
+  # ── Misc ───────────────────────────────────────────────────────────────────
+  OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}
+
+  # ── Failure alerts ─────────────────────────────────────────────────────────
+  # Set SLACK_WEBHOOK_URL secret → any agent crash posts to your Slack channel
+  # Get webhook: https://api.slack.com/messaging/webhooks
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+jobs:
+  run-agents:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout agent-os repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Determine start agent
+        id: start
+        run: |
+          FROM="${{ github.event.inputs.from || 'market' }}"
+          echo "from=$FROM" >> $GITHUB_OUTPUT
+
+      # ── Loop 1: Market Intelligence ──────────────────────────────────────────
+      - name: Run market-agent
+        if: |
+          steps.start.outputs.from == 'market'
+        run: node agents/market-agent.js
+        continue-on-error: false
+
+      # ── Loop 2: SEO Page Factory ──────────────────────────────────────────────
+      - name: Run seo-agent
+        if: |
+          steps.start.outputs.from == 'market' ||
+          steps.start.outputs.from == 'seo'
+        run: node agents/seo-agent.js
+        continue-on-error: true   # SEO failures shouldn't stop product building
+
+      # ── Loop 3a: Product Spec Generator ──────────────────────────────────────
+      - name: Run product-agent
+        if: |
+          steps.start.outputs.from == 'market' ||
+          steps.start.outputs.from == 'seo'    ||
+          steps.start.outputs.from == 'product'
+        run: node agents/product-agent.js
+
+      # ── Loop 3b: Tool Builder ─────────────────────────────────────────────────
+      - name: Run builder-agent
+        if: |
+          steps.start.outputs.from == 'market'  ||
+          steps.start.outputs.from == 'seo'     ||
+          steps.start.outputs.from == 'product' ||
+          steps.start.outputs.from == 'builder'
+        run: node agents/builder-agent.js
+
+      # ── Loop 3c: Launch (Stripe + Vercel) ────────────────────────────────────
+      - name: Run launch-agent
+        if: |
+          steps.start.outputs.from == 'market'  ||
+          steps.start.outputs.from == 'seo'     ||
+          steps.start.outputs.from == 'product' ||
+          steps.start.outputs.from == 'builder' ||
+          steps.start.outputs.from == 'launch'
+        run: node agents/launch-agent.js
+
+      # ── Loop 5: Traffic Distribution ─────────────────────────────────────────
+      - name: Run traffic-agent
+        if: |
+          steps.start.outputs.from == 'market'  ||
+          steps.start.outputs.from == 'seo'     ||
+          steps.start.outputs.from == 'product' ||
+          steps.start.outputs.from == 'builder' ||
+          steps.start.outputs.from == 'launch'  ||
+          steps.start.outputs.from == 'traffic'
+        run: node agents/traffic-agent.js
+        continue-on-error: true   # don't block analytics if Dev.to/Hashnode rates us
+
+      # ── Loop 6: Analytics + Self-Improvement ─────────────────────────────────
+      - name: Run analytics-agent
+        run: node agents/analytics-agent.js
+        continue-on-error: true
+
+      # ── Commit updated data files back to repo ───────────────────────────────
+      - name: Commit agent output files
+        run: |
+          git config user.name  "agent-os[bot]"
+          git config user.email "agent-os[bot]@users.noreply.github.com"
+          git add \
+            products/build-queue.json \
+            products/product-specs.json \
+            products/built-products.json \
+            products/launched-products.json \
+            products/seo-results.json \
+            products/copy-queue.json \
+            products/insights-memory.json \
+            products/tomorrow-queue.json \
+            public/portfolio.json \
+            || true
+          git diff --cached --quiet || git commit -m "chore: daily agent run $(date -u '+%Y-%m-%d')"
+          git push origin HEAD
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

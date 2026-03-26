@@ -1,0 +1,229 @@
+{
+  "generatedAt": "2026-03-10T11:02:14.111Z",
+  "ideas": [
+    {
+      "id": "IDEA-001",
+      "topic": "5 AI Tools to Boost Your Sales Today",
+      "sourceSignal": "trending|audience_question|product_tie",
+      "hookAngle": "5 AI tools to boost your sales today, no sales experience required",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "carousel",
+      "cta": "Try these AI tools for yourself",
+      "productTie": "Product Name: Boosting Sales AI Tools",
+      "priority": "high",
+      "estimatedRetentionScore": "8"
+    },
+    {
+      "id": "IDEA-002",
+      "topic": "How to Cut Email Time by 90%",
+      "sourceSignal": "data|trending|founder_story",
+      "hookAngle": "Watch me write a cold email in 30 minutes, no need for 5 years of sales experience",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "video_demo|talking_head",
+      "cta": "Try our AI-powered email writer",
+      "productTie": "Product Name: Email Time Cutting AI Writer",
+      "priority": "high",
+      "estimatedRetentionScore": "9"
+    },
+    {
+      "id": "IDEA-003",
+      "topic": "10x Your Email Response Rates with AI",
+      "sourceSignal": "data|trending|utility",
+      "hookAngle": "10x your email response rates using AI, no cold email expertise needed",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "talking_head|video_demo",
+      "cta": "Use our AI-powered email copywriter",
+      "productTie": "Product Name: Email Response Rate Boosting AI",
+      "priority": "low",
+      "estimatedRetentionScore": "6"
+    },
+    {
+      "id": "IDEA-004",
+      "topic": "Contrarian: Why AI Writing Tools Are a Bad Idea",
+      "sourceSignal": "contrarian|founder_story|utility",
+      "hookAngle": "You've been fooled by AI writing tool promises, the truth is...",
+      "valueType": "identity",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "talking_head|thread|tutorial",
+      "cta": "Learn why AI writing tools aren't the answer",
+      "productTie": "Product Name: Human-Centric Content Creation",
+      "priority": "high",
+      "estimatedRetentionScore": "9"
+    },
+    {
+      "id": "IDEA-005",
+      "topic": "Revenue Reveal: Top Earners Share Their AI Secrets",
+      "sourceSignal": "revenue_reveal|founder_story|utility",
+      "hookAngle": "Top earners reveal their AI secrets to boost revenue, get ahead of the competition",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "carousel|thread|tutorial",
+      "cta": "Discover the revenue secrets of top earners",
+      "productTie": "Product Name: AI-Powered Revenue Growth",
+      "priority": "high",
+      "estimatedRetentionScore": "8"
+    },
+    {
+      "id": "IDEA-006",
+      "topic": "The Ultimate Guide to Cold Email Subject Line Formulas",
+      "sourceSignal": "trending|audience_question|utility",
+      "hookAngle": "Unlock the secrets to writing irresistible cold email subject lines, increase conversions",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "video_demo|talking_head",
+      "cta": "Get the ultimate guide to cold email subject lines",
+      "productTie": "Product Name: Cold Email Subject Line Optimizer",
+      "priority": "high",
+      "estimatedRetentionScore": "8"
+    },
+    {
+      "id": "IDEA-007",
+      "topic": "Contrarian: The Dark Side of AI Writing Tools",
+      "sourceSignal": "contrarian|founder_story|utility",
+      "hookAngle": "AI writing tools promise the world, but what's the dark side?",
+      "valueType": "identity",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "talking_head|thread|tutorial",
+      "cta": "Learn the dark side of AI writing tools",
+      "productTie": "Product Name: Human-Centric Content Creation",
+      "priority": "high",
+      "estimatedRetentionScore": "9"
+    },
+    {
+      "id": "IDEA-008",
+      "topic": "How to Write 10x Faster with AI Writing Tools",
+      "sourceSignal": "data|trending|utility",
+      "hookAngle": "Write 10x faster using AI writing tools, boost productivity",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "video_demo|talking_head",
+      "cta": "Get the tools to write 10x faster",
+      "productTie": "Product Name: AI-Powered Writing Tools",
+      "priority": "high",
+      "estimatedRetentionScore": "8"
+    },
+    {
+      "id": "IDEA-009",
+      "topic": "Building AI Products: The Ultimate Guide for Indie Hackers",
+      "sourceSignal": "trending|founder_story|data",
+      "hookAngle": "Unlock the secrets to building successful AI products as an indie hacker",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "carousel|thread|tutorial",
+      "cta": "Get the ultimate guide to building AI products",
+      "productTie": "Product Name: AI Product Builder",
+      "priority": "high",
+      "estimatedRetentionScore": "8"
+    },
+    {
+      "id": "IDEA-010",
+      "topic": "Cold Email Time Suck: How to Cut Email Time by 90%",
+      "sourceSignal": "data|trending|utility",
+      "hookAngle": "Cut email time by 90% with AI-powered writing tools, say goodbye to hours spent crafting emails",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "video_demo|talking_head",
+      "cta": "Try our AI-powered email writer",
+      "productTie": "Product Name: Email Time Cutting AI Writer",
+      "priority": "high",
+      "estimatedRetentionScore": "9"
+    },
+    {
+      "id": "IDEA-011",
+      "topic": "The AI Writing Tool Paradox: How to Write Better Content Faster",
+      "sourceSignal": "contrarian|founder_story|utility",
+      "hookAngle": "The AI writing tool paradox: how to write better content faster, without sacrificing quality",
+      "valueType": "identity",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "talking_head|thread|tutorial",
+      "cta": "Learn the paradox of AI writing tools",
+      "productTie": "Product Name: Human-Centric Content Creation",
+      "priority": "high",
+      "estimatedRetentionScore": "9"
+    },
+    {
+      "id": "IDEA-012",
+      "topic": "Revenue Reveal: Top Earners Share Their AI Product Secrets",
+      "sourceSignal": "revenue_reveal|founder_story|utility",
+      "hookAngle": "Top earners reveal their AI product secrets to boost revenue, get ahead of the competition",
+      "valueType": "utility",
+      "platformFit": [
+        "TikTok",
+        "LinkedIn",
+        "YouTube",
+        "X"
+      ],
+      "formatSuggestion": "carousel|thread|tutorial",
+      "cta": "Discover the revenue secrets of top earners",
+      "productTie": "Product Name: AI-Powered Revenue Growth",
+      "priority": "high",
+      "estimatedRetentionScore": "8"
+    }
+  ],
+  "top5Selected": [
+    "IDEA-002",
+    "IDEA-004",
+    "IDEA-005",
+    "IDEA-001",
+    "IDEA-009"
+  ],
+  "updatedAt": "2026-03-10T10:50:05.905Z"
+}

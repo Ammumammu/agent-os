@@ -1,0 +1,27 @@
+{
+  "name": "agent-os",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Autonomous SEO + SaaS Factory — Agent OS v7",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "agents:market": "node agents/market-agent.js",
+    "agents:seo": "node agents/seo-agent.js",
+    "agents:product": "node agents/product-agent.js",
+    "agents:builder": "node agents/builder-agent.js",
+    "agents:launch": "node agents/launch-agent.js",
+    "agents:traffic": "node agents/traffic-agent.js",
+    "agents:analytics": "node agents/analytics-agent.js",
+    "agents:all": "node agents/market-agent.js && node agents/seo-agent.js && node agents/product-agent.js && node agents/builder-agent.js && node agents/launch-agent.js && node agents/traffic-agent.js && node agents/analytics-agent.js",
+    "setup": "node setup.js",
+    "start": "node run.js",
+    "start:local": "node run.js --local"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

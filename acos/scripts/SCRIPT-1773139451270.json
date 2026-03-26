@@ -1,0 +1,84 @@
+{
+  "scriptId": "SCRIPT-1773139451270",
+  "ideaId": "IDEA-001",
+  "hookUsed": "From 5 hours to 30 minutes per email",
+  "targetPlatform": "TikTok",
+  "estimatedLength": "60-90 seconds",
+  "script": [
+    {
+      "timestamp": "0-3s",
+      "section": "HOOK",
+      "words": "From 5 hours to 30 minutes per email",
+      "visual": "animated clock ticking from 5 hours to 30 minutes",
+      "retentionMechanic": "pattern_interrupt"
+    },
+    {
+      "timestamp": "3-8s",
+      "section": "PATTERN INTERRUPT",
+      "words": "But how?",
+      "visual": "bold text on screen",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "8-15s",
+      "section": "SETUP",
+      "words": "Imagine you're a sales team, sending out emails one by one, taking 5 hours to send just 10 emails.",
+      "visual": "team working on computers, with a clock in the corner",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "15-40s",
+      "section": "VALUE DELIVERY",
+      "words": "But what if you could automate that process and send 10 emails in just 30 minutes?",
+      "visual": "automation software demo",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "20s",
+      "section": "CURIOSITY INJECTOR #2",
+      "words": "Here's the catch...",
+      "visual": "winking emoticon on screen",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "40-60s",
+      "section": "EXAMPLE/PROOF",
+      "words": "Real example: increased email open rates by 25% in just 1 week.",
+      "visual": "chart displaying results",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "45s",
+      "section": "CURIOSITY INJECTOR #3",
+      "words": "And there's one more thing...",
+      "visual": "excited tone on screen",
+      "retentionMechanic": "curiosity_injector"
+    },
+    {
+      "timestamp": "60-75s",
+      "section": "INSIGHT",
+      "words": "The key to success is not just automation, but also personalization and relevance.",
+      "visual": "lightbulb moment animation",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "75-90s",
+      "section": "CTA",
+      "words": "Comment below with X to get the template and start sending 30-minute emails!",
+      "visual": "button on screen",
+      "retentionMechanic": "dm_trigger"
+    }
+  ],
+  "ctaStrategy": {
+    "type": "dm_trigger",
+    "exactWords": "Comment below with X to get the template and start sending 30-minute emails!",
+    "expectedSignal": "DM sends"
+  },
+  "contentValueGateCheck": {
+    "insightDelivered": true,
+    "utilityDelivered": true,
+    "hookPayoffAligned": true,
+    "noFiveSlip": true
+  },
+  "recordingNotes": "Show enthusiasm and energy while recording. Use a mix of close-ups and wide shots to keep the viewer engaged."
+}

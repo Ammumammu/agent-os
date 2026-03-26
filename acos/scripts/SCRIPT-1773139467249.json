@@ -1,0 +1,84 @@
+{
+  "scriptId": "SCRIPT-1773139467249",
+  "ideaId": "IDEA-003",
+  "hookUsed": "Watch me write a cold email in 90 seconds using AI",
+  "targetPlatform": "TikTok",
+  "estimatedLength": "60-90 seconds",
+  "script": [
+    {
+      "timestamp": "0-3s",
+      "section": "HOOK",
+      "words": "Watch me write a cold email in 90 seconds using AI",
+      "visual": "screen recorder of AI writing an email",
+      "retentionMechanic": "pattern_interrupt"
+    },
+    {
+      "timestamp": "3-8s",
+      "section": "PATTERN INTERRUPT",
+      "words": "And here's how it can change your sales outreach.",
+      "visual": "screen recorder of email writing speed increased",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "8-15s",
+      "section": "SETUP",
+      "words": "Imagine writing a cold email that converts every time without feeling like a sales spam.",
+      "visual": "screen recorder of AI email writing with stats",
+      "retentionMechanic": "curiosity_injector|1"
+    },
+    {
+      "timestamp": "15-40s",
+      "section": "VALUE DELIVERY",
+      "words": "AI-powered outreach automation tools can help you write personalized emails in seconds and increase conversions.",
+      "visual": "screen recorder of AI writing emails with different subjects",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "20s",
+      "section": "CURIOSITY INJECTOR #2",
+      "words": "But there's one catch.",
+      "visual": "dramatic music and a clock ticking",
+      "retentionMechanic": "curiosity_injector|2"
+    },
+    {
+      "timestamp": "40-60s",
+      "section": "EXAMPLE/PROOF",
+      "words": "For example, one business saw a 25% increase in conversions by using our AI-powered outreach tool.",
+      "visual": "stats screen with before and after",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "45s",
+      "section": "CURIOSITY INJECTOR #3",
+      "words": "And there's one more thing.",
+      "visual": "dramatic music and a clock ticking",
+      "retentionMechanic": "curiosity_injector|3"
+    },
+    {
+      "timestamp": "60-75s",
+      "section": "INSIGHT",
+      "words": "The secret to successful sales outreach is not about being pushy or aggressive, but about being personal and relevant.",
+      "visual": "screen recorder of email writing with stats",
+      "retentionMechanic": "none"
+    },
+    {
+      "timestamp": "75-90s",
+      "section": "CTA",
+      "words": "Comment 'Sales Outreach' below to get access to our free guide on AI-powered outreach automation.",
+      "visual": "call to action on screen",
+      "retentionMechanic": "dm_trigger"
+    }
+  ],
+  "ctaStrategy": {
+    "type": "dm_trigger",
+    "exactWords": "Comment 'Sales Outreach' below to get access to our free guide on AI-powered outreach automation.",
+    "expectedSignal": "DM sends"
+  },
+  "contentValueGateCheck": {
+    "insightDelivered": true,
+    "utilityDelivered": true,
+    "hookPayoffAligned": true,
+    "noFiveSlip": true
+  },
+  "recordingNotes": "Show a screen recorder of AI writing an email, and use dramatic music and clock ticking to create suspense. Use a stats screen to show before and after results."
+}
