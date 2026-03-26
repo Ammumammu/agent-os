@@ -273,7 +273,7 @@ function MarketTab({ addLog }) {
     setLoading(true);
     addLog('info', 'market-agent: discovering keywords...');
     try {
-      const data = await api('/api/keywords', { action: 'daily_discover' });
+      const data = await api('/api/discover', { action: 'daily_discover' });
       setResults(data);
       addLog('success', `market-agent: found ${data.discovered} keywords, ${data.buildQueue?.length} queued for build`);
     } catch (e) {
@@ -285,7 +285,7 @@ function MarketTab({ addLog }) {
   const search = async () => {
     if (!query) return;
     setLoading(true);
-    const data = await api('/api/keywords', { action: 'autosuggest', query }).catch(() => null);
+    const data = await api('/api/discover', { action: 'autosuggest', query }).catch(() => null);
     if (data) setResults({ buildQueue: data.suggestions, seoQueue: [] });
     setLoading(false);
   };
@@ -743,7 +743,7 @@ function AnalyticsTab({ addLog }) {
   const fetch_ = async () => {
     setLoading(true);
     try {
-      const d = await api('/api/posthog', { action: 'dashboard', dateFrom: '-7d', product: product || undefined });
+      const d = await api('/api/analytics', { action: 'dashboard', dateFrom: '-7d', product: product || undefined });
       setMetrics(d);
     } catch (e) { addLog('error', e.message); }
     setLoading(false);
@@ -1021,7 +1021,7 @@ function PipelineTab({ portfolio, addLog }) {
   const loadJobs = async () => {
     setLoading(true);
     try {
-      const d = await api('/api/jobs', { action: 'list' });
+      const d = await api('/api/analytics', { action: 'list_jobs' });
       setJobs(Array.isArray(d) ? d : (d.jobs || []));
     } catch (e) { addLog('error', `pipeline: ${e.message}`); }
     setLoading(false);

@@ -201,8 +201,8 @@ async function run() {
   if (ownerEmail) {
     const digest = await callAPI('/api/analytics', { action: 'daily_digest' }).catch(() => null);
     if (digest) {
-      await callAPI('/api/email', {
-        action: 'digest',
+      await callAPI('/api/publish', {
+        action: 'email_digest',
         to: ownerEmail,
         data: { ...digest, mrr: mrrData.mrr_usd },
       }).catch(e => log(`  ⚠️ Email failed: ${e.message}`));

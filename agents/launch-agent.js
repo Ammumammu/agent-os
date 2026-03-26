@@ -80,8 +80,8 @@ async function run() {
 
       // Phase 3: Create Gumroad listing
       log(`  Phase 3: Creating Gumroad listing...`);
-      const gumroadResult = await callAPI('/api/commerce', {
-        action: 'createProduct',
+      const gumroadResult = await callAPI('/api/stripe', {
+        action: 'gumroad_create',
         name: spec.name,
         description: spec.tagline,
         price_usd: spec.pricing?.one_time_usd || 19,

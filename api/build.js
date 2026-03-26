@@ -29,6 +29,8 @@ export default async function handler(req, res) {
       case 'check_budget':return res.json(checkBudget());
       // Legacy single-shot action — delegates to phased pipeline
       case 'build_product': return res.json(await buildProductLegacy(p, res));
+      // Groq proxy (merged from groq.js) — products call this instead of Groq directly
+      case 'groq_proxy': return res.json(await groqProxy(p));
       default: return res.status(400).json({ error: `Unknown action: ${action}` });
     }
   } catch (e) {
@@ -84,7 +86,7 @@ async function phaseStart({ keyword, sourceData, githubUsername }) {
     name: spec.name,
     description: spec.tagline,
     price_usd: spec.pricing?.one_time_usd || 19,
-    productUrl: `https://${spec.slug}.vercel.app`,
+    productUrl: `https://${spec.slug}${process.env.VERCEL_SCOPE ? '-' + process.env.VERCEL_SCOPE : ''}.vercel.app`,
   }).catch(() => null);
 
   const stripeLink = stripeResult?.payment_url || stripeResult?.link?.url || '';
@@ -168,7 +170,7 @@ async function phaseDeploy({ jobId, githubUsername }) {
     intervalMs: 5000,
   });
 
-  const phase3Data = { liveUrl: liveUrl || `https://${spec.slug}.vercel.app` };
+  const phase3Data = { liveUrl: liveUrl || `https://${spec.slug}${process.env.VERCEL_SCOPE ? '-' + process.env.VERCEL_SCOPE : ''}.vercel.app` };
   if (jobId) await updateJob(jobId, { status: 'phase3_done', phase3_data: phase3Data }).catch(() => {});
 
   return { jobId, status: 'phase3_done', liveUrl: phase3Data.liveUrl };
@@ -182,7 +184,7 @@ async function phaseFinalize({ jobId, githubUsername }) {
   const spec = job.phase1_data?.spec;
   const stripeLink = job.phase1_data?.stripeLink || '';
   const gumroadLink = job.phase1_data?.gumroadLink || '';
-  const liveUrl = job.phase3_data?.liveUrl || `https://${spec.slug}.vercel.app`;
+  const liveUrl = job.phase3_data?.liveUrl || `https://${spec.slug}${process.env.VERCEL_SCOPE ? '-' + process.env.VERCEL_SCOPE : ''}.vercel.app`;
   const owner = githubUsername || job.phase2_data?.owner || process.env.GITHUB_USERNAME;
 
   const api = makeApiCaller();
@@ -379,3 +381,16 @@ Background, problem, what I built, early results, link: ${url}. Max 250 words.`;
 }
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ─── Groq proxy (merged from groq.js) ─────────────────────────────────────
+async function groqProxy({ messages, model = 'llama-3.3-70b-versatile', max_tokens = 2000, temperature = 0.7, system }) {
+  const KEY = process.env.GROQ_API_KEY;
+  if (!KEY) throw new Error('GROQ_API_KEY not configured');
+  const msgs = system ? [{ role: 'system', content: system }, ...(messages || [])] : (messages || []);
+  const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${KEY}` },
+    body: JSON.stringify({ model, messages: msgs, temperature, max_tokens }),
+  });
+  return r.json();
+}
