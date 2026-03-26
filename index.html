@@ -151,7 +151,13 @@ async function api(path, body) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
-  return r.json();
+  const text = await r.text();
+  if (!text) throw new Error(`${path} → ${r.status} (empty response — check Vercel env vars)`);
+  try {
+    return JSON.parse(text);
+  } catch {
+    throw new Error(`${path} → ${r.status}: ${text.slice(0, 120)}`);
+  }
 }
 
 // ─── Groq helper ──────────────────────────────────────────────────────────────
@@ -907,18 +913,42 @@ const AGENT_ENDPOINT = {
 function AgentsTab({ addLog }) {
   const [running, setRunning] = useState({});
   const [results, setResults] = useState({});
+  const [health, setHealth] = useState(null);
+
+  const checkHealth = async () => {
+    addLog('info', 'health: checking Vercel env vars...');
+    try {
+      const r = await fetch('/api/health');
+      const text = await r.text();
+      const d = JSON.parse(text);
+      setHealth(d);
+      const missing = Object.entries(d.checks?.env?.details || {}).filter(([, ok]) => !ok).map(([k]) => k);
+      if (missing.length) addLog('error', `health: missing env vars — ${missing.join(', ')}`);
+      else addLog('success', `health: ${d.status} — all env vars set`);
+    } catch (e) { addLog('error', `health: ${e.message}`); }
+  };
+
+  useEffect(() => { checkHealth(); }, []);
 
   const runAgent = async (agentId) => {
     setRunning(p => ({ ...p, [agentId]: true }));
     setResults(p => ({ ...p, [agentId]: null }));
-    addLog('info', `${agentId}: triggering...`);
+    addLog('info', `Running ${agentId}...`);
     const { path, body } = AGENT_ENDPOINT[agentId] || {};
     if (!path) { addLog('warn', `${agentId}: no endpoint mapped`); setRunning(p => ({ ...p, [agentId]: false })); return; }
     try {
       const d = await api(path, body);
-      const summary = d.error ? `✗ ${d.error}` : (d.discovered || d.keywords?.length || d.queued || d.mrr_usd !== undefined) ? `✓ done` : `✓ ${JSON.stringify(d).slice(0, 80)}`;
-      setResults(p => ({ ...p, [agentId]: summary }));
-      addLog('success', `${agentId}: ${summary}`);
+      const detail = d.error ? `✗ ${d.error}` :
+        d.discovered != null ? `✓ ${d.discovered} keywords discovered` :
+        d.keywords?.length != null ? `✓ ${d.keywords.length} keywords` :
+        d.queued != null ? `✓ ${d.queued} queued` :
+        d.mrr_usd != null ? `✓ MRR $${d.mrr_usd}` :
+        d.projects?.length != null ? `✓ ${d.projects.length} projects` :
+        d.queue?.length != null ? `✓ ${d.queue.length} in queue` :
+        d.score != null ? `✓ demand score ${d.score}` :
+        '✓ complete';
+      setResults(p => ({ ...p, [agentId]: detail }));
+      addLog(d.error ? 'error' : 'success', `${agentId}: ${detail}`);
     } catch (e) {
       setResults(p => ({ ...p, [agentId]: `✗ ${e.message}` }));
       addLog('error', `${agentId}: ${e.message}`);
@@ -938,8 +968,26 @@ function AgentsTab({ addLog }) {
 
   return (
     <div className="slide-in">
-      <div className="section-header">Agent Control</div>
-      <div className="section-sub">Run agents manually or they run on schedule via Vercel Cron</div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+        <div className="section-header" style={{ marginBottom: 0 }}>Agent Control</div>
+        <button className="btn btn-secondary" style={{ fontSize: 11 }} onClick={checkHealth}>⚕ Health Check</button>
+      </div>
+      <div className="section-sub">Run agents manually or they run on schedule via GitHub Actions</div>
+      {health && (
+        <div className="card" style={{ marginBottom: 12, padding: '10px 14px' }}>
+          <div style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 6 }}>VERCEL ENV VARS</div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {Object.entries(health.checks?.env?.details || {}).map(([k, ok]) => (
+              <span key={k} style={{ fontSize: 11, padding: '2px 8px', borderRadius: 12,
+                background: ok ? 'rgba(34,197,94,.1)' : 'rgba(239,68,68,.1)',
+                color: ok ? 'var(--green)' : 'var(--red)',
+                border: `1px solid ${ok ? 'rgba(34,197,94,.2)' : 'rgba(239,68,68,.2)'}` }}>
+                {ok ? '✓' : '✗'} {k}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
       <div style={{ display: 'grid', gap: 10 }}>
         {agents.map(agent => (
           <div key={agent.id} className="card">

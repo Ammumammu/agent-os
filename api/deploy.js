@@ -4,7 +4,7 @@
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  const { action, ...p } = req.body;
+  const { action, ...p } = req.body || {};
   const KEY = process.env.VERCEL_API_KEY;
   const TEAM = process.env.VERCEL_TEAM_ID;
   const BASE = 'https://api.vercel.com';
@@ -149,6 +149,9 @@ export default async function handler(req, res) {
 
     // Get domains for a project
     getDomains: () => fetch(`${BASE}/v9/projects/${p.name}/domains${teamQ}`, { headers: h }),
+
+    // run = alias for listProjects (agent dashboard "▶ Run" button)
+    run: () => fetch(`${BASE}/v9/projects${teamQ}&limit=100`, { headers: h }),
   };
 
   try {

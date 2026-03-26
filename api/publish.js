@@ -4,15 +4,15 @@
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  const { action, ...p } = req.body;
-
   try {
+    const { action, ...p } = req.body || {};
     switch (action) {
       case 'auto_publish':   return res.json(await autoPublish(p));
       case 'queue_semi':     return res.json(await queueSemiAuto(p));
       case 'get_queue':      return res.json(await getQueue());
       case 'batch_publish':  return res.json(await batchPublish(p));
       case 'ph_submission':  return res.json(await generatePHSubmission(p));
+      case 'run':            return res.json(await getQueue());
       default: return res.status(400).json({ error: `Unknown action: ${action}` });
     }
   } catch (e) {

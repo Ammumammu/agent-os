@@ -6,9 +6,8 @@
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  const { action, ...p } = req.body;
-
   try {
+    const { action, ...p } = req.body || {};
     switch (action) {
       case 'tool_landing':   return res.json(await generateToolLanding(p));
       case 'tutorial':       return res.json(await generateTutorial(p));
@@ -17,6 +16,7 @@ export default async function handler(req, res) {
       case 'template_page':  return res.json(await generateTemplatePage(p));
       case 'dev_landing':    return res.json(await generateDevLanding(p));
       case 'niche_batch':    return res.json(await generateNicheBatch(p));
+      case 'run':            return res.json(await generateNicheBatch({ keyword: 'ai productivity tools', toolName: 'AI Tool', toolUrl: 'https://example.vercel.app' }));
       default: return res.status(400).json({ error: `Unknown action: ${action}` });
     }
   } catch (e) {

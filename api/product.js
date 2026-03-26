@@ -5,9 +5,9 @@
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  const { action, ...p } = req.body;
-
   try {
+    const { action, ...p } = req.body || {};
+
     switch (action) {
       case 'generate_spec': return res.json(await generateSpec(p));
       case 'generate_copy': return res.json(await generateCopy(p));
@@ -15,6 +15,7 @@ export default async function handler(req, res) {
       case 'validate_code': return res.json(await validateCode(p.html));
       case 'score_idea': return res.json(scoreIdea(p));
       case 'full_spec': return res.json(await fullSpec(p));
+      case 'run': return res.json(await fullSpec(p));
       default: return res.status(400).json({ error: `Unknown action: ${action}` });
     }
   } catch (e) {

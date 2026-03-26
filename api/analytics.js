@@ -5,9 +5,9 @@
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  const { action, ...p } = req.method === 'GET' ? req.query : req.body;
-
   try {
+    const { action, ...p } = req.method === 'GET' ? req.query : (req.body || {});
+
     switch (action) {
       // ── Revenue & Portfolio ───────────────────────────────────────────────
       case 'full_report': return res.json(await fullReport(p));
@@ -26,6 +26,8 @@ export default async function handler(req, res) {
       case 'dashboard': return res.json(await getDashboardMetrics(p));
       case 'persons': return res.json(await getPersons(p));
       case 'feature_flags': return res.json(await getFeatureFlags());
+
+      case 'run': return res.json(await fullReport(p));
 
       default: return res.status(400).json({ error: `Unknown action: ${action}` });
     }

@@ -8,10 +8,10 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  const params = req.method === 'GET' ? req.query : req.body;
-  const { action, query, niche, limit = 20, ...p } = params;
-
   try {
+    const params = req.method === 'GET' ? req.query : (req.body || {});
+    const { action, query, niche, limit = 20, ...p } = params;
+
     switch (action) {
       // ── Keyword Discovery ────────────────────────────────────────────────────
       case 'autosuggest':      return res.json(await googleAutosuggest(query));
@@ -44,6 +44,7 @@ export default async function handler(req, res) {
       case 'pain':             return res.json(await redditPain(p.subreddit, limit));
       case 'multi':            return res.json(await redditMulti(query, limit));
 
+      case 'run':              return res.json(await dailyDiscover());
       default: return res.status(400).json({ error: `Unknown action: ${action}` });
     }
   } catch (e) {
