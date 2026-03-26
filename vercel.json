@@ -2,10 +2,10 @@
   "outputDirectory": ".",
   "functions": {
     "api/build.js": {
-      "maxDuration": 300
+      "maxDuration": 60
     },
     "api/deploy.js": {
-      "maxDuration": 120
+      "maxDuration": 60
     },
     "api/**/*.js": {
       "maxDuration": 60

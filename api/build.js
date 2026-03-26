@@ -12,7 +12,7 @@
 // Dedup: buildId = "${slug}-${YYYY-MM-DD}". If a non-failed job exists
 //        for this slug today, returns the existing job instead of re-running.
 
-import { createJob, getJob, updateJob, checkDuplicate } from './analytics.js';
+import { createJob, getJob, updateJob, checkDuplicate } from '../lib/jobs.js';
 
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();

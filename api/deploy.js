@@ -70,8 +70,16 @@ export default async function handler(req, res) {
           const latestDeploy = project.latestDeployments?.[0];
 
           if (latestDeploy?.readyState === 'READY') {
-            const url = `https://${latestDeploy.url}`;
-            return new Response(JSON.stringify({ url, ready: true, attempts: i + 1 }), { status: 200 });
+            // Use production alias (stable), not deployment-hash URL (changes every deploy)
+            // Vercel scoped projects: {slug}-{scope}.vercel.app
+            const scope = process.env.VERCEL_SCOPE || TEAM || '';
+            const fallbackDomain = scope ? `${p.name}-${scope}.vercel.app` : `${p.name}.vercel.app`;
+            const productionAlias = project.alias?.[0]?.domain
+              || project.targets?.production?.alias?.[0]
+              || fallbackDomain;
+            const url = `https://${productionAlias}`;
+            const deployUrl = `https://${latestDeploy.url}`;
+            return new Response(JSON.stringify({ url, deployUrl, ready: true, attempts: i + 1 }), { status: 200 });
           }
           if (latestDeploy?.readyState === 'ERROR') {
             return new Response(JSON.stringify({
@@ -83,7 +91,9 @@ export default async function handler(req, res) {
         await sleep(interval);
       }
       // Timeout — try to return URL anyway (project might be live even if poll timed out)
-      return new Response(JSON.stringify({ ready: false, error: 'Poll timeout', url: `https://${p.name}.vercel.app` }), { status: 408 });
+      const scope = process.env.VERCEL_SCOPE || TEAM || '';
+      const fallbackUrl = scope ? `https://${p.name}-${scope}.vercel.app` : `https://${p.name}.vercel.app`;
+      return new Response(JSON.stringify({ ready: false, error: 'Poll timeout', url: fallbackUrl }), { status: 408 });
     },
 
     // Deploy files directly without GitHub (no GitHub App needed)
