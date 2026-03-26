@@ -1,20 +1,20 @@
 {
-  "run_at": "2026-03-10T10:46:39.701Z",
-  "products_count": 3,
+  "run_at": "2026-03-26T21:58:25.549Z",
+  "products_count": 5,
   "results": [
     {
-      "product": "followup-writer-tool",
+      "product": "resume-optimizer-ai",
       "channels_hit": 3,
       "total_channels": 4,
       "results": {
         "devto": {
-          "url": "https://dev.to/poreddivarajaykumar/i-built-followup-writer-write-follow-ups-fast-3ekd",
-          "id": 3334556,
+          "url": "https://dev.to/poreddivarajaykumar/i-built-resume-optimizer-ai-fix-your-resume-in-60-seconds-land-more-interviews-52jp",
+          "id": 3411113,
           "platform": "devto"
         },
         "hashnode": {
-          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-followup-writer-write-follow-ups-fast-1-1-1-1-1-1-1-1-1",
-          "id": "69aff655472f9716affdd903",
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-resume-optimizer-ai-fix-your-resume-in-60-seconds-land-more-interviews",
+          "id": "69c5ab99ee32f899dcac97a4",
           "platform": "hashnode"
         },
         "backlinks": {
@@ -30,7 +30,7 @@
             }
           ],
           "indexnow": null,
-          "pinged_at": "2026-03-10T10:45:40.779Z"
+          "pinged_at": "2026-03-26T21:56:39.867Z"
         },
         "newsletter": {
           "skipped": true,
@@ -39,18 +39,18 @@
       }
     },
     {
-      "product": "youtube-thumbnail-ideas",
+      "product": "invoice-generator-pro",
       "channels_hit": 3,
       "total_channels": 4,
       "results": {
         "devto": {
-          "url": "https://dev.to/poreddivarajaykumar/i-built-vidspark-boost-views-3216",
-          "id": 3334558,
+          "url": "https://dev.to/poreddivarajaykumar/i-built-invoice-generator-pro-professional-invoices-in-30-seconds-get-paid-faster-1kgc",
+          "id": 3411115,
           "platform": "devto"
         },
         "hashnode": {
-          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-vidspark-boost-views-1",
-          "id": "69aff661472f9716affdd905",
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-invoice-generator-pro-professional-invoices-in-30-seconds-get-paid-faster",
+          "id": "69c5aba3d6134b6b3fac7688",
           "platform": "hashnode"
         },
         "backlinks": {
@@ -66,7 +66,7 @@
             }
           ],
           "indexnow": null,
-          "pinged_at": "2026-03-10T10:45:53.115Z"
+          "pinged_at": "2026-03-26T21:56:49.916Z"
         },
         "newsletter": {
           "skipped": true,
@@ -75,17 +75,18 @@
       }
     },
     {
-      "product": "youtube-title-ideas",
-      "channels_hit": 2,
+      "product": "meeting-notes-ai",
+      "channels_hit": 3,
       "total_channels": 4,
       "results": {
         "devto": {
-          "skipped": true,
-          "reason": "Dev.to rate limited — retry in 300s"
+          "url": "https://dev.to/poreddivarajaykumar/i-built-meeting-notes-ai-paste-meeting-transcript-action-items-decisions-summary-2l2p",
+          "id": 3411116,
+          "platform": "devto"
         },
         "hashnode": {
-          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-vid-title-pro-boost-views-1",
-          "id": "69aff68b472f9716affdd907",
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-meeting-notes-ai-paste-meeting-transcript-action-items-decisions-summary",
+          "id": "69c5abcbee32f899dcac97a6",
           "platform": "hashnode"
         },
         "backlinks": {
@@ -101,7 +102,79 @@
             }
           ],
           "indexnow": null,
-          "pinged_at": "2026-03-10T10:46:35.296Z"
+          "pinged_at": "2026-03-26T21:57:30.038Z"
+        },
+        "newsletter": {
+          "skipped": true,
+          "reason": "No subscribers yet"
+        }
+      }
+    },
+    {
+      "product": "linkedin-bio-writer",
+      "channels_hit": 3,
+      "total_channels": 4,
+      "results": {
+        "devto": {
+          "url": "https://dev.to/poreddivarajaykumar/i-built-linkedin-bio-writer-turn-your-job-history-into-a-linkedin-about-that-gets-recruiter-dms-1n56",
+          "id": 3411118,
+          "platform": "devto"
+        },
+        "hashnode": {
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-linkedin-bio-writer-turn-your-job-history-into-a-linkedin-about-that-gets-recruiter-dms",
+          "id": "69c5abd65f8714070b70cbb8",
+          "platform": "hashnode"
+        },
+        "backlinks": {
+          "platform": "backlinks",
+          "pings": [
+            {
+              "service": "google",
+              "status": 404
+            },
+            {
+              "service": "bing",
+              "status": 410
+            }
+          ],
+          "indexnow": null,
+          "pinged_at": "2026-03-26T21:57:40.314Z"
+        },
+        "newsletter": {
+          "skipped": true,
+          "reason": "No subscribers yet"
+        }
+      }
+    },
+    {
+      "product": "landing-page-copy-ai",
+      "channels_hit": 3,
+      "total_channels": 4,
+      "results": {
+        "devto": {
+          "url": "https://dev.to/poreddivarajaykumar/i-built-landing-page-copy-ai-complete-landing-page-copy-in-2-minutes-headline-to-faq-328g",
+          "id": 3411119,
+          "platform": "devto"
+        },
+        "hashnode": {
+          "url": "https://automateanythinghashnodedev.hashnode.dev/i-built-landing-page-copy-ai-complete-landing-page-copy-in-2-minutes-headline-to-faq",
+          "id": "69c5abff2d45de878da5f78c",
+          "platform": "hashnode"
+        },
+        "backlinks": {
+          "platform": "backlinks",
+          "pings": [
+            {
+              "service": "google",
+              "status": 404
+            },
+            {
+              "service": "bing",
+              "status": 410
+            }
+          ],
+          "indexnow": null,
+          "pinged_at": "2026-03-26T21:58:21.346Z"
         },
         "newsletter": {
           "skipped": true,

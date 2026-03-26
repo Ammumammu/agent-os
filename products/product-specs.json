@@ -1,242 +1,112 @@
 {
-  "date": "2026-03-10",
-  "run_at": "2026-03-10T10:33:17.968Z",
-  "total_processed": 10,
-  "specs_generated": 5,
+  "generated_at": "2026-03-27T00:00:00.000Z",
+  "source": "manual-high-demand-diverse",
+  "total_specs": 5,
   "selected_for_build": [
     {
-      "name": "Cold Email Writer",
-      "slug": "cold-email-writer-tool",
-      "tagline": "Write cold emails that convert",
-      "icp": "sales team member sending cold emails to potential customers",
-      "pain_point": "Struggling to craft effective cold emails that get responses",
-      "core_feature": "AI-powered email writing assistance for cold outreach",
-      "secondary_features": [
-        "Email template library",
-        "Personalization suggestions"
-      ],
-      "free_limit": 5,
+      "name": "Resume Optimizer AI",
+      "slug": "resume-optimizer-ai",
+      "tagline": "Fix your resume in 60 seconds — land more interviews",
+      "icp": "job seekers who have been applying for weeks with no callbacks",
+      "pain_point": "Candidates spend hours perfecting resumes and still hear nothing — ATS systems reject them silently",
+      "core_feature": "Paste your resume → AI identifies ATS issues, weak action verbs, missing keywords, formatting problems → outputs a bullet-by-bullet rewrite",
+      "category": "career",
+      "free_limit": 1,
+      "pricing": {
+        "monthly_usd": 15,
+        "one_time_usd": 29
+      },
+      "target_subreddit": "jobs",
+      "secondary_subreddits": ["resumes", "GetEmployed", "careerguidance"],
+      "demand_score": 9.2,
+      "founder_story": "I applied to 80 jobs and heard nothing. A recruiter told me my resume was getting rejected by ATS before a human ever saw it. Fixed 3 things and got 4 interviews the next week.",
+      "keywords": ["resume checker", "ats resume scanner", "resume optimizer", "fix my resume ai"],
+      "viral_attribution": "Resume optimized by resume-optimizer-ai.vercel.app",
+      "posthog_product": "resume-optimizer-ai"
+    },
+    {
+      "name": "Invoice Generator Pro",
+      "slug": "invoice-generator-pro",
+      "tagline": "Professional invoices in 30 seconds — get paid faster",
+      "icp": "freelancers and consultants who delay invoicing because it takes too long",
+      "pain_point": "Freelancers lose money to late payments because creating professional invoices is time-consuming and awkward",
+      "core_feature": "Enter client name, services, amounts → AI generates a professional PDF-ready invoice with your branding, payment terms, and late fee clause",
+      "category": "finance",
+      "free_limit": 3,
+      "pricing": {
+        "monthly_usd": 9,
+        "one_time_usd": 19
+      },
+      "target_subreddit": "freelance",
+      "secondary_subreddits": ["smallbusiness", "Entrepreneur", "consulting"],
+      "demand_score": 8.8,
+      "founder_story": "I used to delay sending invoices because Word templates were a nightmare. Lost $2k one month because I forgot to invoice. Built this so I can invoice in 30 seconds from my phone.",
+      "keywords": ["invoice generator", "freelance invoice", "invoice maker", "create invoice online free"],
+      "viral_attribution": "Invoice created with invoice-generator-pro.vercel.app",
+      "posthog_product": "invoice-generator-pro"
+    },
+    {
+      "name": "Meeting Notes AI",
+      "slug": "meeting-notes-ai",
+      "tagline": "Paste meeting transcript → action items, decisions, summary",
+      "icp": "remote workers and managers who attend 5+ meetings per day",
+      "pain_point": "People spend hours after meetings writing notes, lose track of action items, and forget what was decided",
+      "core_feature": "Paste raw meeting transcript or notes → AI extracts: executive summary, decisions made, action items with owners, follow-up questions, and a Slack-ready update",
+      "category": "productivity",
+      "free_limit": 2,
+      "pricing": {
+        "monthly_usd": 15,
+        "one_time_usd": 29
+      },
+      "target_subreddit": "productivity",
+      "secondary_subreddits": ["projectmanagement", "remotework", "sysadmin"],
+      "demand_score": 9.0,
+      "founder_story": "I had 8 meetings on a Tuesday. By Friday I couldn't remember what I had agreed to in any of them. My team was angry. Built this to turn 1 hour of chaos into 30 seconds of clarity.",
+      "keywords": ["meeting notes ai", "meeting summary generator", "action items from meeting", "meeting transcript summarizer"],
+      "viral_attribution": "Meeting summarized by meeting-notes-ai.vercel.app",
+      "posthog_product": "meeting-notes-ai"
+    },
+    {
+      "name": "LinkedIn Bio Writer",
+      "slug": "linkedin-bio-writer",
+      "tagline": "Turn your job history into a LinkedIn About that gets recruiter DMs",
+      "icp": "professionals who know LinkedIn matters but have a blank or weak About section",
+      "pain_point": "85% of professionals have weak LinkedIn About sections — they know it matters but stare at a blank text box every time they try to write it",
+      "core_feature": "Enter your role, 3 achievements, target job → AI writes a LinkedIn About section in your voice that ends with a clear CTA and passes the recruiter scroll test",
+      "category": "career",
+      "free_limit": 2,
+      "pricing": {
+        "monthly_usd": 9,
+        "one_time_usd": 15
+      },
+      "target_subreddit": "linkedin",
+      "secondary_subreddits": ["jobs", "careerguidance", "marketing"],
+      "demand_score": 8.5,
+      "founder_story": "Spent 3 hours trying to write my LinkedIn About. Ended up with: 'Passionate about technology.' A recruiter literally laughed. Built this to stop that from happening to anyone else.",
+      "keywords": ["linkedin bio writer", "linkedin about section generator", "linkedin profile writer ai"],
+      "viral_attribution": "Bio written with linkedin-bio-writer.vercel.app",
+      "posthog_product": "linkedin-bio-writer"
+    },
+    {
+      "name": "Landing Page Copy AI",
+      "slug": "landing-page-copy-ai",
+      "tagline": "Complete landing page copy in 2 minutes — headline to FAQ",
+      "icp": "indie founders and marketers who need landing page copy but cannot afford a copywriter",
+      "pain_point": "Founders spend weeks on product and 10 minutes on copy — then wonder why nobody converts",
+      "core_feature": "Enter product name, pain it solves, target customer → AI writes: headline, subheadline, 3 benefit bullets, how-it-works section, objection FAQ, CTA, and pricing copy",
+      "category": "marketing",
+      "free_limit": 1,
       "pricing": {
         "monthly_usd": 19,
-        "one_time_usd": 99
+        "one_time_usd": 39
       },
-      "target_subreddit": "sales",
-      "founder_story": "I've spent countless hours writing cold emails that fell flat, and I wished I had a tool to help me craft emails that actually got responses. As a founder, I understand the pain of trying to scale cold outreach efforts without a reliable email writing solution.",
-      "viral_attribution": "Generated by Cold Email Writer — cold-email-writer-tool.vercel.app",
-      "type": "stateless",
-      "demand_score": 7.5,
-      "keywords": [
-        "email writer for cold outreach",
-        "cold email templates",
-        "cold email automation"
-      ],
-      "competitor": "Mailchimp",
-      "category": "email"
-    },
-    {
-      "name": "Subject Line Pro",
-      "slug": "email-subject-writer",
-      "tagline": "Write better subjects",
-      "icp": "marketing specialist crafting email campaigns",
-      "pain_point": "Struggling to write effective email subject lines that increase open rates",
-      "core_feature": "AI-powered subject line generation",
-      "secondary_features": [
-        "personalization suggestions",
-        "subject line analytics"
-      ],
-      "free_limit": 2,
-      "pricing": {
-        "monthly_usd": 9,
-        "one_time_usd": 19
-      },
-      "target_subreddit": "emailmarketing",
-      "founder_story": "As a marketer, I've spent hours trying to come up with the perfect subject line, only to see my emails go unopened. I wished there was a tool that could help me write subject lines that actually work.",
-      "viral_attribution": "Generated by Email Subject Writer — email-subject-writer.vercel.app",
-      "type": "stateless",
-      "demand_score": 7.5,
-      "keywords": [
-        "email writer for subject line",
-        "subject line generator",
-        "email subject line tool"
-      ],
-      "competitor": "Mailchimp",
-      "category": "email"
-    },
-    {
-      "name": "Apology Email Pro",
-      "slug": "apology-email-writer",
-      "tagline": "Write sorry emails",
-      "icp": "customer support specialist responding to complaints",
-      "pain_point": "Struggling to craft sincere and effective apology emails to customers",
-      "core_feature": "Generate polished apology email templates",
-      "secondary_features": [
-        "Customizable email templates",
-        "Tone and language suggestions"
-      ],
-      "free_limit": 2,
-      "pricing": {
-        "monthly_usd": 9,
-        "one_time_usd": 19
-      },
-      "target_subreddit": "customer_service",
-      "founder_story": "I've been in situations where I had to apologize to customers via email and struggled to find the right words, which is why I created this tool to help others like me. I believe a well-crafted apology email can make all the difference in resolving issues and maintaining customer trust",
-      "viral_attribution": "Generated by Apology Email Pro — apology-email-writer.vercel.app",
-      "type": "stateless",
-      "demand_score": 7.5,
-      "keywords": [
-        "email writer for apology",
-        "apology email template",
-        "sorry email generator"
-      ],
-      "competitor": "Grammarly",
-      "category": "email"
-    }
-  ],
-  "all_specs": [
-    {
-      "name": "Cold Email Writer",
-      "slug": "cold-email-writer-tool",
-      "tagline": "Write cold emails that convert",
-      "icp": "sales team member sending cold emails to potential customers",
-      "pain_point": "Struggling to craft effective cold emails that get responses",
-      "core_feature": "AI-powered email writing assistance for cold outreach",
-      "secondary_features": [
-        "Email template library",
-        "Personalization suggestions"
-      ],
-      "free_limit": 5,
-      "pricing": {
-        "monthly_usd": 19,
-        "one_time_usd": 99
-      },
-      "target_subreddit": "sales",
-      "founder_story": "I've spent countless hours writing cold emails that fell flat, and I wished I had a tool to help me craft emails that actually got responses. As a founder, I understand the pain of trying to scale cold outreach efforts without a reliable email writing solution.",
-      "viral_attribution": "Generated by Cold Email Writer — cold-email-writer-tool.vercel.app",
-      "type": "stateless",
-      "demand_score": 7.5,
-      "keywords": [
-        "email writer for cold outreach",
-        "cold email templates",
-        "cold email automation"
-      ],
-      "competitor": "Mailchimp",
-      "category": "email"
-    },
-    {
-      "name": "Subject Line Pro",
-      "slug": "email-subject-writer",
-      "tagline": "Write better subjects",
-      "icp": "marketing specialist crafting email campaigns",
-      "pain_point": "Struggling to write effective email subject lines that increase open rates",
-      "core_feature": "AI-powered subject line generation",
-      "secondary_features": [
-        "personalization suggestions",
-        "subject line analytics"
-      ],
-      "free_limit": 2,
-      "pricing": {
-        "monthly_usd": 9,
-        "one_time_usd": 19
-      },
-      "target_subreddit": "emailmarketing",
-      "founder_story": "As a marketer, I've spent hours trying to come up with the perfect subject line, only to see my emails go unopened. I wished there was a tool that could help me write subject lines that actually work.",
-      "viral_attribution": "Generated by Email Subject Writer — email-subject-writer.vercel.app",
-      "type": "stateless",
-      "demand_score": 7.5,
-      "keywords": [
-        "email writer for subject line",
-        "subject line generator",
-        "email subject line tool"
-      ],
-      "competitor": "Mailchimp",
-      "category": "email"
-    },
-    {
-      "name": "Apology Email Pro",
-      "slug": "apology-email-writer",
-      "tagline": "Write sorry emails",
-      "icp": "customer support specialist responding to complaints",
-      "pain_point": "Struggling to craft sincere and effective apology emails to customers",
-      "core_feature": "Generate polished apology email templates",
-      "secondary_features": [
-        "Customizable email templates",
-        "Tone and language suggestions"
-      ],
-      "free_limit": 2,
-      "pricing": {
-        "monthly_usd": 9,
-        "one_time_usd": 19
-      },
-      "target_subreddit": "customer_service",
-      "founder_story": "I've been in situations where I had to apologize to customers via email and struggled to find the right words, which is why I created this tool to help others like me. I believe a well-crafted apology email can make all the difference in resolving issues and maintaining customer trust",
-      "viral_attribution": "Generated by Apology Email Pro — apology-email-writer.vercel.app",
-      "type": "stateless",
-      "demand_score": 7.5,
-      "keywords": [
-        "email writer for apology",
-        "apology email template",
-        "sorry email generator"
-      ],
-      "competitor": "Grammarly",
-      "category": "email"
-    },
-    {
-      "name": "Resume Refiner",
-      "slug": "resume-refiner-tool",
-      "tagline": "Fix Your Resume",
-      "icp": "entry-level job seeker struggling to get interviews",
-      "pain_point": "Applicants are often rejected due to poorly formatted or ineffective resumes.",
-      "core_feature": "AI-powered resume optimization and review",
-      "secondary_features": [
-        "Automatic keyword extraction",
-        "Personalized career advice"
-      ],
-      "free_limit": 2,
-      "pricing": {
-        "monthly_usd": 9,
-        "one_time_usd": 19
-      },
-      "target_subreddit": "careerguidance",
-      "founder_story": "As a recent graduate, I struggled to get my foot in the door due to a lackluster resume. I wish I had a tool to help me refine my resume and increase my chances of getting hired.",
-      "viral_attribution": "Generated by Resume Refiner — resume-refiner-tool.vercel.app",
-      "type": "stateless",
-      "demand_score": 7.5,
-      "keywords": [
-        "ai tool for resume",
-        "resume builder",
-        "resume optimization"
-      ],
-      "competitor": "Resume.io",
-      "category": "resume"
-    },
-    {
-      "name": "Video Script Pro",
-      "slug": "youtube-script-writer",
-      "tagline": "Write scripts fast",
-      "icp": "freelance YouTuber creating content regularly",
-      "pain_point": "Creating engaging YouTube scripts takes too much time and effort",
-      "core_feature": "AI-powered script writing for YouTube videos",
-      "secondary_features": [
-        "script templates",
-        "collaboration tools"
-      ],
-      "free_limit": 2,
-      "pricing": {
-        "monthly_usd": 9,
-        "one_time_usd": 19
-      },
-      "target_subreddit": "youtubers",
-      "founder_story": "As a freelance videographer, I struggled to write engaging scripts for my clients' YouTube videos. I wished there was a tool that could help me generate high-quality scripts quickly and efficiently",
-      "viral_attribution": "Generated by Video Script Pro — youtube-script-writer.vercel.app",
-      "type": "stateless",
-      "demand_score": 7,
-      "keywords": [
-        "youtube script writer",
-        "video script generator",
-        "youtube content creator tools"
-      ],
-      "competitor": "Copy.ai",
-      "category": "youtube"
+      "target_subreddit": "indiehackers",
+      "secondary_subreddits": ["SideProject", "startups", "marketing"],
+      "demand_score": 8.7,
+      "founder_story": "My first product had 0 conversions. A copywriter quoted me $3k. I am a developer, not a writer. Learned conversion copywriting the hard way so you do not have to.",
+      "keywords": ["landing page copy generator", "landing page copywriter ai", "conversion copy ai"],
+      "viral_attribution": "Copy generated by landing-page-copy-ai.vercel.app",
+      "posthog_product": "landing-page-copy-ai"
     }
   ]
 }

@@ -1,0 +1,41 @@
+
+============================================================
+PRODUCT: Meeting Notes AI → r/productivity
+============================================================
+I'm the founder of a startup and I have to say, meetings are a huge part of my life. On Tuesday, I had 8 back-to-back meetings with different teams and clients. By Friday, I had forgotten almost everything that was discussed. It was embarrassing. My team was frustrated with me because I kept asking them to remind me of action items and decisions that were made.
+
+I realized that I needed a system to keep track of my meetings. I tried taking notes by hand, but it was slow and I always seemed to miss something important. I tried recording meetings, but that was a nightmare to review. I felt like I was wasting so much time trying to stay on top of things.
+
+That's when I started experimenting with AI-powered note-taking. I built a tool that can automatically generate meeting notes, action items, and decisions. It's been a game-changer for me. I can finally keep up with my meetings and my team is happy again.
+
+If you're struggling with meeting overload like I was, I feel your pain. I've made my tool available at https://meeting-notes-ai.vercel.app. Check it out and let me know what you think.
+
+[Twitter thread prompt: write 7 tweets about Meeting Notes AI - https://meeting-notes-ai.vercel.app]
+
+============================================================
+PRODUCT: Resume Optimizer AI → r/jobs
+============================================================
+I still remember the frustration of applying to over 80 jobs and not getting a single reply. I had a good feeling about my qualifications, but it seemed like I was invisible. It wasn't until I had a conversation with a recruiter that I realized what was going on. They told me that my resume was getting rejected by the applicant tracking system (ATS) before it even had a chance to be seen by a human.
+
+It turns out that these systems are designed to filter out resumes that don't have the right keywords, formatting, and phrases. It's not about being qualified or not, it's about being able to game the system. I was shocked and felt like the whole job search process was rigged against me.
+
+That's when I decided to take matters into my own hands. I started learning about natural language processing and machine learning, and I built a tool that could help optimize resumes to get past these ATS filters. It's been a labor of love, and I'm excited to share it with others who may be going through the same struggles.
+
+If you're tired of feeling like your resume is getting lost in the void, I hope you'll check out https://resume-optimizer-ai.vercel.app.
+
+[Twitter thread prompt: write 7 tweets about Resume Optimizer AI - https://resume-optimizer-ai.vercel.app]
+
+============================================================
+PRODUCT: Invoice Generator Pro → r/freelance
+============================================================
+I still remember the month I lost $2k because I kept delaying invoicing. I was so caught up in delivering projects that I just didn't have the bandwidth to deal with Word templates and manual calculations. It was a painful process, and it cost me.
+
+As a freelancer, I know I'm not alone in this struggle. We all hate invoicing, but we know it's a necessary evil. So, I decided to take matters into my own hands. I started building a tool that would make invoicing easier, faster, and less prone to errors.
+
+I spent countless hours researching, designing, and coding, and eventually, I had a working prototype. It was a game-changer for my own business, and I knew I had to share it with others. I've been using it for months now, and it's saved me so much time and stress.
+
+I'd love to hear from other freelancers about their invoicing struggles and what they've done to overcome them. Have you found any tools or workflows that make invoicing less painful? I'm always looking for ways to improve my own tool, and I'd love to hear your thoughts.
+
+If you're curious, you can check out my tool here: https://invoice-generator-pro.vercel.app
+
+[Twitter thread prompt: write 7 tweets about Invoice Generator Pro - https://invoice-generator-pro.vercel.app]

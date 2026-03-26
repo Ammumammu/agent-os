@@ -1,91 +1,147 @@
 {
-  "date": "2026-03-10",
-  "run_at": "2026-03-10T06:27:35.614Z",
-  "launched": 3,
   "products": [
     {
-      "id": 1773124044607.8494,
-      "name": "FollowUp Writer",
-      "slug": "followup-writer-tool",
-      "tagline": "Write follow-ups fast",
-      "icp": "sales teams sending follow-up emails",
-      "category": "email",
+      "id": 1774562047809.058,
+      "name": "Resume Optimizer AI",
+      "slug": "resume-optimizer-ai",
+      "tagline": "Fix your resume in 60 seconds — land more interviews",
+      "icp": "job seekers who have been applying for weeks with no callbacks",
+      "category": "career",
       "status": "live",
-      "github_url": "https://github.com/Ammumammu/followup-writer-tool",
-      "vercel_url": "https://followup-writer-tool-fv66hxlih-sweths-projects-68683994.vercel.app",
-      "stripe_link": "https://buy.stripe.com/test_bJeeV67rsawK8TY5cvg7e0g",
+      "github_url": "https://github.com/Ammumammu/resume-optimizer-ai",
+      "vercel_url": "https://resume-optimizer-mq3pz3unb-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_8x26oAbHI34i5HMbATg7e0j",
       "gumroad_link": "",
-      "stripe_product_id": "prod_U7YtCfGM7di72z",
+      "stripe_product_id": "prod_UDnR9Neve0FrDx",
       "mrr_usd": 0,
       "visitors": 0,
       "conversion_rate": 0,
-      "demand_score": 7.5,
+      "demand_score": 9.2,
       "keywords": [
-        "email writer for follow up",
-        "follow up email template",
-        "sales follow up email"
+        "resume checker",
+        "ats resume scanner",
+        "resume optimizer",
+        "fix my resume ai"
       ],
       "pricing": {
-        "monthly_usd": 9,
-        "one_time_usd": 19
+        "monthly_usd": 15,
+        "one_time_usd": 29
       },
-      "launched_at": "2026-03-10T06:27:24.607Z"
+      "launched_at": "2026-03-26T21:54:07.809Z"
     },
     {
-      "id": 1773124049451.7866,
-      "name": "VidSpark",
-      "slug": "youtube-thumbnail-ideas",
-      "tagline": "Boost Views",
-      "icp": "independent YouTuber creating engaging videos",
-      "category": "youtube",
+      "id": 1774562061342.6316,
+      "name": "Invoice Generator Pro",
+      "slug": "invoice-generator-pro",
+      "tagline": "Professional invoices in 30 seconds — get paid faster",
+      "icp": "freelancers and consultants who delay invoicing because it takes too long",
+      "category": "finance",
       "status": "live",
-      "github_url": "https://github.com/Ammumammu/youtube-thumbnail-ideas",
-      "vercel_url": "https://youtube-thumbnail-ideas-nyyaabzm6-sweths-projects-68683994.vercel.app",
-      "stripe_link": "https://buy.stripe.com/test_7sY14g9zAgV87PU6gzg7e0h",
+      "github_url": "https://github.com/Ammumammu/invoice-generator-pro",
+      "vercel_url": "https://invoice-generator-l7n5vuxhn-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_dRmcMY13434i4DI8oHg7e0k",
       "gumroad_link": "",
-      "stripe_product_id": "prod_U7Yt5mRekWmLU1",
+      "stripe_product_id": "prod_UDnRpO3oXjrmiA",
       "mrr_usd": 0,
       "visitors": 0,
       "conversion_rate": 0,
-      "demand_score": 7.5,
+      "demand_score": 8.8,
       "keywords": [
-        "youtube thumbnail idea",
-        "youtube thumbnail creator",
-        "youtube video thumbnail maker"
+        "invoice generator",
+        "freelance invoice",
+        "invoice maker",
+        "create invoice online free"
       ],
       "pricing": {
         "monthly_usd": 9,
         "one_time_usd": 19
       },
-      "launched_at": "2026-03-10T06:27:29.451Z"
+      "launched_at": "2026-03-26T21:54:21.342Z"
     },
     {
-      "id": 1773124055610.3015,
-      "name": "Vid Title Pro",
-      "slug": "youtube-title-ideas",
-      "tagline": "Boost Views!",
-      "icp": "independent YouTuber creating content regularly",
-      "category": "youtube",
+      "id": 1774562074651.9495,
+      "name": "Meeting Notes AI",
+      "slug": "meeting-notes-ai",
+      "tagline": "Paste meeting transcript → action items, decisions, summary",
+      "icp": "remote workers and managers who attend 5+ meetings per day",
+      "category": "productivity",
       "status": "live",
-      "github_url": "https://github.com/Ammumammu/youtube-title-ideas",
-      "vercel_url": "https://youtube-title-ideas-9skmmlql2-sweths-projects-68683994.vercel.app",
-      "stripe_link": "https://buy.stripe.com/test_5kQ14g134fR4c6a7kDg7e0i",
+      "github_url": "https://github.com/Ammumammu/meeting-notes-ai",
+      "vercel_url": "https://meeting-notes-1xeizsbl2-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_7sY6oA8vw7ky3zEgVdg7e0l",
       "gumroad_link": "",
-      "stripe_product_id": "prod_U7YtVsFko0NrXz",
+      "stripe_product_id": "prod_UDnSmwVm3YHflF",
       "mrr_usd": 0,
       "visitors": 0,
       "conversion_rate": 0,
-      "demand_score": 7.5,
+      "demand_score": 9,
       "keywords": [
-        "youtube title generator",
-        "youtube title ideas",
-        "youtube seo title generator"
+        "meeting notes ai",
+        "meeting summary generator",
+        "action items from meeting",
+        "meeting transcript summarizer"
+      ],
+      "pricing": {
+        "monthly_usd": 15,
+        "one_time_usd": 29
+      },
+      "launched_at": "2026-03-26T21:54:34.651Z"
+    },
+    {
+      "id": 1774562088010.451,
+      "name": "LinkedIn Bio Writer",
+      "slug": "linkedin-bio-writer",
+      "tagline": "Turn your job history into a LinkedIn About that gets recruiter DMs",
+      "icp": "professionals who know LinkedIn matters but have a blank or weak About section",
+      "category": "career",
+      "status": "live",
+      "github_url": "https://github.com/Ammumammu/linkedin-bio-writer",
+      "vercel_url": "https://linkedin-bio-writer-d9bzhiy77-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_4gM3co9zAcESeei48rg7e0m",
+      "gumroad_link": "",
+      "stripe_product_id": "prod_UDnSPAnTWa55IZ",
+      "mrr_usd": 0,
+      "visitors": 0,
+      "conversion_rate": 0,
+      "demand_score": 8.5,
+      "keywords": [
+        "linkedin bio writer",
+        "linkedin about section generator",
+        "linkedin profile writer ai"
       ],
       "pricing": {
         "monthly_usd": 9,
-        "one_time_usd": 19
+        "one_time_usd": 15
       },
-      "launched_at": "2026-03-10T06:27:35.610Z"
+      "launched_at": "2026-03-26T21:54:48.010Z"
+    },
+    {
+      "id": 1774562104155.7092,
+      "name": "Landing Page Copy AI",
+      "slug": "landing-page-copy-ai",
+      "tagline": "Complete landing page copy in 2 minutes — headline to FAQ",
+      "icp": "indie founders and marketers who need landing page copy but cannot afford a copywriter",
+      "category": "marketing",
+      "status": "live",
+      "github_url": "https://github.com/Ammumammu/landing-page-copy-ai",
+      "vercel_url": "https://landing-page-copy-qook9z2no-sweths-projects-68683994.vercel.app",
+      "stripe_link": "https://buy.stripe.com/test_00w5kwaDEeN02vAeN5g7e0n",
+      "gumroad_link": "",
+      "stripe_product_id": "prod_UDnS84TQRfwCYI",
+      "mrr_usd": 0,
+      "visitors": 0,
+      "conversion_rate": 0,
+      "demand_score": 8.7,
+      "keywords": [
+        "landing page copy generator",
+        "landing page copywriter ai",
+        "conversion copy ai"
+      ],
+      "pricing": {
+        "monthly_usd": 19,
+        "one_time_usd": 39
+      },
+      "launched_at": "2026-03-26T21:55:04.155Z"
     }
   ]
 }
