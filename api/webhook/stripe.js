@@ -38,6 +38,10 @@ export default async function handler(req, res) {
       case 'customer.subscription.deleted':
         await handleSubscriptionCanceled(event.data.object);
         break;
+      case 'invoice.payment_failed':
+      case 'invoice.payment_action_required':
+        await handlePaymentFailed(event.data.object);
+        break;
       default:
         console.log(`Unhandled event type: ${event.type}`);
     }
@@ -119,6 +123,82 @@ async function handleSubscriptionUpdate(subscription) {
 
 async function handleSubscriptionCanceled(subscription) {
   await supabaseUpdate('subscriptions', { status: 'canceled', canceled_at: new Date().toISOString() }, 'stripe_sub_id', subscription.id);
+
+  // Trigger win-back day 1 email
+  const email = await getCustomerEmail(subscription.customer);
+  if (email) {
+    const productSlug = subscription.items?.data?.[0]?.price?.metadata?.slug || 'your subscription';
+    await selfApi('/api/publish', {
+      action: 'email_winback',
+      to: email,
+      day: 1,
+      productSlug,
+    });
+    await supabaseInsert('winback_log', {
+      customer_email: email,
+      stripe_sub_id: subscription.id,
+      product_slug: productSlug,
+      day1_sent_at: new Date().toISOString(),
+      created_at: new Date().toISOString(),
+    });
+    console.log(`↩ Win-back day 1 queued for ${email}`);
+  }
+}
+
+async function handlePaymentFailed(invoice) {
+  const email = invoice.customer_email || invoice.customer_details?.email;
+  if (!email) return;
+
+  const attempt = invoice.attempt_count || 1;
+  const productSlug = invoice.lines?.data?.[0]?.price?.metadata?.slug || 'your subscription';
+
+  // Only send dunning on attempts 1, 2, 3 (day 1, ~day 3, ~day 7)
+  if (attempt > 3) return;
+
+  await selfApi('/api/publish', {
+    action: 'email_dunning',
+    to: email,
+    attempt,
+    invoiceUrl: invoice.hosted_invoice_url,
+    productSlug,
+  });
+
+  await supabaseInsert('dunning_log', {
+    customer_email: email,
+    stripe_invoice_id: invoice.id,
+    product_slug: productSlug,
+    attempt_count: attempt,
+    invoice_url: invoice.hosted_invoice_url,
+    created_at: new Date().toISOString(),
+  });
+
+  console.log(`⚡ Dunning attempt ${attempt} queued for ${email}`);
+}
+
+// ─── Internal API + Stripe customer helpers ───────────────────────────────────
+const SELF_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+
+async function selfApi(path, body) {
+  try {
+    await fetch(`${SELF_URL}${path}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+  } catch (e) {
+    console.error(`[webhook] selfApi ${path} failed:`, e.message);
+  }
+}
+
+async function getCustomerEmail(customerId) {
+  if (!customerId) return null;
+  try {
+    const r = await fetch(`https://api.stripe.com/v1/customers/${customerId}`, {
+      headers: { Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}` },
+    });
+    const data = await r.json();
+    return data.email || null;
+  } catch (_) { return null; }
 }
 
 // ─── Supabase helpers ─────────────────────────────────────────────────────────

@@ -33,7 +33,7 @@ async function groq(prompt, maxTokens = 2000) {
   let lastErr;
   for (const model of GROQ_MODELS) {
     try {
-      const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const r = await fetchWithRetry('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
         body: JSON.stringify({

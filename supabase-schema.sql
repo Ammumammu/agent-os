@@ -170,3 +170,43 @@ create policy "service can manage publish_queue"
   on publish_queue for all
   to service_role
   using (true);
+
+-- ─── dunning_log (failed payment recovery tracking) ──────────────────────────
+create table if not exists dunning_log (
+  id                  bigserial primary key,
+  customer_email      text not null,
+  stripe_invoice_id   text unique,
+  product_slug        text,
+  attempt_count       int default 1,
+  invoice_url         text,
+  resolved_at         timestamptz,
+  created_at          timestamptz default now()
+);
+
+alter table dunning_log enable row level security;
+
+create policy "service can manage dunning_log"
+  on dunning_log for all
+  to service_role
+  using (true);
+
+-- ─── winback_log (canceled subscriber re-engagement tracking) ─────────────────
+create table if not exists winback_log (
+  id              bigserial primary key,
+  customer_email  text not null,
+  stripe_sub_id   text,
+  product_slug    text,
+  day1_sent_at    timestamptz,
+  day3_sent_at    timestamptz,
+  day7_sent_at    timestamptz,
+  day14_sent_at   timestamptz,
+  reactivated_at  timestamptz,
+  created_at      timestamptz default now()
+);
+
+alter table winback_log enable row level security;
+
+create policy "service can manage winback_log"
+  on winback_log for all
+  to service_role
+  using (true);

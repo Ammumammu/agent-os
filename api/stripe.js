@@ -79,7 +79,11 @@ export default async function handler(req, res) {
     // Full product + price + payment link in one call (used by builder-agent)
     // Dedup: searches for existing Stripe product by metadata[slug] before creating.
     // Safe to call multiple times — returns existing product if already created today.
+    // Returns: payment_url (monthly Pro), payment_url_annual (annual Pro)
     createFull: async () => {
+      const monthlyUsd = p.monthly_usd || 9;
+      const annualUsd = p.annual_usd || Math.round(monthlyUsd * 10); // ~17% discount
+
       // ── Dedup: check if product with this slug already exists in Stripe ──
       let product = null;
       if (p.slug) {
@@ -90,30 +94,30 @@ export default async function handler(req, res) {
           console.log(`[stripe] createFull: reusing existing product for slug "${p.slug}" (id: ${existing.id})`);
           product = existing;
 
-          // Find existing active price for this product
-          const pricesRes = await fetch(`${BASE}/prices?product=${existing.id}&active=true&limit=5`, { headers: sh });
+          const pricesRes = await fetch(`${BASE}/prices?product=${existing.id}&active=true&limit=10`, { headers: sh });
           const pricesData = await pricesRes.json();
-          const existingPrice = pricesData?.data?.find(pr => pr.recurring?.interval === 'month');
+          const monthlyPrice = pricesData?.data?.find(pr => pr.recurring?.interval === 'month' && pr.metadata?.tier === 'pro');
+          const annualPrice = pricesData?.data?.find(pr => pr.recurring?.interval === 'year' && pr.metadata?.tier === 'pro');
 
-          if (existingPrice) {
-            // Find existing payment link for this price
-            const linksRes = await fetch(`${BASE}/payment_links?active=true&limit=20`, { headers: sh });
+          if (monthlyPrice) {
+            const linksRes = await fetch(`${BASE}/payment_links?active=true&limit=50`, { headers: sh });
             const linksData = await linksRes.json();
-            const existingLink = linksData?.data?.find(l => l.line_items?.data?.[0]?.price?.id === existingPrice.id);
-            if (existingLink) {
-              return new Response(JSON.stringify({ product, price: existingPrice, link: existingLink, payment_url: existingLink.url, reused: true }), { status: 200 });
+            const monthlyLink = linksData?.data?.find(l => l.line_items?.data?.[0]?.price?.id === monthlyPrice.id);
+            const annualLink = annualPrice ? linksData?.data?.find(l => l.line_items?.data?.[0]?.price?.id === annualPrice.id) : null;
+
+            if (monthlyLink) {
+              return new Response(JSON.stringify({
+                product, price: monthlyPrice, link: monthlyLink,
+                payment_url: monthlyLink.url,
+                payment_url_annual: annualLink?.url || null,
+                reused: true,
+              }), { status: 200 });
             }
-            // Recreate payment link (links are cheap to recreate)
-            const newLink = await (await fetch(`${BASE}/payment_links`, {
-              method: 'POST', headers: sh,
-              body: qs({ 'line_items[0][price]': existingPrice.id, 'line_items[0][quantity]': '1', 'after_completion[type]': 'redirect', 'after_completion[redirect][url]': p.successUrl || `https://${p.slug}.vercel.app/success` }),
-            })).json();
-            return new Response(JSON.stringify({ product, price: existingPrice, link: newLink, payment_url: newLink.url, reused: true }), { status: 200 });
           }
         }
       }
 
-      // ── Create new product (no duplicate found) ───────────────────────────
+      // ── Create new product ────────────────────────────────────────────────
       if (!product) {
         product = await (await fetch(`${BASE}/products`, {
           method: 'POST', headers: sh,
@@ -121,11 +125,14 @@ export default async function handler(req, res) {
         })).json();
       }
 
-      const price = await (await fetch(`${BASE}/prices`, {
+      const successUrl = p.successUrl || `https://${p.slug}.vercel.app/success`;
+
+      // Monthly Pro price
+      const monthlyPrice = await (await fetch(`${BASE}/prices`, {
         method: 'POST', headers: sh,
         body: qs({
           product: product.id,
-          unit_amount: String((p.monthly_usd || 9) * 100),
+          unit_amount: String(monthlyUsd * 100),
           currency: 'usd',
           'recurring[interval]': 'month',
           'metadata[tier]': 'pro',
@@ -133,18 +140,71 @@ export default async function handler(req, res) {
         }),
       })).json();
 
-      const link = await (await fetch(`${BASE}/payment_links`, {
+      // Annual Pro price (save 2 months vs monthly)
+      const annualPrice = await (await fetch(`${BASE}/prices`, {
         method: 'POST', headers: sh,
         body: qs({
-          'line_items[0][price]': price.id,
-          'line_items[0][quantity]': '1',
-          'after_completion[type]': 'redirect',
-          'after_completion[redirect][url]': p.successUrl || `https://${p.slug}.vercel.app/success`,
+          product: product.id,
+          unit_amount: String(annualUsd * 100),
+          currency: 'usd',
+          'recurring[interval]': 'year',
+          'metadata[tier]': 'pro_annual',
+          'metadata[slug]': p.slug || '',
         }),
       })).json();
 
-      return new Response(JSON.stringify({ product, price, link, payment_url: link.url, reused: false }), { status: 200 });
+      // Payment links for both
+      const [monthlyLink, annualLink] = await Promise.all([
+        fetch(`${BASE}/payment_links`, {
+          method: 'POST', headers: sh,
+          body: qs({ 'line_items[0][price]': monthlyPrice.id, 'line_items[0][quantity]': '1', 'after_completion[type]': 'redirect', 'after_completion[redirect][url]': successUrl }),
+        }).then(r => r.json()),
+        fetch(`${BASE}/payment_links`, {
+          method: 'POST', headers: sh,
+          body: qs({ 'line_items[0][price]': annualPrice.id, 'line_items[0][quantity]': '1', 'after_completion[type]': 'redirect', 'after_completion[redirect][url]': successUrl }),
+        }).then(r => r.json()),
+      ]);
+
+      return new Response(JSON.stringify({
+        product,
+        price: monthlyPrice,
+        price_annual: annualPrice,
+        link: monthlyLink,
+        link_annual: annualLink,
+        payment_url: monthlyLink.url,
+        payment_url_annual: annualLink.url,
+        monthly_usd: monthlyUsd,
+        annual_usd: annualUsd,
+        reused: false,
+      }), { status: 200 });
     },
+
+    // Upgrade an existing subscription to a new price (Pro → Max, monthly → annual)
+    // Proration: always_invoice = charge/credit immediately
+    upgradeSubscription: async () => {
+      const subRes = await fetch(`${BASE}/subscriptions/${p.subscriptionId}`, { headers: sh });
+      const sub = await subRes.json();
+      if (sub.error) return new Response(JSON.stringify({ error: sub.error.message }), { status: 400 });
+      const currentItemId = sub.items?.data?.[0]?.id;
+      const r = await fetch(`${BASE}/subscriptions/${p.subscriptionId}`, {
+        method: 'POST', headers: sh,
+        body: qs({
+          [`items[0][id]`]: currentItemId,
+          [`items[0][price]`]: p.newPriceId,
+          proration_behavior: 'always_invoice',
+        }),
+      });
+      return r;
+    },
+
+    // Cancel a subscription at period end (not immediately)
+    cancelSubscription: () => fetch(`${BASE}/subscriptions/${p.subscriptionId}`, {
+      method: 'DELETE', headers: sh,
+      body: qs({ cancel_at_period_end: 'true' }),
+    }),
+
+    // List canceled subscriptions (for win-back targeting)
+    listCanceled: () => fetch(`${BASE}/subscriptions?limit=100&status=canceled`, { headers: sh }),
   };
 
   // Gumroad actions (merged from commerce.js)
@@ -164,13 +224,11 @@ export default async function handler(req, res) {
     const actionFn = actions[action];
     if (!actionFn) return res.status(400).json({ error: `Unknown action: ${action}` });
     const r = await actionFn();
-    if (!r || typeof r.json !== 'function') {
-      const text = await r.text();
-      return res.status(r.status).json(JSON.parse(text));
-    }
+    if (!r) return res.status(500).json({ error: `Action "${action}" returned no response` });
     const data = await r.json();
-    return res.status(r.ok ? 200 : r.status).json(data);
+    return res.status(r.ok !== false ? 200 : (r.status || 500)).json(data);
   } catch (e) {
+    console.error(`[api/stripe] ${action} error:`, e.message);
     return res.status(500).json({ error: e.message });
   }
 }

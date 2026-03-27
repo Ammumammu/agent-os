@@ -60,8 +60,8 @@ export default async function handler(req, res) {
 
     // Poll until deployment is live (blocking — returns URL when ready)
     pollUntilLive: async () => {
-      const maxAttempts = p.maxAttempts || 24; // 24 × 5s = 120s max
-      const interval = p.intervalMs || 5000;
+      const maxAttempts = p.maxAttempts || 12; // 12 × 10s = 120s max (ERR-003)
+      const interval = p.intervalMs || 10000;
 
       for (let i = 0; i < maxAttempts; i++) {
         try {
@@ -168,13 +168,11 @@ export default async function handler(req, res) {
     const actionFn = actions[action];
     if (!actionFn) return res.status(400).json({ error: `Unknown action: ${action}` });
     const r = await actionFn();
-    if (!r || typeof r.json !== 'function') {
-      const text = await r.text();
-      return res.status(r.status).json(JSON.parse(text));
-    }
+    if (!r) return res.status(500).json({ error: `Action "${action}" returned no response` });
     const data = await r.json();
-    return res.status(r.ok ? 200 : r.status).json(data);
+    return res.status(r.ok !== false ? 200 : (r.status || 500)).json(data);
   } catch (e) {
+    console.error(`[api/deploy] ${action} error:`, e.message);
     return res.status(500).json({ error: e.message });
   }
 }

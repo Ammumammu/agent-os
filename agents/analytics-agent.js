@@ -195,6 +195,10 @@ async function run() {
   writeFileSync(TOMORROW_FILE, JSON.stringify(tomorrow, null, 2));
   log(`  Tomorrow's queue: ${tomorrow.build_queue?.length || 0} products planned`);
 
+  // ─ Step 8a: Win-back drip — send days 3/7/14 for pending canceled subscribers ─
+  log('Step 8a: Processing win-back sequences...');
+  await processWinbackDrip();
+
   // ─ Step 8: Send daily digest email ───────────────────────────────────────
   log('Step 8: Sending daily digest...');
   const ownerEmail = process.env.OWNER_EMAIL;
@@ -400,6 +404,47 @@ function saveCopyQueue(queue) {
 function loadTomorrow() {
   if (!existsSync(TOMORROW_FILE)) return null;
   try { return JSON.parse(readFileSync(TOMORROW_FILE, 'utf8')); } catch (_) { return null; }
+}
+
+// ─── Win-back drip: send days 3, 7, 14 for pending canceled subscribers ───────
+async function processWinbackDrip() {
+  const SUPABASE_URL = process.env.SUPABASE_URL;
+  const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY;
+  if (!SUPABASE_URL || !SUPABASE_KEY) return;
+
+  const sbHeaders = { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json' };
+
+  // Fetch winback_log entries where reactivated_at is null (still churned)
+  let rows = [];
+  try {
+    const r = await fetchWithRetry(`${SUPABASE_URL}/rest/v1/winback_log?reactivated_at=is.null&order=created_at.asc&limit=100`, { headers: sbHeaders });
+    rows = await r.json();
+  } catch (_) { return; }
+
+  const now = Date.now();
+  for (const row of rows) {
+    const created = new Date(row.created_at).getTime();
+    const daysSince = (now - created) / 864e5;
+
+    // Day 3: send between day 3 and day 4 (not yet sent)
+    if (daysSince >= 3 && daysSince < 4 && !row.day3_sent_at) {
+      await callAPI('/api/publish', { action: 'email_winback', to: row.customer_email, day: 3, productSlug: row.product_slug });
+      await fetchWithRetry(`${SUPABASE_URL}/rest/v1/winback_log?id=eq.${row.id}`, { method: 'PATCH', headers: sbHeaders, body: JSON.stringify({ day3_sent_at: new Date().toISOString() }) });
+      log(`  ↩ Win-back day 3 → ${row.customer_email}`);
+    }
+    // Day 7: send between day 7 and day 8
+    else if (daysSince >= 7 && daysSince < 8 && !row.day7_sent_at) {
+      await callAPI('/api/publish', { action: 'email_winback', to: row.customer_email, day: 7, productSlug: row.product_slug });
+      await fetchWithRetry(`${SUPABASE_URL}/rest/v1/winback_log?id=eq.${row.id}`, { method: 'PATCH', headers: sbHeaders, body: JSON.stringify({ day7_sent_at: new Date().toISOString() }) });
+      log(`  ↩ Win-back day 7 → ${row.customer_email}`);
+    }
+    // Day 14: send between day 14 and day 15
+    else if (daysSince >= 14 && daysSince < 15 && !row.day14_sent_at) {
+      await callAPI('/api/publish', { action: 'email_winback', to: row.customer_email, day: 14, productSlug: row.product_slug });
+      await fetchWithRetry(`${SUPABASE_URL}/rest/v1/winback_log?id=eq.${row.id}`, { method: 'PATCH', headers: sbHeaders, body: JSON.stringify({ day14_sent_at: new Date().toISOString() }) });
+      log(`  ↩ Win-back day 14 → ${row.customer_email}`);
+    }
+  }
 }
 
 async function callAPI(path, body) {

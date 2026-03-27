@@ -77,6 +77,7 @@ async function run() {
       }).catch(e => { log(`  ⚠️ Stripe error: ${e.message}`); return null; });
 
       const stripeLink = stripeResult?.payment_url || stripeResult?.link?.url || '';
+      const stripeLinkAnnual = stripeResult?.payment_url_annual || '';
 
       // Phase 3: Create Gumroad listing
       log(`  Phase 3: Creating Gumroad listing...`);
@@ -105,7 +106,9 @@ async function run() {
             let html = Buffer.from(fileResult.content, 'base64').toString('utf8');
             html = html
               .replace(/https:\/\/buy\.stripe\.com\/placeholder-[^"']*/g, stripeLink)
-              .replace(/https:\/\/gumroad\.com\/l\/placeholder-[^"']*/g, gumroadLink || stripeLink);
+              .replace(/https:\/\/gumroad\.com\/l\/placeholder-[^"']*/g, gumroadLink || stripeLink)
+              .replace(/CONFIG\.STRIPE_LINK_PRO\s*=\s*['"][^'"]*['"]/g, `CONFIG.STRIPE_LINK_PRO = '${stripeLink}'`)
+              .replace(/CONFIG\.STRIPE_LINK_ANNUAL\s*=\s*['"][^'"]*['"]/g, `CONFIG.STRIPE_LINK_ANNUAL = '${stripeLinkAnnual || stripeLink}'`);
 
             await callAPI('/api/github', {
               action: 'pushFile',
@@ -137,6 +140,9 @@ async function run() {
         stripe_link: stripeLink,
         gumroad_link: gumroadLink,
         stripe_product_id: stripeResult?.product?.id,
+        stripe_link_annual: stripeLinkAnnual,
+        monthly_usd: spec.pricing?.monthly_usd || 9,
+        annual_usd: stripeResult?.annual_usd || Math.round((spec.pricing?.monthly_usd || 9) * 10),
         mrr_usd: 0,
         visitors: 0,
         conversion_rate: 0,

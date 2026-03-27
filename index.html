@@ -342,7 +342,7 @@ const BUILD_PHASES = [
   { key: 'finalize',   label: '④ SEO pages + publish content',  pct: 95 },
 ];
 
-function BuildTab({ addLog, addProduct }) {
+function BuildTab({ addLog, addProduct, refreshBudget }) {
   const [keyword, setKeyword] = useState('');
   const [building, setBuilding] = useState(false);
   const [phaseIdx, setPhaseIdx] = useState(-1);
@@ -436,6 +436,7 @@ function BuildTab({ addLog, addProduct }) {
       setPhaseLabel('');
       setPhaseIdx(-1);
       addLog('success', `build: ✅ ${product.name} LIVE — ${product.vercel_url}`);
+      if (refreshBudget) refreshBudget();
 
     } catch (e) {
       stopPolling();
@@ -573,7 +574,7 @@ function SeoTab({ addLog }) {
         action: 'niche_batch',
         keyword,
         toolName: toolName || `${keyword.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')} Tool`,
-        toolUrl: toolUrl || 'https://example.vercel.app',
+        toolUrl: toolUrl || `https://${(toolName || keyword).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.vercel.app`,
       });
       setPages(data.pages);
       addLog('success', `seo-agent: generated ${Object.keys(data.pages || {}).length} pages`);
@@ -898,12 +899,12 @@ function BudgetTab({ budget }) {
 }
 
 // ─── Agents Tab ───────────────────────────────────────────────────────────────
-// Agent "Run" buttons trigger the closest equivalent serverless action.
-// Full scheduled runs happen via GitHub Actions (daily-agents.yml).
+// "Run" buttons trigger the equivalent serverless action for that agent phase.
+// Full end-to-end scheduled runs happen via GitHub Actions (daily-agents.yml).
 const AGENT_ENDPOINT = {
   'market-agent':    { path: '/api/discover',  body: { action: 'daily_discover' } },
-  'seo-agent':       { path: '/api/content',   body: { action: 'niche_batch', keyword: 'ai productivity tools', toolName: 'AI Productivity Tool', toolUrl: 'https://example.vercel.app' } },
-  'product-agent':   { path: '/api/product',   body: { action: 'score_idea', keyword: 'ai resume builder' } },
+  'seo-agent':       { path: '/api/content',   body: { action: 'niche_batch', keyword: 'ai writing tools', toolName: 'AI Writing Tool', toolUrl: '' } },
+  'product-agent':   { path: '/api/product',   body: { action: 'score_idea', keyword: 'ai productivity' } },
   'builder-agent':   { path: '/api/build',     body: { action: 'check_budget' } },
   'launch-agent':    { path: '/api/deploy',    body: { action: 'listProjects' } },
   'traffic-agent':   { path: '/api/publish',   body: { action: 'get_queue' } },
@@ -943,9 +944,11 @@ function AgentsTab({ addLog }) {
         d.keywords?.length != null ? `✓ ${d.keywords.length} keywords` :
         d.queued != null ? `✓ ${d.queued} queued` :
         d.mrr_usd != null ? `✓ MRR $${d.mrr_usd}` :
-        d.projects?.length != null ? `✓ ${d.projects.length} projects` :
+        d.projects?.length != null ? `✓ ${d.projects.length} Vercel projects live` :
         d.queue?.length != null ? `✓ ${d.queue.length} in queue` :
         d.score != null ? `✓ demand score ${d.score}` :
+        d.daily_limit_usd != null ? `✓ budget $${d.estimated_cost_usd || 0} / $${d.daily_limit_usd} used` :
+        d.total?.length != null ? `✓ ${d.total.length} items` :
         '✓ complete';
       setResults(p => ({ ...p, [agentId]: detail }));
       addLog(d.error ? 'error' : 'success', `${agentId}: ${detail}`);
@@ -957,13 +960,13 @@ function AgentsTab({ addLog }) {
   };
 
   const agents = [
-    { id: 'market-agent', icon: '🔍', desc: 'Discover 50 keywords from HN/Reddit/Google/PH', time: '00:00', free: true },
-    { id: 'seo-agent', icon: '📝', desc: 'Generate 50 SEO pages + push to GitHub', time: '02:00', free: true },
-    { id: 'product-agent', icon: '🛠️', desc: 'Convert top keywords into SaaS specs', time: '04:00', free: true },
-    { id: 'builder-agent', icon: '🔨', desc: 'Build 3 HTML tools (Claude Sonnet ~$0.18)', time: '05:00', free: false },
-    { id: 'launch-agent', icon: '🚀', desc: 'Deploy to Vercel, create Stripe links', time: '07:00', free: false },
-    { id: 'traffic-agent', icon: '📣', desc: 'Auto-publish Dev.to/Hashnode, queue Reddit/Twitter', time: '09:00', free: true },
-    { id: 'analytics-agent', icon: '📊', desc: 'Fetch metrics, extract insights, plan tomorrow', time: '22:00', free: true },
+    { id: 'market-agent', icon: '🔍', desc: 'Discover 50 keywords from HN/Reddit/Google/PH · Run triggers daily_discover', time: '00:00', free: true },
+    { id: 'seo-agent', icon: '📝', desc: 'Generate 50 SEO pages + push to GitHub · Run generates sample niche batch', time: '02:00', free: true },
+    { id: 'product-agent', icon: '🛠️', desc: 'Convert top keywords into SaaS specs · Run scores a sample idea', time: '04:00', free: true },
+    { id: 'builder-agent', icon: '🔨', desc: 'Build 3 HTML tools via GitHub Actions · Run checks current API budget', time: '05:00', free: false },
+    { id: 'launch-agent', icon: '🚀', desc: 'Deploy to Vercel + Stripe links via GitHub Actions · Run lists live Vercel projects', time: '07:00', free: false },
+    { id: 'traffic-agent', icon: '📣', desc: 'Auto-publish Dev.to/Hashnode, queue Reddit/Twitter · Run fetches publish queue', time: '09:00', free: true },
+    { id: 'analytics-agent', icon: '📊', desc: 'Fetch metrics, extract insights, plan tomorrow · Run pulls 7-day full report', time: '22:00', free: true },
   ];
 
   return (
@@ -1260,7 +1263,15 @@ function App() {
     setMrr(prev => prev + (product.mrr_usd || 0));
   }, []);
 
-  // Load portfolio on mount
+  const refreshBudget = useCallback(() => {
+    api('/api/build', { action: 'check_budget' }).then(d => {
+      if (d?.daily_limit_usd != null) {
+        setBudget({ used: d.estimated_cost_usd || 0, limit: d.daily_limit_usd, groq_calls: d.groq_calls_today || 0, sonnet_calls: d.sonnet_calls_today || 0 });
+      }
+    }).catch(() => {});
+  }, []);
+
+  // Load portfolio + budget on mount
   useEffect(() => {
     fetch('/public/portfolio.json').then(r => r.ok ? r.json() : []).then(data => {
       if (Array.isArray(data)) {
@@ -1268,12 +1279,13 @@ function App() {
         setMrr(data.reduce((s, p) => s + (p.mrr_usd || 0), 0));
       }
     }).catch(() => {});
+    refreshBudget();
   }, []);
 
   const budgetColor = budget.used > 9.5 ? 'danger' : budget.used > 7 ? 'warn' : 'ok';
 
   const renderTab = () => {
-    const props = { portfolio, mrr, budget, addLog, addProduct };
+    const props = { portfolio, mrr, budget, addLog, addProduct, refreshBudget };
     switch (tab) {
       case 'dashboard': return <DashboardTab {...props} />;
       case 'market':    return <MarketTab {...props} />;

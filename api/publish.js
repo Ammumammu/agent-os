@@ -21,6 +21,8 @@ export default async function handler(req, res) {
       case 'email_post_payment':       return res.json(await postPaymentSequence(p));
       case 'email_digest':             return res.json(await sendDigest(p));
       case 'email_followup':           return res.json(await sendFollowUp(p));
+      case 'email_dunning':            return res.json(await sendDunning(p));
+      case 'email_winback':            return res.json(await sendWinback(p));
 
       default: return res.status(400).json({ error: `Unknown action: ${action}` });
     }
@@ -274,4 +276,87 @@ async function sendDigest({ to, data }) {
 
 async function sendFollowUp({ to, productName, productUrl, stripeLink, daysAgo = 14 }) {
   return resendSend({ from: FROM, to, subject: `Still interested in ${productName}?`, html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto"><p>You signed up for extra uses on ${productName} ${daysAgo} days ago. We've improved it since then.</p><a href="${productUrl}" style="display:inline-block;background:#6366f1;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700">Check it out →</a><p style="color:#6b7280;font-size:13px;margin-top:16px">Unlimited access is $9/mo. <a href="${stripeLink}" style="color:#6366f1">Upgrade here</a>.</p></div>` });
+}
+
+// ─── Dunning: recover failed payments ────────────────────────────────────────
+// attempt 1 = day 1, attempt 2 = ~day 3, attempt 3 = ~day 7 (Stripe retries)
+async function sendDunning({ to, attempt, invoiceUrl, productSlug }) {
+  const name = productSlug || 'your subscription';
+  const templates = {
+    1: {
+      subject: `Action needed — payment failed for ${name}`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+<h2 style="color:#ef4444">Payment failed</h2>
+<p>Your payment for <strong>${name}</strong> didn't go through. This usually happens due to an expired card or insufficient funds.</p>
+<p>No action needed yet — we'll retry automatically. But if you want to fix it now:</p>
+<a href="${invoiceUrl}" style="display:inline-block;background:#6366f1;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;margin:16px 0">Update Payment Method →</a>
+<p style="color:#6b7280;font-size:13px">Your access continues while we retry. Reply if you need help.</p>
+</div>`,
+    },
+    2: {
+      subject: `2nd attempt failed — update your card for ${name}`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+<h2 style="color:#ef4444">Still having trouble</h2>
+<p>We tried again and the payment for <strong>${name}</strong> failed a second time.</p>
+<p>Please update your payment method to keep access:</p>
+<a href="${invoiceUrl}" style="display:inline-block;background:#ef4444;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;margin:16px 0">Fix Payment Now →</a>
+<p style="color:#6b7280;font-size:13px">One more retry in ~4 days, then access will pause.</p>
+</div>`,
+    },
+    3: {
+      subject: `Final notice — ${name} access pausing soon`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+<h2 style="color:#ef4444">Last chance</h2>
+<p>This is our final retry for <strong>${name}</strong>. If we can't collect payment, your access will pause.</p>
+<a href="${invoiceUrl}" style="display:inline-block;background:#ef4444;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;margin:16px 0">Update Card to Keep Access →</a>
+<p style="color:#6b7280;font-size:13px">Takes 30 seconds. Your data is safe and ready when you return.</p>
+</div>`,
+    },
+  };
+  const t = templates[attempt] || templates[1];
+  return resendSend({ from: FROM, to, subject: t.subject, html: t.html });
+}
+
+// ─── Win-back: re-engage canceled subscribers ─────────────────────────────────
+// day 1 sent from webhook immediately; days 3/7/14 sent by analytics-agent cron
+async function sendWinback({ to, day, productSlug, stripeLink }) {
+  const name = productSlug || 'your subscription';
+  const templates = {
+    1: {
+      subject: `We noticed you left — here's what you're missing`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+<p>Sorry to see you go. Your access to <strong>${name}</strong> has ended.</p>
+<p>If it was a pricing issue, we'd love to keep you — reply and we'll figure something out.</p>
+${stripeLink ? `<a href="${stripeLink}" style="display:inline-block;background:#6366f1;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;margin:16px 0">Come back →</a>` : ''}
+<p style="color:#6b7280;font-size:13px">No hard feelings either way. <a href="{{unsubscribe_url}}" style="color:#6b7280">Unsubscribe</a></p>
+</div>`,
+    },
+    3: {
+      subject: `One thing you might not know about ${name}`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+<p>Quick check-in — did you know ${name} recently added [feature]? Might be worth another look.</p>
+${stripeLink ? `<a href="${stripeLink}" style="display:inline-block;background:#6366f1;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;margin:16px 0">Try it again →</a>` : ''}
+<p style="color:#6b7280;font-size:13px"><a href="{{unsubscribe_url}}" style="color:#6b7280">Unsubscribe</a></p>
+</div>`,
+    },
+    7: {
+      subject: `Special offer — come back at 50% off`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+<h2>We want you back</h2>
+<p>One-time offer for ${name}: restart at <strong>50% off your first month</strong>.</p>
+${stripeLink ? `<a href="${stripeLink}?prefilled_promo_code=COMEBACK50" style="display:inline-block;background:#6366f1;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;margin:16px 0">Claim 50% Off →</a>` : ''}
+<p style="color:#6b7280;font-size:13px">Offer expires in 48 hours. <a href="{{unsubscribe_url}}" style="color:#6b7280">Unsubscribe</a></p>
+</div>`,
+    },
+    14: {
+      subject: `Last message from us about ${name}`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+<p>This is our last reach-out. If you ever want to return to ${name}, the door is open.</p>
+<p>Before you go — one quick question: <a href="mailto:${process.env.OWNER_EMAIL || FROM}" style="color:#6366f1">what made you leave?</a> One reply helps us improve for everyone.</p>
+<p style="color:#6b7280;font-size:13px"><a href="{{unsubscribe_url}}" style="color:#6b7280">Unsubscribe</a></p>
+</div>`,
+    },
+  };
+  const t = templates[day] || templates[1];
+  return resendSend({ from: FROM, to, subject: t.subject, html: t.html });
 }
