@@ -31,7 +31,18 @@ export default async function handler(req, res) {
       case 'build_product': return res.json(await buildProductLegacy(p, res));
       // Groq proxy (merged from groq.js) — products call this instead of Groq directly
       case 'groq_proxy': return res.json(await groqProxy(p));
-      default: return res.status(400).json({ error: `Unknown action: ${action}` });
+      // AI proxy — used by /api/ai rewrite (products send { system, user }, expect { text })
+      case 'ai':
+      default: {
+        // Handle requests routed from /api/ai rewrite: body has { system, user } without action
+        if (p.user || (!action && req.body?.user)) {
+          const d = await groqProxy({ system: p.system || req.body?.system, messages: [{ role: 'user', content: p.user || req.body?.user }], model: p.model });
+          const text = d.choices?.[0]?.message?.content || '';
+          if (d.error) return res.status(500).json({ error: d.error.message || 'Groq error' });
+          return res.status(200).json({ text });
+        }
+        return res.status(400).json({ error: `Unknown action: ${action}` });
+      }
     }
   } catch (e) {
     // Update job status to failed if we have a jobId
